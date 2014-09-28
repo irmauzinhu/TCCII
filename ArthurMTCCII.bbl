@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{abnt-url-package=url}
+
+
+\bibitem{bennett2007netflix}
+James Bennett and Stan Lanning.
+\newblock The netflix prize.
+\newblock In {\em Proceedings of KDD cup and workshop}, volume 2007, page~35,
+  2007.
+
+\bibitem{resnick1997recommender}
+Paul Resnick and Hal~R Varian.
+\newblock Recommender systems.
+\newblock {\em Communications of the ACM}, 40(3):56--58, 1997.
+
+\bibitem{schafer1999recommender}
+J~Ben Schafer, Joseph Konstan, and John Riedl.
+\newblock Recommender systems in e-commerce.
+\newblock In {\em Proceedings of the 1st ACM conference on Electronic
+  commerce}, pages 158--166. ACM, 1999.
+
+\end{thebibliography}

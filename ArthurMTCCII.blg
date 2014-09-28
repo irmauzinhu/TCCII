@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ArthurMTCCII.aux
+The style file: plain.bst
+Database file #1: abntex2-options.bib
+Warning--entry type for "abnt-url-package=url" isn't style-file defined
+--line 199 of file abntex2-options.bib
+Database file #2: bib/bib.bib
+Warning--all relevant fields are empty in abnt-url-package=url
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            519 strings with 4415 characters,
+and the built_in function-call counts, 1314 in all, are:
+= -- 126
+> -- 45
+< -- 3
++ -- 19
+- -- 14
+* -- 80
+:= -- 194
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 60
+empty$ -- 121
+format.name$ -- 14
+if$ -- 293
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 3
+newline$ -- 21
+num.names$ -- 6
+pop$ -- 27
+preamble$ -- 1
+purify$ -- 16
+quote$ -- 0
+skip$ -- 53
+stack$ -- 0
+substring$ -- 76
+swap$ -- 21
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 1
+while$ -- 12
+width$ -- 5
+write$ -- 41
+(There were 2 warnings)

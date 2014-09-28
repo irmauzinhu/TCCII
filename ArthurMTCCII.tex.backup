@@ -1,0 +1,1039 @@
+\documentclass[12pt,
+				openright,
+				twoside,
+				a4paper,
+				apter=TITLE,
+				section=TITLE,
+				subsection=TITLE,
+				chapter=TITLE,
+				english,
+				french,
+				spanish,
+				brazil]{abntex2}
+
+\usepackage{lmodern}
+
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage{calligra}
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} % para melhorias de justificação
+
+
+%\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+
+
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{multirow}
+
+
+
+
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+
+\titulo{Sistema de Recomendação Utilizando a Recomendação por Conteúdo}
+
+\autor{Arthur Silva Morato}
+\local{Mato Grosso do Sul - Brasil}
+\data{\today}
+\instituicao{%
+  Fundação Universidade Federal de Mato Grosso do Sul
+  \par
+  Campus de Ponta Porã – MS
+  \par
+  Ciência da Computação – Bacharelado }
+\tipotrabalho{Trabalho de Conclusão de Curso}
+\orientador{Me. Daniel Matte Freitas}
+
+
+\preambulo{Dissertação apresentada ao curso de graduação em Ciência da Computação da Universidade Federal de
+Mato Grosso do Sul como trabalho de conclusão de curso: requisito obrigatório para colação de grau e obtenção do título de Bacharel em Ciência da Computação.}
+
+
+\definecolor{blue}{RGB}{41,5,195}
+\definecolor{lightgray}{gray}{0.9}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={Sistema de Recomendação},
+		pdfkeywords={Sistema de Recomendação}{Recomendação de Conteúdo}{Filtro Colaborativo}{Sistema de 
+		Recomendação Híbrido}{Exemplos de Recomndação}{Pesquisa}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,        		% color of links to bibliography
+    	filecolor=black,      		% color of file links
+		urlcolor=black,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % posso por também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+
+% ----
+% Início do documento
+\begin{document}
+\frenchspacing 
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{img/logoufms}
+\end{figure}
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% ---
+\imprimirfolhaderosto
+\imprimirtipotrabalho
+\imprimirorientador
+% ---
+
+
+
+\addcontentsline{toc}{chapter}{Agradecimentos}
+
+\begin{flushright}
+
+\begin{minipage}[b]{13cm}
+\vspace{15.01cm}
+\chapter*{Agradecimentos}{
+\calligra A Deus pelas bênçãos sem fim, e mais um monte de blábláblá que tenho que bolar depois!\\
+A meus pais por tudo, em expecial: pela grana que me manteu todo esse tempo longe de casa.\\
+A meus amigos e colegas da zuera sem fim.\\
+A meus professores amados \\
+A meu orientador.}
+
+\end{minipage}
+\end{flushright}
+
+% nova página para dedicatória
+
+\begin{flushright}
+\begin{minipage}[b]{13cm}
+\vspace{20.01cm}
+
+\calligra Dedico a mim e só a mim! Vlw flw. 
+Ass: Irmauzinhu
+
+\end{minipage}
+\end{flushright}
+\clearpage
+
+% ---
+% Lista de imagens
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+\begin{siglas}
+\item EXP \textit{Exemplo} 
+
+\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+\begin{simbolos}
+  \item[$ \Gamma $] Letra grega Gama
+  \item[$ \Lambda $] Lambda
+  \item[$ \zeta $] Letra grega minúscula zeta
+  \item[$ \in $] Pertence
+\end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+
+\frenchspacing 
+
+\addcontentsline{toc}{chapter}{Resumo}
+\chapter*{Resumo}
+% ---
+% Feito
+% ---
+Este trabalho tem como objetivo apresentar as principais técnicas sobre os Sistemas de Recomendação de conteúdo, entre muitas técnicas conhecidas, que foram derivadas ou baseadas nessas técnicas ou em outras, apresentando de forma clara todos  os seus mecanismos de funcionamento e seus respectivos resultados encontrados em trabalhos realizados anteriormente, proporcionando uma prévia dos dados obtidos em pesquisas e estudos realizados desde os primórdios do estudo sobre a recomendação e das primeiras hipóteses de recomendação por um sistema independente, onde se utiliza dados coletados para poder predizer o que poderia ser mais relevante, sendo assim, com uma maior probabilidade de acerto próximo passo, para determinado fim baseado em alguma métrica estabelecida pelo sistema, aprimorando todo o conjunto do sistema onde foi aplicado a recomendação. Para demonstração de desempenho e visualização dos resultados obtidos, será proposto neste trabalho o desenvolvimento de um framework para recomendação generalizada, onde o algoritmo passará por um processo de aprendizagem de máquina indutivo, utilizando uma base de dados que será subdividida em conjunto de teste e conjunto de aprendizagem, para poder generalizar novos casos e classificar as informações do conjunto de teste, utilizando o ``aprendizado'' obtido por meio do conjunto de aprendizagem. 
+
+
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstract}
+% ---
+% Feito
+% ---
+This work aims to present the main techniques on Recommender Systems, among many known techniques, which were derived from or based on such technical or other, showing clearly all its operating mechanisms and their results found in studies previously conducted providing a preview of the data obtained in surveys and studies conducted since the beginning of the study and on the recommendation of the first hypotheses recommendation by an independent system, which uses the collected data in order to predict what could be more relevant, therefore, to a higher probability of success next step for a particular purpose based on some metric established by the system, improving the whole system where the recommendation was applied. To demonstrate performance and displaying the measurement results, it is proposed in this work to develop a generalized framework for recommendation where the algorithm will go through a learning process of induction machine using a database to be divided into the test set, and learning to generalize to new cases and sort the information of the test, using the `learning 'obtained through the learning set.
+
+\chapter{Introdução}
+% ---
+% Feito
+% ---
+A recomendação está em presente em muitos lugares e situações, uma vez que é preciso, na maioria da vezes, algum conhecimento sobre algo novo para se interessar por ele ao ponto do querer mais informações para poder confirmar o interesse, mas o primeiro obstáculo à ser derrubado é como saber o que terá nesse algo novo que poderá ser do interesse de quem ou o que, está recebendo a recomendação. Sem fazer destinção do que será recomendado, é natural o conhecimento de que todas as informações sobre um produto ou serviço é do interesse de quem está procurando, mas poder apresentar resultados baseados em suas preferências pode ser a principal etapa para definir se há realmente o interesse, ou não, proporcionando uma otimização significativa em todo o conjunto do sistema, que será refletido nos resultados que serão obtidos desse sistema. Entre pessoas, por exemplo, a preferência é ver se alguém já testou algum novo produto ou serviço, e qual foi a reação que isso proporcionol para a pessoa, para depois analisar se o novo produto pode, ou não, see bom, ou ruim, para si próprio.[1],[2].
+
+Uma grande conquista para a tecnologia é a grande quantidade de conteúdo que pode ser compartilhado através de diversos meios de comunicação e de trafego de dados, possibilitando a propagação de informação, acessível a todas as pessoas com acesso a tecnologia, otimizando as atividades em todos os âmbitos pessoais e tecnológicas. Um grande avanço se mostra no compartilhamento em massa de informações em todas as áreas de interesses, como notícias sobre esportes, tempo, política, ou sobre estudos e pesquísas, como conseguir encontrar áreas de pesquisa e estudo que estão em destaque nos dias atuais, ou sobre alimentação, como qual restaurante poderia ser o melhor para visitar em determinada cidade, também é demonstrado avanço sobre o compartilhamento de mídias digitais, como música, áudio, filmes, texto, etc. [5]. Alguns exemplos de sistemas que conseguem recomendar CDs, livros e uma outra infinidade de produtos pelo loja online Amazon.com [3], ou filmes e suas classificações pelo site MovieLens.com [6], ou livros e críticas de livros no site barnesandnoble.com, ou artigos acadêmicos, sites, lugares para conhecer ou visitar, culinária, produtos em geral, entre outros, procurando sempre o que for melhor para oferecer aos seus usuários, que estão buscando o que for mais interessante para ele. [4], [5], [6], [7].
+
+Descobrir o mecanismo e as funcionalidades dos algorítmos de recomendação é descobrir como a recomendação desses sistemas, citados acima, conseguem oferecer um novo produto com uma grande taxa probabilidade de que um futuro novo usuário possa gostar, e continuar recomendando com cada vez mais precisão, utilizando como parâmentro o perfil de seus usuários. Avaliando essa tarefa de recomendação como um desafio, então conseguir entender o funcionamento humano de recomendação e transformá-lo em dados através de um algorítmo que possa ``aprender'' a recomendar com a maior precisão possível, é uma provável solução para esse desafio. [2].
+
+Neste trabalho, para uma melhor abordagem do assunto, será feita uma ampla abordagem sobre os tipos de sistemas de recomendação, alguns problemas na recomendação e suas soluções. Também é proposto nestedocumento, o desenvolvimento de um Framework para exemplificar o funcionamento de um algoritmo de recomendação, com a finalidade de visualizar os dados obtidos e verificar e comprovar a eficiência da recomendação por sistemas de Inteligência Artificial. Os resultados se encontrarão ao final desse documento.
+
+Nas seções e subseções deste trabalho, será abordado o hitórico da recomendação, exemplifica algumas técnicas mais utilizadas e seu funcionamento, e a elaboração, desenvolvimento e a avaliação dos resultados obtidos, como forma de visualização do desempenho do recomendador, as conciderações finais e as respectivas referências bibliográficas. 
+
+\section{Justificativa}
+É possível encontrar com facilidade resultados que são demostrado em diversos trabalhos publicados e disponibilizados na internet, provando a eficiência do sistema de recomendação aplicado em diversas aplicações. A derivação desse trabalho e suas pesquisas dão seguimento ao raciocínio lógico de otimização encontrado na maior parte dos trabalhos referentes a recomendação. 
+
+\begin{citacao}
+Muitas vezes é preciso fazer escolhas sem ter experiência suficiente sobre as escolhas que nos são dispostas. Em nosso vida diária, buscamos por recomendação de outras pessoas que já tiveram experiências sobre o que você está procurando ou até mesmo por boatos feitos de boca em boca para descobrir quais as conclusões encontradas pelos outros, como pedir uma carta de recomendação, avaliações e comentários sobre livros e filmes que são publicadas em jornais, ou levantamentos gerais como encontrar um restaurante que lhe interesse pelo guia de restaurantes Zagat’s.
+\cite{resnick1997recommender}
+\end{citacao}
+
+Na maioria das aplicações, a recomendação é feita para oferecer ao seu usuário um produto que ele tem uma chance maior de interesse por parte do consumidor, facilitando a procura desse usuário, se for o caso, e aprimorando a eficiência do serviço prestado pelo ofertante.
+
+\begin{citacao}
+As empresas precisam estár prepadas para, no mínimo, oferecer produtos com diversas características para para conseguir oefercer a característica que mais se adeque a determinado usuário. A tendência é de que as empresas de comércio eletrônico possa oferecer mais produtos relacionados com o gosto de todos na internet. No entanto, ao disponibilizar diversas características de seus produtos para seus usuários, torna-se complicado a busca do usuário pelo produto que ele está procurando. Uma solução para esse problema de \textit overload de informação é a utilização de Sistema de Recomendação.  
+\cite[4.0]{schafer1999recommender}.
+\end{citacao}
+
+A recomendação é provada como ferramenta fundamental em um sistema corporativo quando é possível encontrar empresas oferecendo prêmios para melhorar seus sistema de recomendação ou oferecer um novo que supere o seu já utilizado, como é o caso da Netflix.
+
+\begin{citacao}
+Em out  
+\cite[4.0]{bennett2007netflix}.
+\end{citacao}
+
+Aliado ao crescimento da computação móvel o acesso ao GPS se popularizou, uma vez esses aparelhos trazem em si receptores de sinais de satélites do sistema de posicionamento global. Diante deste cenário, a principal justificativa para a realização desse estudo é que a área está em alta. Muitas empresas fazem uso das geotecnologias no desenvolvimento de aplicativos que soluciona tanto problemas complexos, como problemas corriqueiros como encontrar o carro em um estacionamento, por exemplo. Por esse trabalho, busca-se o conhecer e aplicar essas ferramentas no desenvolvimento de aplicativos para o sistema operacional mais utilizado do mundo da plataforma Móvel que é o Android.
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=1]{imagens/crescimento}
+\caption{Projeção de crescimento de do número de celuar no mundo}
+\label{figure:projecaocrescimento}
+\end{figure}
+\footnote{Figura \ref{figure:projecaocrescimento} \apud{GOMES:2012}{TELECO:2014}}
+
+
+\section{Objetivos}
+Os principais objetivos são destacados abaixo:
+\begin{itemize}
+
+\item Angariar conhecimento através de pesquisas em material bibliográfico e métodos empíricos para descrever os avanços, limitações e tendências futuras das geotecnologias. 
+
+\item Procurar inovar desenvolvendo aplicativos que faça uso dessas ferramentas a fim de ampliar o universo de problemas solúveis com as geotecnologias.
+
+\item Documentar todo o processo, para que seja de grande utilidade para trabalhos futuros, e também para a Fábrica de Software CPPP/UFMS.
+
+\end{itemize}
+
+
+\chapter{Computação Móvel}
+
+O conceito de computação móvel adotado neste trabalho é extendido do conceito de smartphones dado por TANENBAUM.
+
+\begin{citacao}
+ $[...]$ mais de 90\% das CPUs no mundo não estão nos PCs desktop e notebooks, mas nos sistemas embargados. como os telefones celulares, PDAs, câmeras digitais, filmadoras, máquinas de jogos. IPods, tocadores de MP3, tocadores de CD, gravadores de DVD, roteadores sem fio, aparelhos televisores, receptores de GPS impressora Laser, Carros e muitos outros produtos de consumo.
+Os Smartphones são chamados assim porque executam sistemas operacionais com funções completas e apresentam características de PCs desktop.\cite{TANENBAUM:2009} 
+\end{citacao}
+
+
+Dessa forma, computação móvel pode ser definida como uma classe de dispositivos eletrônicos que possuem a estrutura de um computador tradicional.
+Um computador é composto de três partes CPU, memória, dispositivos de entrada e saída e barramentos. Um computador roda um sistema operacional maduro com funões completas que podem também ser encontradas em PCs e trás como característica a mobilidade. A partir da definição nota-se que nem todos os aparelhos listados por TANENBAUM fazem parte da computação móvel apesar de ter um CPU e apresentar mobilidade.
+
+O surgimento dos computadores móvel, segundo TANENBAUM, aponta para a década de 1980 e os primeiros aparelhos lançados não foram bem sucedidos. O PDA Newton da Apple, por exemplo, foi um dispositivo bem projetado, mas não se   popularizou como esperado. Os PDAs foram um fracasso na década de 1980 em termos de aceitabilidade. No entanto, apesar desse fracasso, na década seguinte (1990), com a evolução dos sistemas de comunicação, começou a disseminar rapidamente os telefones sem fio chamados de celulares. O surgimento dos Smartphones foi o resultado da fusão dos PDAs com os celulares.
+
+O um dos primeiros sistemas operacionais móveis, de acordo com TANENBAUM, foi o EPOC da empresa Psion que foi originalmente projetado para PDA. Como os como computadores móveis (PDAs) fundiram os celulares, os sistemas operacionais precisavam evoluir para se adaptar aos novos recursos dinâmicos da telefonia.
+
+O EPOC se adaptou para atender a necessidade emergente dos smartphones. Porém para lançar a versão 6, O EPOC trocou de nome, passou a se chamar Symbian. O Symbian fez história chegando o sistema mais utilizado na década de 2000, mas foi suprimido pelo sucesso do IOS e pela chegada do Android.
+
+Atualmente, a quantidade de celulares em uso, somente no Brasil, já é maior que a quantidade de habitantes. E tende a crescer cada vez mais.
+Não só no Brasil, mas o mundo presencia um novo cenário marcado pela mudança de paradigmas em relação os computadores pessoais.    
+
+Existem atualmente dezenas de empresas fabricantes de smartphones no mundo, porém, em se tratando de sistema operacional para essa plataforma, são pouco concorrentes. Google, Apple, Microsoft e Mozila são quatro principais empresas que estão na brigada pelo o universo móvel. As quatro são detentoras dos seguintes sistemas operacionais respectivamente. Android, IOS, Windows Phone e Firefox OS. Todos sistemas operacionais possui pontos fortes e fracos, mas o Android leva vantagem sobre os demais concorrentes por ser de código fonte aberto. Isso permite o uso por diferentes fabricantes. Cada fabricante pode adaptar qualquer uma das versões do  sistema existente para se adaptar às singularidade de cada aparelho. O principal concorrente de peso do Android é o sistema IOS da Apple. Os sistemas Windows Phone e Firefox OS foram disponibilizados recentemente portanto suas fatias de mercado ainda são pequenas.
+
+Em se tratando de computação móvel, as mudanças acontecem a passos largos, por isso não podemos garantir que o Android se mantenha na liderança por muito tempo. Pelos dados fornecidos pelo IDC, o crescimento anual de cada SO é marcado 79,5\% para O Android contra 133,3\% do Windows Phone \cite{OLHAR:2013}.
+
+\section{Android}
+O Android é um  sistema operacional baseado no núcleo do Linux desenvolvido e mantido pela \textit{Open Handset Alliance} (OHA) sob liderança da Google. Para LECHETA, Android consiste em uma nova plataforma de desenvolvimento para dispositivos móveis baseada em sistema operacional de código aberto Linux com diversas aplicações nativas e uma API enriquecida para auxiliar no desenvolvimento de novas aplicações. A OHA foi criada "com a intenção de padronizar uma plataforma de código aberto e livre para celulares" \cite{LECHETA:2010}.
+
+Segundo LECHETA, em 2010, quando lançou segunda edição do seu livro sobre o Android, A OHA contava com um grupo em torno de 80 empresas. Destancando algumas gigantes do mercado mobile como HTC, LG, Motorola, Samsung, Sony Ericsson, Toshiba, Sprint Nextel, China Mobile, T-Mobile, Asus, Intel, Garmin \cite{LECHETA:2010} e \cite{GOMES:2012}.  
+
+
+\subsection{Predecessores do Android}
+O sistema operacional Linux será sucintamente descrito nesse trabalho pela a sua importância para o surgimento do Android. Muitas de suas características foram herdadas pelo Android que é, hoje, o sistema operacional do momento no universo Mobile. O linux por sua vez é uma versão do UNIX. Segundo TANENBAUM
+\begin{citacao}
+O Linux é uma variante do UNIX, mas existem muitas outras versões e variações do UNIX, incluindo AIX, FreeBDS, HP-UX, SCO UNIX, System V, Solaris e outras \cite{TANENBAUM:2009}.
+  
+\end{citacao}
+
+
+Através de TANANBAUM é possível concluir que o UNIX é "Pai" de dezenas de sistemas operacionais. A história do UNIX é bem antiga quanto os primordios da computação multitarefas. Não é objetivo entrar em profundidade sobre a história do UNIX nem mesmo do Linux. O Linux é um SO bastante popular da grande família do UNIX. Assim como o seu predecessor, o Linux também abriu sua própria árvore de ramificações tornando o pai de dezenas de outros SOs, assim como o Android, por ser de código aberto e licença grauíta, formam novas versões com características bastante singulares. UBUNTU e Android, sem dúvidas, estão entre as versões mais popularizadas do Linux. 
+
+O Linux surgiu do resultado acumulado de anos de estudos de um estudante Filandês chamado Linus Torvalds que decidiu criar um clone do UNIX com sistema completo de produção incluindo todas as características que faltava nas demais versões do UNIX. Torvalds lançou a primeira versão de seu novo sistema operacional em 1991 e era um SO completo e não apenas o núcleo. O Linux se popularizou  ganhando adptos em todo o mundo dando forças aos defensores do software livre. O Linux é disponibilizado sobre a liçença GNU e pode ser utilizado para qualquer finalidade sem que o usuário precise pagar por isso. 
+
+O objetivo em falar sobre o Linux aqui é mostrar sua parte pouco variável que é o seu núcleo. Seria inviável falar de todas as versões do sistema geradas a partir de seu núcleo. As funcionalidades que são delegadas ao núcleo pouco sofrem alteração, apesar de não existir uma padronização para garantir a compatibilidade e portabilidade de aplicações entre os SOs gerados do Linux, funcionalidades como gerenciamento de memória, chamadas ao sistema, a linguagem de controle Shell, etc., na maioria dos casos são compatíveis (com poucas excessões). Portanto, partindo se da premissa de que não conhecemos todas as versões do Linux e é totalmente inviável fazer um levantamento, nem é de interesse nesse trabalho. É importante conhecermos as versões do núcleo do Linux para para mostrar onde nasce o Android. A tabela \ref{table:versoeslinux} mostra as versões estáveis do núclo do Linux.
+\begin{table}[htb]
+\center
+ \rowcolors{1}{}{lightgray}
+\footnotesize
+\begin{tabular}{|p{1.4cm}|p{6cm}|}
+\hline
+\textbf{Versão} & \textbf{Data de lançamento} \\
+\hline
+1.0 & Março de 1994 \\
+\hline
+1.2 & Março de 1995\\
+\hline
+2.0 & Junho de 1996\\
+\hline
+2.2 & Janeiro de 1999 \\
+\hline
+2.4 & Janeiro de 2001\\
+\hline
+\textbf{2.6} & \textbf{Dezembro de 2003}\\
+\hline
+3.0 & Julho de 2011 \\
+\hline
+3.1 & Outubro de 2011\\
+\hline
+3.2 & Janeiro de 2012\\
+\hline
+\end{tabular}
+\caption{Lista de versões estáveis do núcleo do Linux}
+\label{table:versoeslinux}
+\end{table}
+
+Alguns autores referem a essas versões como \textbf{séries} pelo o fato de possuir muitas outras "subversões" a partir delas. exemplo, a versão 1.0 refere-se a série 1.x. A versão  2.0 refere a série 2.x, a versão 2.2 a série 2.2.x e assim por diante. O Android foi desenvolvido em cima de do núcleo versão 2.6 do Linux que aparece em destacada em negrito na tabela \ref{table:versoeslinux}. 
+A arquitetura do Android é formada por um conjunto de camadas rodando em cima do núclo (\textit{kernel}) do Linux como mostra a figura 
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.8]{imagens/arquitetura}
+\caption{Arquitetura do Android}
+\label{figure:arquitetura}
+\end{figure}
+\footnote{Figura  \ref{figure:arquitetura} Fonte: http://developer.android.com}
+Na próxima seção será feita uma descrição de forma \textbf{\textit{buttom-up}} das camadas do Android começando com o núcleo e terminando na camada de aplicação.
+
+\subsection{Núcleo do Android}
+
+Como já foi mencionado, o núcleo\footnote{É comum na literatura o núcleo ser chamado de Kernel.} do Android é baseado no núcleo do Linux versão 2.6 que se encontra destacado em negrito na tabela \ref{table:versoeslinux} da seção anterior. Algumas modificações foram feitas no núcleo, porém, mais significativas foram a inclusão de novos drivers, melhoria no gerenciamento de energia e o encerramento de processos para se adaptar ao hardware com  pouca mémoria. \cite{GOMES:2012}).
+Como todo SO, o núcleo do Android é uma interface entre o hardware e as demais camadas. Em outras palavras, é o núcleo que "conversa" diretamente com o hardware. Tomando como premissa que nem todos os componentes de hardware são conhecidos (justamente pela sua diversidade) e que o núcleo precisa se comunicar com todos esses componentes, então essa comunicação é estabelecida por intermédio de drivers. Driver é uma de tradutor que intermedia a comunicação do componente de hardware com o núcleo do sistema. Cada vez que um novo componente hardware(um sensor por exemplo) não conhecido é adicionado, um novo driver é acomplado ao núcleo.
+
+O núcleo também é o responsável por executar as funcionalidades principais como o gerenciamento de memória, o gerenciamento de E/S, o gerenciamento de arquivos, etc. Além de atender as requisições feitas pela  s camadas superiores que desejam executar ou acessar recursos privilegiados delegados apenas ao núcleo do sistema para garantir a segurança e confiabilidade do sistema. Esse processo de proteção de recursos pelo o núcleo impede que uma aplicação monopolize um recurso.
+Isso garante que o SO será multitarefa. 
+
+Em um SO multitarefa, as aplicações de usuários concorrem pela a utilização dos recursos e o núcleo do SO é responsável por estabelecer políticas de escalonamento de processos, controle de acesso a memória, controle de utilização da CPU, Controle de utilização de dispositivos de E/S (entre outras) de forma que nenhuma aplicação de usuário leve vantagem sobre as demais. Abaixo aparece listados alguns dos novos mecanismos incrementados ao núcleo do Linux original.
+\begin{itemize}
+\item \textbf{\textit{Binder:}} Mecanismo de comunicação entre processos que facilita o sincronismo entre processos e impede que um processo manipule diretamente dados na memória pertencente a outro processo ou thread.
+\item \textbf{\textit{Ashmem:}} Mecanismo que permite dois ou mais processos se comunicarem utilizando uma região compartilhada na memória. Essa permissão não violar o mecanismo \textbf{\textit{Binder}} que protege a memória contra acessos ilegais. 
+\item \textbf{\textit{Logger:}} Sistema global de geração de log do sistema.
+\item \textbf{\textit{Wakelocks:}} O módulo gerenciador de consumo de energia, não existia no kernel do Linux por motivo de ter sido originalmente projetado para atender PCs. 
+\item \textbf{\textit{Oom handling:}} Controla a memória e encerra processos quando necessário para garantir memória às aplicações de maior importância em um dado momento.
+\item \textbf{\textit{imed GPIO:}} Módulo que cpntrola o acionamento de dispositivos de E/S de forma temporizada.
+
+\end{itemize}
+\cite{GOMES:2012}.
+
+
+\subsection{Bibliotecas e serviços}
+As bibliotecas são responsáveis por criar uma interface entre o núcleo e a camada superior. Cada biblioteca é específica para o prover determinado tipo de serviço. Abaixo segue listado algumas dessas bibliotecas e o tipo de serviço que elas oferecem. De acordo com CHICOSKI, essa camada contém as bibliotecas escritas em C/C++ usadas pelo sistema e para o desenvolvimento de aplicativos \apud{CHICOSKI:2013}{PEREIRA:2009}.
+\begin{itemize}
+\item \textbf{\textit{Surface Manager}:} Essa biblioteca é responsável pelo acesso ao subsistema de exibição de aplicações 2D e 3D.
+\item \textbf{\textit{Media Framework}:} biblioteca responsável pela criação, manipulação, alteração e visualização de mídias. É baseada no PacketVideo’s OpenCORE que suporta vídeos, imagens e áudio nos mais diferentes formatos.
+
+\item \textbf{\textit{SQLite}:} Fornece recursos de um poderoso banco de dados relacional para qualquer aplicação que solicitar tal serviço. "SQLite é um mecanismo de banco de dados SQL embutido.Diferentemente da maioria dos outros bancos de dados SQL" \cite{CHICOSKI:2013}.
+\item \textbf{\textit{OpenGL e ES}:} Implementa OpenGL para criação de ambientes gráficos 2D e 3D incluindo poderosos recursos para animação.
+\item \textbf{\textit{FreeType}:} biblioteca utilizada renderização de fontes bitmap e vector. 
+\item \textbf{\textit{WebKit}:} É um conjunto de blibliotecas utilizadas para prover serviços web para a camadas superiores. É utilizado tanto no Browser nativo do Android quanto em aplicações de terceiros.
+
+\item \textbf{\textit{SGL}:} também é conhecida como uma engine de gráficos 2D 3D. Essa biblioteca é capaz aplicar técnicas de aceleração de gráficos no nível de hardware quando disponível, ou utilizando software altamente otimizados.
+\item \textbf{\textit{SSL}} Essa biblioteca é reponsável pela multiplexação e demultiplexão de dados para serem transportados na rede de forma confiável.
+\item \textbf{\textit{libc}:} É uma biblioteca derivada da biblioteca C padrão sistema (libc) do BSD sintonizada para dispositivos rodando Linux. \cite{SILVA:2010}
+\end{itemize}
+
+\subsection{O Android Runtime}
+Java é a linguagem oficial adotada pelo o Google para o desenvolvimento de aplicativos para o Android.
+
+A linguagem e os softwares escritos em Java são multiplataforma, ou seja, os códigos são independentes da arquitetura. O slogan adotado pela \textit{Sun MicroSystems}\footnote{Empresa detentora dos direitos da linguagem Java} para divulgar os benefícios da linguagem é \textit{Write once, run anywhere}  ou "Escreva uma vez, execute em qualquer lugar" no Português. A mágica por trás desse poder do Java é o fato dos códigos fontes compilados não não rodar diretamente no hardware e sim em uma máquina virtual criada e disponibilizada pela a empresa. A máquina virtual serve de interface com a arquitetura em questão logo, em qualquer arquitetura ou sistema operacional que tenha uma JVM é capaz de executar, sem problemas, qualquer programa escrito em Java. Os códigos escritos em java são compilados em uma linguagem intermediária. Esse tipo de linguagem é chamada de Bytecode. A Bytecode do java é então interpletada pela JVM que gera um código de máquina na arquitetura correspondente.
+No entanto, o android não possui uma JVM oficial da Sun MicroSystems. Mesmo se a Sun criassem uma JVM para o Android, ela poderia ser inviável em termos de otimização. A JRE oficial é sofware oferecido pela Sun que inclui a JVM formando o ambiente de execução. E o JDK é um conjunto completo de softwares oficiais para o desenvolvimento na linguagem Java. Esses fatores mencionados levaram o Google a criar sua própria "JRE", \textit{Android Rutime}, bem como seu próprio SDK para sobrepor a JRE e o JDK oficiais.
+O \textit{Android Runtime} inclui VM Dalvik responsável pela execução dos aplicativos. Todos os sofware do SDK foram escritos pelos engenheiros do Google pensando em otimização e economia de recursos indispensáveis à computação móvel.  
+A VM Dalvik  possui sua própria entensão para arquivos executáveis .dex chamado de dexcode.
+\begin{citacao}
+A VM é baseada em registros e roda classes
+compiladas pela linguagem Java que foram transformadas em arquivos .dex,
+através da ferramenta “dx” incluída no SDK. \cite{GOMES:2012}
+\end{citacao} 
+Através do texto de\cite{GOMES:2012} é possível entender, por suposição, que não seria preciso reescrever toda as funcionalidades da linguagem Java no SDK Android, Mas apenas as classes específicas do Android. As demais funcionalidades implementadas nas milhares de classes Java poderia ser extraída apenas convertendo e otimizando diretamente o bytecode contido arquivo .class tradicional para o arquivo .dex que será oferecido como entrada na nova VM Dalvik do Android. 
+A VM Dalvik, há tempo, vem se utilizando de uma técnica conhecida como \textit{Just-in-time} {JIT} que permite a compilação do código para a arquitetura alvo em tempo de execução em tempo de execução, dessa forma a VM não precisa interpletar o dexcode sempre que precisar executar. Essa técnica trás um ganho significativo na performance do sistema. Ao mesmo tempo que economiza energia, acelera as execução dos APPs. 
+Diferente da JVM, o Android também gerencia o tempo de vida de cada processo. Para garantir economia de memória e, de acordo com a necessidade o sistema pode parar ou matar um processo para liberar recursos à aplicações de maior prioridade.
+\subsection{Camada Framework de Aplicações}
+A camada Framework diponibiliza aos desenvolvedores as mesmas APIs, utilizadas para a criação de APP nativos do sistema. Dessa forma aplicativos criados pelo o usuário têm o mesmo poder de um aplicativo nativo. Essa camada foi criada para facilitar o desenvolvimento de APPs implementando abstrações de funcionalidades mais complexas de serem construídas. A grosso modo, a camada é um conjunto de funções prontas para serem utilizadas. Fazendo uma analogia, podemos comparar o Android, sem essa camada, seria a linguagem C onde quase tudo deveria ser implementado pelo o desenvolvedor. Já o Android com essa camada seria a linguagens Java onde se encontra muita coisa pronta para ser utilizada, por exemplo: estruturas de dados.
+\subsection{Camada de Aplicações}
+Essa camada é o topo da pirâmide da arquitetura Android. É nessa camada que o usuário interage com o sistema. Nela se encontra todos os Aplicativos, tantos os nativos quanto os Aplicativos de terceiros. podemos destacar algumas aplicações nativas presente em todas as versões do Android: cliente de e-mail, despertador, calendário, jogos, mapas, browser e internet, discador de chamadas, Leitor SMS e Agenda. Para LECHETA qualquer aplicação nativa pode ser sobreposta por uma aplicação de terceiro ou modificada por desenvolvedores mais experiente.
+
+O Android é um sistema multiusuário. Cada aplicação no SO  representa um usuário diferente, portanto, tem sua própria \textit{User ID} e uma instância da VM Dalvik. Isso aumenta a segurança permitindo que a comunicação entre aplicações seja de forma oficialmente permitida.
+
+ 
+\subsection{Gerenciamento de Memória}
+O Android é muititarefa. No entanto, a quantidade de recursos nos dispositivos móveis, em geral, é significativamente menor que em PCs convencionais. Portanto, para se adaptar a essas limitações, foi preciso implementar um gerenciamento de memória que atenda e soluciona esse problema garantindo a performance do sistema. 
+
+O gerenciamento memória descrito na literatura dos sistemas operacionais fundamenta-se em: 
+\begin{itemize}
+\item \textbf{Relocação:} Capacidade de mover um programa e seus dados de uma região para outra sem invalidar suas referências na memória.
+\item \textbf{Proteção:} Garantir que cada processo tenha  seu próprio espaço de endereçamento na memória impedindo-o de manipular o espaço de outro processo ou ter seu espaço manipulado sem permissão.
+\item \textbf{Compartilhamento:} Permitir que uma região da memória seja compartilhada entre processos sem comprometer o requisito de proteção. Um exemplo de vantagem de oferecer essa permissão: suponhamos que precisamos iniciar um mesmo programa duas vezes para manipular dados diferentes, serão iniciados dois processos com o mesmo programa.  Logo, uma região da memória que contém o código fonte pode ser compartilhada entre os processos mantendo a região  de dados protegida.  
+\item \textbf{Organização lógica:} capacidade de separar o programa muito grande em módulos e manter na memória apenas os módulos em execução.
+\item \textbf{Organização física:} É a capacidade de organizar físicamente a memória do computador hierarquizando para tirar proveito no desempenho do sistema em geral.
+
+\cite{BECCENERI:2014} 
+
+\end{itemize}
+Os processos são carregados e descartados da memória seguindo uma ordem de prioridade. Mantem na memória se na memória os processos de maior prioridade num dado instante de tempo. A figura \ref{figure:processos} inlustra uma abstração da pilha de processos na memória.
+\begin{figure}
+\centering
+%\includegraphics[scale=0.8]{imagens/processos}
+\caption{Estado de processos e níveis de prioridades}
+\legend{Fonte: \apud{GOMES:2012}{MOBWORLD:2012}}
+\label{figure:processos}
+\end{figure}
+
+O estado do processo em um dado instante de tempo é dada em função de sua prioridade. A prioridade é representada em três categorias: Prioridade Crítica, Alta Prioridade e Baixa prioridade. A seguir será listados os estados possíveis de um processo na pilha de execução.
+\begin{itemize}
+\item \textbf{\textit{Active Processes}:} São processos que estão em interação com o usuário(\textit{foreground}) São processos que estão no topo da pilha de execução por serem considerados processos de Prioridade Crítica. Como a política de escalonamento de processos é por prioridade um processo pode acabar ser iniciado e sobrepor um processo em execução no topo da pilha. Por exemplo, suponha que o usuário de Smartphone esteja jogando um jogo X, em um dado instante seu telefone recebe uma chamada, nesse momento há o processo que contém aplicação da chamada que tem maior prioridade que o jogo X do usuário, logo esse processo é escalocanado e colocado no lugar do processo do jogo X.
+\item \textbf{\textit{Visible Processes}:}
+Processos visíveis são processos de Prioridade Alta, portanto, um processo visível só é encerrado em caso de extrema necessidade. No exemplo em que um usuário de smartphone estava jogando um jogo X e recebe uma chamada. O processo X não é encerrado ele é tido como um processo visível. 
+\item \textbf{\textit{Started Service Processes}:} Esses processos, assim como os processos visíveis, também são Processos de Alta Prioridade, mas, pelo o fato de não interagir diretamente com o usuário, têm prioridade menor que os processos visíveis.
+\item \textbf{\textit{BackGround Processes}:} São processos que estão ativos, não são visíveis e possuem nenhum serviço iniciado. Esse processos são elinados da memória, quando houver necessidade, usando a técnica \textit{Last–Seen–First–
+Killed}.
+\item \textbf{\textit{Empty Processes}:} São os processos que já foram finalizados pelo o SO, porém ainda mantêm uma região na memória pronta para serem utilizadas por qualquer a ser iniciado ou mesmo por processos ativos que desejam mais memória.
+\end{itemize}
+A Android como a maioria dos sistemas operacionais modernos faz uso de uma Memória virtual.
+Memória virtual é uma técnica que consiste em utilizar parte da memória permanente(não volátil) para simular a expansão da memória da memória principal. O Acesso à memoria virtual é mais rápido que o restante da memória permanente pelo fato de ser um espaço menor para a busca do dado.
+A justificativa para a utilização dessa técnica é fundamentada na teoria da hierarquização de memórias. Dessa forma a memória principal passa a ser vista como uma cache da memória virtual. Sobre a memória virtual
+TANENBAUM faz a seguinte observação "O tamanho das memórias está aumentando rapidamente, mas o tamanho dos softwares está aumentando muito mais rápido"\cite{TANENBAUM:2009}. A memória virtual é totalmente escondida do programador. Isso acontece porque o sistema não fornece informação diferenciando Memória 
+
+O Android usa duas técnicas combinadas de alocação de memória. A técnica de seguimetação com paginação. Utilizando a técnica de seguimentação a memória é dividida em duas dois seguimentos: O espaço Kernel e o espaço Usuário. Esses seguimentos são divididos em quatros seguimentos: \textbf{Kernel Code},\textbf{Kernel Data/Stack},\textbf{User Code}, \textbf{User Data/Stack}.
+Dessa forma é possível garantir o requisito de proteção da memória. Permite que processos no modo Kernel não se misture com processos no modo usuários. 
+Se utilizar somente a técnica de segmentação da memória geraria um novo problema: Cada processo teria um seguimento que o comportasse. Nesse casso Limitaria a quantidade processos em execução simultânea, pelo o fato de rapidamente se esgotar a quantidade de seguimentos causando uma falha conhecida como (\textit{segmentation faul}). Na técnica de paginação cada seguimento é dividido em páginas de tamanho fixo, cada página comporta parte do código do processo que está sendo executado. Todas as páginas de um processo são referenciadas na tabela de páginas. Dessa forma não  há necessidade de carregar todo o processo na memória e nem precisa está em regiões contínuas.
+
+Quando todas as páginas possíveis já foram preenchidas na memória e um processo solicita a alocação de uma nova página, nesse caso, o módulo gerenciador de memória do SO se encarregada de realizar a substituição de página para que a nova página possa ser alocada. Para tal tarefa existe diveros algorítmos que buscam otimizar esse processo. No Linux, o algoritmo utilizado é o LRU (\textit{Least Recentment Used}) que retira da memória a página que está a mais tempo sem ser utilizada. O LRU é fundamentado no princípio da localidade temporal que é baseado na suposição de páginas não utilizadas recentementemente não será será nos próximos instantes. 
+
+\subsection{Escalonamento de CPU}
+Uma características de SO multiprogramáveis é a concorrência de processos para a utilização da CPU. Cada núcleo do CPU só é capaz de execultar uma tarefa por vez. Porém, aproveitando a rapidez de CPUs atuais, a capacidade multitarefa dos SOs modernos pode ser consolidada e cada vez mais explorada. Trata-se de alternar a utilização da CPU por vários processos dando a cada um deles um pequena fatia de tempo imperceptível para o usuário que tem a impressão de que todos os processos estão executando simutâneamente.
+
+Processos em Android são classificados em três classes: processos interativos, processos batch e processos tempo real. Em cada uma dessas três classes os processos podem ainda serem reclassificados em I/O \textit{bound} ou CPU \textit{bound}. I/O \textit{bound} são processos que usam menos a CPU e passam sua maior parte de tempo na espera por operação E/S e CPU \textit{bound} são processos que usam a CPU por mais tempo e têm baixo ou nenhum índice de operação de E/S.
+
+O Android é baseado em fatia de tempo, técnica conhecida como \textit{time-sharing}. Quando a fatia de tempo do processo em execução é esgotada, O SO então realiza uma troca de contexto e um novo processo é escalonado. O algoritmo escalonador de processos pode atribuir quantias de tempo de uso de CPU diferentes. A políca de escalonamento é baseada em prioridade, a prioridade de cada processo na lista de espera para a utilização da CPU pode ser calculada dinâmicamente. Cada processo tem seu comportamento monitorado pelo o escalonador para ajustar dinamicamente sua prioridade, visando a equalizar o uso
+do processador entre os processos \cite{GOMES:2012}.
+A figura \ref{figure:processos} mostra as categorias de prioridades de cada tipo de processo. Processos de mesma prioridade não podem ser executados simultâneamente. Usando como exemplo um processo comporta uma chamada telefônica, Esse processo tem prioridade Crítica. Se durante a execução de um processo de uma chamada, o usuário receber uma nova chamada. Dois processos comportando duas chamadas telefônicas têm a mesma prioridade, portanto não podem coexistir. Sempre que chegar um processo contendo uma chamada este é colocado no topo da pilha de execução.
+
+\subsection{Sistema de Arquivos}
+Os arquivos no Android são organizados árvore de diretórios, sendo os dois diretórios principais o "data" e "system" conforme mostrado na figura \ref{figure:arvorediretorios}.
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=1]{imagens/arvorediretorios}
+\caption{Estrutura dos diretórios}
+\legend{Fonte: \apud{GOMES:2012}{PRADO:2011a}.}
+\label{figure:arvorediretorios}
+\end{figure}
+O diretório "data"  armazena as aplicações equanto o diretório "system". No diretório system, as bibliotecas estão armazenadas no subdiretórios system/lib. O serviços estão no subdiretório system/bin e system/xbin. Já as aplicações em Java estão no diretório systm/app.
+
+\section{Desenvolvimento no Android}
+
+\subsection{Android SDK}
+O SDK fornecido pelo Google é o Kit completo de ferramentas de desenvolvimento de softwares para o Android incluindo Android AVD que cria dispositivos virtuais para emular o SO e simular dispositivos reais.
+Constitui um conjunto de ferramentas completo para criar, testar e depurar APP para a plataforma Android.
+
+LECHETA destaca alguns requisitos de software e sistema para utilizar SDK \cite{LECHETA:2010}:
+\begin{itemize}
+\item \textbf{Sistema Operacional:} Windows XP(32-bits), Windows Vista(32 ou 64-bits), Windows 7(32 ou 64-bits), Mac OS X 10.5.8 ou superior(x86), Ubuntu.
+\item \textbf{IDE:} Eclipse 3.6.2 ou superior utilizando o plugin ADT.
+\item \textbf{JDK:} JDK 6 ou superior (O JDK inclui a JRE). 
+\end{itemize} 
+LECHETA não destaca requisitos de hardware, justamento porque o android possui muitas versões e cada versão e seus emuladores para tal consomem recursos diferenciados. 
+Versões mais remotas consomem menos recursos enquanto versões mais atuais consomem mais. Quanto a IDE LECHETA deixa de mencionar o Android Studio justamente por seu Livro ser lançado em 2010 e Ainda hoje o Android Studio encontra-se em sua vesão Beta\footnote{Versão de teste de um Software}. A intenção do Google é batizar o Android Studio como a IDE oficial desenvolvimento para sua plataforma em um futuro próximo. 
+
+Seguem listadas as ferramentas de apoio presentes na documentação\footnote{Fonte: http://developer.android.com/tools/help/index.html} do SDK acompanhadas com uma breve descrição. 
+
+\begin{itemize}
+
+\item \textbf{abd:} \textit{Android Debug Bridge} é uma ferramenta de linha de comandos versátil que permite
+comunicar com um \textit{virtual device} ou conectar diretamente com um aparelho smartphone rodando o Android. A conexão é feita pela rede usando socket TCP, onde o servidor é a máquina de desenvolvimento e o cliente é o  dispositivo virtual ou físico. O número da porta utilizada é o que aparece no topo superior esquerdo do Virtual Device. Por \textit{default} o primeiro \textit{virtual device} inicializado é atribuido a porta 5554. Um exemplo de utilidades dessa ferramenta é quando precisamos simular o recebimento uma chamada telefônica ou SMS. Essa ferramenta pode ser encontrada no diretório <sdk>/plataform-tools.
+\item  \textbf{ADT:} \textit{Android Developer Tools} É um plugin para o Eclipse. Sua função é integrar o Android SDK com a IDE. O ADT também permite que o usuário utilize recursos de linhas de comandos através de GUI.
+\item  \textbf{android:} android é uma importante ferramenta que permite ao desenvolvedor criar, deletar e visualizar AVDs. Permite criar e atualizar projetos Android, além de fornecer comandos para a atualização do SDK. Essa ferramenta foi projetada tanto para ser utilizada por linhas de comando quanto por GUI através do  IDE eclipse.
+\item  \textbf{AVD Manager:} Permite criar e gerenciar AVDs através de uma interface com o usuário. Para iniciar o  AVD Manager pelo o Eclipe é preciso selecionar \textbf{Window>Android Virtual Device Manager} ou através do icone mostrado na barra de ferramentas do Eclipse. A figura \ref{figure:AVDManager} e \ref{figure:AVDDialogo} mostram a janela do AVD Manager e a tela para criação do AVD respectivamente.
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.6]{imagens/avd-manager}
+\caption{Janela do Android Virtual Device Manager}
+\legend{Fonte: Google}
+\label{figure:AVDManager}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.6]{imagens/avd-dialog}
+\caption{AVD Diálogo - Criar AVD}
+\legend{Fonte: Google}
+\label{figure:AVDDialogo}
+\end{figure}
+
+\item  \textbf{Device Monitor:} É uma ferramenta independente que fornece uma interface gráfica do usuário para várias ferramentas de depuração e análise de aplicações Android.
+
+\item  \textbf{Emulator:} Trata-se de uma máquina virtual para executar o Android. Essa máquina virtual pode ser customizada para simular diferentes tipos de dispositivos físicos com características próprias como versão do Android, resolução de tela, quantidade de memória, arquitetura, etc.
+\item  \textbf{SDK Manager:}
+O SDK Manager é uma ferramenta gerenciador das APIs do Android, separando em pacotes diferentes o conjunto de softwares e arquivos necessários para o desenvolvimento em cada versão do Android. O SDK Manager pode ser encontrado de duas formas: no eclipse clicando em \textbf{Window>Android SDK Manager} ou localizando o arquivo \textbf{SDK Manager.exe} no diretório do Android SDK. A figura \ref{figure:SDKManager} mostra a janela do SDK \textit{Manager}.
+
+
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.6]{imagens/sdk_manager_packages}
+\caption{Android SDK Manager}
+\legend{Fonte: Google}
+\label{figure:SDKManager}
+\end{figure}
+
+\end{itemize}
+
+A descrição de todas as ferramentas inclusas no Android SDK encontra na documentão oficial fornecida pelo o Google. Segue a lista de ferramentas encontradas na documentação \textbf{bmgr}, \textbf{etc1tool},\textbf{Hierarchy Viewer}, \textbf{hprof-conv},\textbf{jobb}, \textbf{lint}, \textbf{logcat}, \textbf{mksdcard}, \textbf{monkey}, \textbf{monkeyrunner}, \textbf{ProGuard}, \textbf{Systrace}, \textbf{Tracer for OpenGL ES},
+\textbf{Systraview}, \textbf{uiautomator}, \textbf{zipalign}. Todas essas ferramentas formam o conjunto de software fornecido pelo o Google e podem ser estudadas com mais detalhes por quem deseja se aprofundar no desenvolvimento para essa plataforma.
+
+Como Existem diversos celulares de fabricantes diferentes que utilizam o Android, foi preciso adaptar o SO para atender as necessidades particulares de categoria de modelos e fabricantes. O primeiro celular que entrou no mercado rodando o Android foi O HTC G1 que rodava a versão 1.1 \cite{LECHETA:2010}. Essa versão já, praticamente, entrou em desuso uma vez que celulares mais novos tendem a utilizar vesões mais novas do sistema. 
+
+Para LECHETA  uma versão do Android é chamada de plataforma  e para cada plataforma existe uma API correspondente chamada de API Level \cite{LECHETA:2010}.
+Atualmente temos 19 conforme listadas na tabela \ref{table:plataformas}.
+\begin{table}[htb]
+\center
+ \rowcolors{1}{}{lightgray}
+\footnotesize
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{API} & \textbf{PLATAFORMA CORRESPONDENTE}& \textbf{NOME DA VERSÃO} \\
+\hline
+API Level 1 & Android 1.0 & Alpha \\
+\hline
+API Level 2 & Android 1.1 & Beta \\
+\hline
+API Level 3 & Android 1.5 & Cupcake \\
+\hline
+API Level 4 & Android 1.6 & Donut \\
+\hline
+API Level 5 & Android 2.0 & Eclair\\
+\hline
+API Level 6 & Android 2.0.1 & Eclair  \\
+\hline
+API Level 7 & Android 2.1 & Eclair  \\
+\hline
+API Level 8 & Android 2.2 & Froyo \\
+\hline
+API Level 9 & Android 2.3 &  Gingerbread\\
+\hline
+API Level 10 & Android 2.3.3 & Gingerbread \\
+\hline
+API Level 11 & Android 3.0 & Honeycomb\\
+\hline
+API Level 12 & Android 3.1 & Honeycomb\\
+\hline
+API Level 13 & Android 3.2 & Honeycomb  \\
+\hline
+API Level 14 & Android 4.0 & Ice Cream Sandwich  \\
+\hline
+API Level 15 & Android 4.0.3 & Ice Cream Sandwich  \\
+\hline
+API Level 16 & Android 4.1 & Jelly Bean  \\
+\hline
+API Level 17 & Android 4.2 & Jelly Bean \\
+\hline
+API Level 18 & Android 4.3 & Jelly Bean \\
+\hline
+API Level 19 & Android 4.4 & Kitkat  \\
+\hline
+\end{tabular}
+\caption{Lista de plataformas do Android}
+\label{table:plataformas}
+\end{table}
+Além dessas APIs existem nomeadas de existem API personalizadas para a vantagem de trazer como complemento alguns serviços adicionais oferecidos pelo o Google como por exemplo acesso à API do Google Maps. Essas APIs levam o mesmo identificador da API corresponde mas segue na frente o rótulo \textbf{Google Inc}.
+
+Segundo dados pesquisa\footnote{https://developer.android.com/about/dashboards/index.html} realizada pelo o Google, O Jelly Bean e Kitkat são as duas plataformas mais evidentes no momento. Os são mostrados na tabela \ref{table:distribuicaoplatf} e na figura \ref{figure:distribuicaoplatf}
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{c}
+%\includegraphics[scale=0.6]{imagens/dados}
+\end{tabular}
+
+
+\caption{Porção de dispositivos por plataformas no mercado}
+\legend{Fonte: Google}
+\label{table:distribuicaoplatf}
+
+\end{table}
+
+\begin{figure}
+\centering
+%\includegraphics[scale=0.6]{imagens/chart}
+
+\caption{Porção de dispositivos por plataformas no mercado}
+\legend{Fonte: Google}
+\label{figure:distribuicaoplatf}
+\end{figure}
+
+Ter essas informações é essencial para quem deseja desenvolver APPs. Com base nessas informações é possível tomar a decisão de escrever seu aplicativo compatível apenas para Android Jelly Bean e Kitkat por usufluir de recursos mais poderosos.
+
+\subsection{Instalação e configuração o ambiente}
+O Ambiente de programação utilizado nesse trabalho será instalado em um notebook com processador Core i3, 2 GB de memória RAM, com sistema operacional Microsoft Windows 7 32 bits e o Eclipse IDE for Java Developers versão Juno.
+
+Após baixar o SDK\footnote{Disponível em: http://developer.android.com/sdk/index.html}, o arquivo $"android-sdk_r05-windows.zip"$ foi descompactado em uma pasta de preferência no PC que será utilizado para realizar os experimentos desse trabalho. 
+
+O plugin que ADT acompanha o SDK precisa ser instalado no Eclipse. Com o Eclipse Aberto, selecionando \textbf{help} -> \textbf{Instal New Software} \textbf{Add} e em \textbf{name} deverá ser informado um nome e \textbf{Archive} é preciso informar o caminho do arquivo ADT-0.9.6.zip que acompanha o SDK. A figura \ref{figure:plugin} inlustra a tela que deverá aparecer para instalar o ADT.
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=.6]{imagens/plugin}
+\caption{Instalando o plugin ADT no Eclipse}
+\legend{Fonte: o autor}
+\label{figure:plugin}
+\end{figure} 
+
+Com o Plugin instalado, a barra de ferramentas do Eclipse mostrará novos ícones. A figura \ref{figure:eclipsecomplugin} mostra dois ícones importantes que serão utilizados nos próximos passos da configuração do ambiente, trata-se do \textbf{Android SDK Manager} e \textbf{Android Virtual Device}. Esses ícones estão marcados retângulos vermelhas na imagem. Caso esses ícones não apareça pode fazê-los aparecer mudando a pespectiva do Eclipse ou pode encontrá-los no \textbf{Window}.
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=.6]{imagens/eclipsecomplugin}
+\caption{Eclipse com o plugin ADT}
+\legend{Fonte: o autor}
+\label{figure:eclipsecomplugin}
+\end{figure} 
+ 
+ O primeiro ícone é o SDK Manager clicando nesse ícone, será iniciada uma janela como mostra a figura \ref{figure:sdkmanager}. Android SDK não inclui as APIs de cada plataforma, elas poderão ser baixadas utilizando o SDK Manager. Para instalar uma API é preciso selecioná-la e clicar no canto inferior direito no botão \textbf{Install n packages}, onde n é a quantidade de pacotes selecionados. Nesse trabalho as APIs que possivelmente serão utilizadas são a faixa de 11 a 16.
+ \begin{figure}[htb]
+\centering
+%\includegraphics[scale=.6]{imagens/sdkmanager}
+\caption{SDK Manager}
+\legend{Fonte: o autor}
+\label{figure:sdkmanager}
+\end{figure} 
+ 
+O segundo ícone marcado com retângulo vermelho na figura \ref{figure:eclipsecomplugin} é a ferramenta \textbf{AVD Manager}. Clicando nesse ícone iniciará a janela mostrada na figura \ref{figure:AVDManager}. para Criar um novo dipositivo virtual é preciso clicar em \textbf{Add} e será mostrada a janela de dialogo conforme mostra a figura \ref{figure:AVDDialogo}.
+
+A figura \ref{figure:AVDDialogoconf} mostra a configuração de um dispositivo virtual chamado Phone2 que irá simular um Galaxy Nexus rodando a API Level 15 (Android 4.0.3), 512 de RAM, câmera fronteira e trazeira ser a Webcam do PC e um cartão de memória de 4 GB. 
+
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.8]{imagens/avdconfig}
+\caption{Configuração de um dispositivo Virtual}
+\legend{Fonte: o autor}
+\label{figure:AVDDialogoconf}
+\end{figure} 
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.8]{imagens/avdmaneger}
+\caption{Gerenciador de AVD}
+\legend{Fonte: o autor}
+\label{figure:avdmanager}
+\end{figure}  
+
+A figura \ref{figure:avdmanager} mostra a Janela do AVD Maneger com quatro dispositivos virtuais incluido o Phone2 criado a pouco. 
+
+
+\subsection{Estrutura de um projeto em Android}
+Ao criar um projeto Android um conjunto de arquivos e diretórios são criados automaticamente. Um novo projeto já  teoricamente já uma aplicação pronta que pode ser compilada e instalada no dispositivo. A função dessa aplicação\textit{default} é imprimir na tela uma mensagem com o texto ""Hello World". Alguns desses diretórios e arquivos gerados automaticamente na sua aplicação são de extrema importância conhecê-los, pois precisa-se ser manipulados diretamente ou referenciados em suas aplicações. Para ajudar a entender melhor a estrutura de um projeto Android segue a descrição de alguns diretórios cruciais para entender os fundamentos da programação para  Android. A figura \ref{figure:estrutura} mostra como esses arquivos e diretórios estão localizados no projeto.
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.7]{imagens/estrutura}
+\caption{Estrutura do projeto}
+\legend{Fonte: o autor}
+\label{figure:estrutura}
+\end{figure}  
+
+\begin{itemize}
+\item \textbf{Diretório src:} é a diretório do projeto que contém todos os códigos fontes das classes java utilizadas no projeto. Essas classes podem está distribuidas em diversos pacotes que são definidos pelo o usuário. Pacotes no Android seque o mesmo princípio de pacotes em java. O pacote principal funciona como o identificador do seu aplicativo. O nome do pacote é requisitado na hora de assina seu APP para ser distribuído na loja de aplicativos do Google. Por esse motivo é recomendado criar pacotes seguindo a padronização. No projeto de exemplo o nome do pacote principal é br.ufms.cppp.fabrica. em letras minúsculas começando pelo o código do país seguido pelo o seu domínio na Web se houver separando por ponto.
+\item \textbf{gen:} é o diretório que contém a classe R.java, essa classe é responsável por referenciar todos os objetos que necessite se acessado de outro arquivo.
+Para todos os objetos de interface gráfica usada nos arquivos xml pode ser referenciados e acessados através da classe R.
+\item \textbf{assets:} contém arquivos opcionais que deseja utilizar no projeto \cite{LECHETA:2010}.
+\item \textbf{drawable:} Os diretórios que inicia com o prefixo drawable são utilizados para armazenar as imagens do seu projeto. Cada pasta iniciada com esse prefixo corresponde a um tamanho de tela. Se seu APP for customizado para cada plataforma, deve ser utilizado imagens com resoluções que se adequa a cada tamanho de tela.
+\item \textbf{layout:} para cada de um APP é preciso um xml com sua interface gráfica. Exceto que quando não se opta pela a construção da UI diretamente no Java. Por \textit{default} a primeira tela criada usa o arquivo $activity_main.xml$.
+\item \textbf{value:} contém os arquivos necessários para internacionalização da aplicação e outras configurações \cite{LECHETA:2010}. É como se fosse uma espécie de constantes definidas em xml. Por exemplo,  no arquivo $strings.xml$ contém opcionalmente todos os textos utilizados em seu APP cada texto recebe um nome. Semelhantemente ao arquivo strings.xml existem os arquivos $dimens.xml$ e $styles.xml$ que contém as definições de dimensões e estilos respectivamente. Podem existir outras diretórios iniciando com o prefixo values que são utilizados para customizar a interface gráfica adequando a cada tamanho de tela.
+
+\item \textbf{libs:} Esse diretório é utilizado para armazenar as bibliotecas adicionadas ao seu projeto.
+
+\item \textbf{AndroidManifest.xml:} O arquivo \textbf{AndroidManifest} define as caraterísticas do APP e as permissões que o aplicativo terá. Por exemplo, se o APP precisa acessar a internet, no AndroidManifest deverá conter uma permissão para esse serviço. A figura \ref{figure:manifest} mostra algumas o código \textit{default} gerado automaticamente.  
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.9]{imagens/manifest}
+\caption{Código básico do arquivo manifest}
+\legend{Fonte: o autor}
+\label{figure:manifest}
+\end{figure}  
+
+A linha 1 contém a tag que define a versão do xml e o padrão de codificação utf-8.
+
+A linha  possui a tag \textbf{manifest} e que se encerra na linha 27.
+
+Na linha 7 está uma tag \textbf{uses-sdk} que tem dois atributos importantes  \textbf{android:minSdkVersion} e \textbf{android:targetSdkVersion}, tratam-se da versão mínima e da máxima para qual seu projeto está sendo construído respectivamente. 
+
+Na linha 11 tem -se a tag \textbf{application} que se encerra na linha 25 e tem um conjunto de atributos como nome do APP ícone e tema. 
+
+A tag activity é utilizada para registrar todas as atividades do APP. Para cada tela deverá ter uma activity registrada no arquivo \textbf{AndroidManifest}.
+Uma das ativities das tags ativities deverá conter em seu interior a tag \textbf{intent-filter} que é utilizada para definir a activity principal do seu APP correspondendo a tela incial. Para LECHETA, a tag \textbf{action} que configura (android:name="android.intent.action.MAIN") é análoga ao método principal do Java (public static void main(String[] args)\{\}) que é definido como o primeiro método a ser executado \cite{LECHETA:2010}. 
+
+\end{itemize}
+Além dos arquivos descritos existe o arquivo MainActivity.java que representa a construção de uma tela. É uma classe java comun extendendo da classe Activity da API do Android. Essa classe é análoga à classe JFrame da biblioteca Swing.
+\subsection{Activity}
+Para LECHETA \textit{Activity} é uma classe java que deve herdar android.app.Activity ou alguma suas subclasses e geralmente representa uma tela na aplicação \cite{LECHETA:2010}. Já LEE dá a sequinte definição: A \textit{Activity} é a classe base que define uma série de eventos que controlam o ciclo de vida de uma atividade \cite{LEE:2012}. Partindo das definições dadas por LECHETA e LEE, \textit{Activity} é classe responsável pela a criação de uma atividade na sua aplicação. Um APP possui uma ou mais atividades. Para  cada atividade existe uma classe responsável por implementar os eventos gerados por ela e essa deve extender da classe \textit{Activity} ou de alguma de suas subclasses. 
+
+Quando se declara uma declara uma classe extendo de \textit{Activiy} é obrigatório a implementação do método \textbf{onCreate(Bundle)} via \textbf{Override}.  Dentro desse método é chamado o Método \textbf{setContentView(View)}. Embora a classe \textit{Activity} é de extrema importância para a criação de uma tela para interface gráfica com o usuário, essa classe não desenha nada tela. A classe responsável por desenhar objetos na tela é a classe View.
+A classe \textit{View} será descrita com mais detalhes no próximo tópico. A figura \ref{figure:activity} demostra a criação de uma \textit{activity}.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.9]{imagens/activitydeclarada}
+\caption{Criação de uma Activity}
+\legend{Fonte: o autor}
+\label{figure:activity}
+\end{figure}  
+
+No exemplo  o método setContentView recebe como parâmetro uma referência através da classe R para um arquivo xml enquanto teoricamente deveria ser uma instância da classe View. O que Acontece é que você pode optar por construir sua interface usando xml, esse arquivo será convertido para uma classe View internamente fazendo se passar pelo parâmetro esperado pelo método.
+
+Outro metódo gerado automaticamente, mas que não é obrigatório para a execução atividade é o método \textbf{onCreateOptionsMenu(Menu)} que recebe como parâmetro uma instância da classe Menu. 
+
+Além desses dois métodos a classe \textit{Activity} implementa outros métodos utilizados para para controlar o ciclo de vida de uma activity. para LECHETA o ciclo de vida de uma \textit{Activity} deve ser visto como algo que possui início, meio e fim. Pode se descrever o liclo de vida de uma atividade como o intervalo de templo entre sua ativação até sua morte e eliminação da memória. Durante esse intervalo de tempo as atividades inciadas podem passar por estados conforme visto nos conceitos de gerenciamento de memória e escalonamento de processos do SO Android.
+Para LECHETA uma atividade pode passar por ciclos durante seu ciclo de vida:
+ \textbf{\textit{entire lifetime}}, \textbf{\textit{visible lifetime}} e \textbf{\textit{foreground lifetime}}.
+\begin{enumerate}
+\item \textbf{\textit{entire lifetime}:} compreendo todo o ciclo de vida de uma atividade da sua ativação com o método onCreate até sua eliminação total da memória.
+\item \textbf{\textit{visible lifetime}:} a atividade está ativa podendo está interagindo diretamente com o usuário, ou parada no segundo plano. Quando uma atividade está interagindo diretamente com o usuário ela está no topo da pilha de execução.
+
+\item\textbf{\textit{foreground lifetime}:} esse é o temppo em que a atividade está exclusivamente no topo da pilha de execussão interagindo com o usuário.
+\end{enumerate}
+
+O controle do ciclo de vida é feito pelo o sistema  operacional, no entanto o usuário poderá interferir usando métodos que serão descritos abaixo. Com esses métodos é possível ativar, iniciar, pausar, parar, restaurar e eliminar a atividade da pilha de execução liberando os recursos reservados a ela. Uma lista completa com os métodos que controla o ciclo de vida será apresentada a seguir.
+
+\begin{itemize}
+\item \textbf{onCreate(Bundle):} esse método é criado uma única vez, nele deve ser informada a View que irá formar a tela da atividade com o método setContentView. O método \textbf{onStart} é chamado ao final do método onCreate para ativar a \textit{Activity}. 
+\item \textbf{onStart():} é utilizado para ativar uma \textit{Activity}. Em outras palavras esse método é responsável colocar a atividade para ser escalonada. Como  uma atividade que interage diretamente com o usuário, ela será comportada em um processo com prioridade alta e rapidamente é colocado na topo da pilha de execução.
+\item \textbf{onRestart():} esse método é utilizado para restaurar uma atividade, que por uma decisão do usuário ou do sistema operacional esteve pausada. Sempre que o método onRestart é chamada há uma mudança de contexto. Um exemplo é quando usuário de um smartphone recebe uma chamada, aplicação que estava interagindo com o usuário passa para o segundo plano enquanto durar a ligação, depois então é restaurada de onde parou sua execução.
+\item \textbf{onResume():} O método onResume é chamada sempre depois que a atividade é colocada no topo da pilha e pronta para entrar em execução. Portanto, esse método é sempre chamado após o \textbf{onStart}.
+\item \textbf{onPause):} o método é chamado para pausar uma atividade geralmente é chamdo quando o celular entra em modo \textbf{\textit{stand-by}}\footnote{Palavra pode ser substituída por dormindo ou espera}. O contexto de hardware é salvo para uma possível restauração do processo.
+\item \textbf{onStop():} esse método é chamado sempre que uma activity está sendo encerrada. Porém mesmo sendo encerrada o processo fica na memória até que o SO precise de alocar aquele espaço de memória, nesse caso ocorre a chamada do método \textbf{onDestroy} pelo sistema.
+\item \textbf{onDestroy():} O processo é encerrado eliminado da pilha de execução e da memória sendo impossível restaurá-lo.
+
+\end{itemize}
+
+A figura \ref{figure:ciclodevida} ilustra o diagrama de funcionamento do ciclo de vida de uma \textit{Activity} no Android.
+
+\begin{figure}[htb]
+\centering
+%\includegraphics[scale=0.9]{imagens/ciclodevida}
+\caption{Diagrama do ciclo de vida de uma \textit{Activity}}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:ciclodevida}
+\end{figure} 
+
+O ciclo de vida de uma atividade é controlada automativamente pelo o SO, no entanto o programador pode interferir no nesse processo afim de melhorar a performace do sistema com bom gerenciamento de recursos. o programador sabe exatamente e mais que o SO quando uma \textit{Activity} precisa ser destruída e retirada da memória. 
+
+\subsection{Intent}
+Para LECHETA  a classe \textbf{\textit{Intent}} é o coração do Android devido a sua tamanha importância.
+\begin{citacao}
+Uma intent está presente em todos os lugares e representa uma mensagem de aplicação para o sistema operacional, solicitando que algo seja realizado, e representa um importante papel na arquiteura do Android para integrar diferentes aplicações \cite{LECHETA:2010}.
+
+\end{citacao}
+
+Uma chamada ao sistema para realizar determinada ação é feita utilizando a classe android.content.Intent.
+Segue numerada exemplo de funcionalidades ou serviços realizados pela a classe Intent citada por LECHETA.
+
+\begin{enumerate}
+\item Enviar um mensagem ao sistema operacional solicitando serviço.
+\item Passar parâmetros de uma tela da aplicação para outra.
+
+\item Solicitar que o SO inicie a aplicação nativa para realiza uma ligação telefônica. Figuras \ref{figure:fazerchamada} e \ref{figure:fazerchamadaresultado}.
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.8]{imagens/fazerchamada}
+\caption{Fazer uma chamada para o número 651234567}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:fazerchamada}
+\end{figure} 
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.4]{imagens/fazerchamadaresultado}
+\caption{Resultado ação de fazer uma chamada}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:fazerchamadaresultado}
+\end{figure} 
+
+\item Abrir o browser com determinado endereço como mostrado nas figura \ref{figure:abrirbrowser} e \ref{figure:abrirbrowserresultado}.
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.8]{imagens/abrirbrowser}
+\caption{Abrindo o browser no site da Amazon}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:abrirbrowser}
+\end{figure} 
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.4]{imagens/abrirbrowserresultado}
+\caption{Resultado ação abrir o browser no site Amazon}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:abrirbrowserresultado}
+\end{figure} 
+\item Solicitar ao SO que inicie a aplicação padrão de mapas em determinada coordenada. Figuras \ref{figure:abrirmapa} e   \ref{figure:abrirmaparesultado}.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.8]{imagens/abrirmapa}
+\caption{Abrindo o mapa}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:abrirmapa}
+\end{figure} 
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.4]{imagens/abrirmaparesultado}
+\caption{Resultado ação abrir o mapa}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:abrirmaparesultado}
+\end{figure} 
+
+\item Enviar mensagem para outra aplicação ou processo.
+\end{enumerate}
+
+É quase que impossível enumarar todas as vezes que utilizamos uma intent. O importante é saber que ela é uma interligadora entre seu APP, o SO e demais processos. Para solicitar que o sistema relize boa parte das tarefas diretamente de sua aplicação é preciso adicionar permissões no arquivo \textbf{AndroidManifest.xml}. Por exemplo, para abrir o browser é preciso adicionar a permissão de acesso à internet.
+
+\subsection{Interfáce Gráfica com Usuário}
+A interface gráfica com o usuário pode ser feita de duas maneira. Uma é usando XML\footnote{Recomendada pelo Google e mais documentada} a outra usando Java diretamente. A classe mãe de todas as classes de interface gráfica é a classe \textbf{View}
+na a figura 
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=1]{imagens/classeview}
+\caption{Classe \textbf{View} e suas classes filhas}
+\legend{Fonte: \cite{ABLESON:2012}}
+\label{figure:classeview}
+\end{figure} 
+
+A tabela mostra os métodos da \textbf{View}. Não há objetivo nesse trabalho se aprofundar detalhadamente em todas as classes filhas da classe \textbf{View} apenas introduzir os conceitos para criação de interface gráfica com o usário. Nesse ínterim, contempla-se a classe \textbf{View} e seus métodos. É interessante lembrar que numa linguagem orientada a objetos todos todos os métodos de uma classe pai serão herdadas em todas suas classes filhas. Desse forma, todos os métodos apresentados na talbela \ref{}
+\ref{table:plataformas}.
+\begin{table}[h!]
+\center
+
+\begin{tabular}{|l|l|}
+\hline
+\textbf{MÉTODO} & \textbf{FUNÇÃO}\\
+\hline
+setBackgroundColor(int color) & Define a cor de fundo \\&\\
+\hline
+setBackgroundDrawable(Drawable d) & Define o fundo com\\ 
+&imagem ou gradiente\\
+\hline
+setClickable(boolean c) & Define eventos de click\\&\\
+\hline
+setFocusable(boolean f) & Define eventos de foco\\&\\
+\hline
+setLayoutParams(ViewGroup.LayoutParams l) & Define parâmetros para Layout\\
+& como posição, tamanho, etc. \\
+\hline
+setMinimumHeight(int minHeight)& Define a altura mínima\\&\\
+\hline
+setMinimumWidth(int minWidth)& Define largura mínima\\&\\
+\hline
+setOnClickListener(OnClickListener l)& Escuta eventos de de click.\\&\\
+\hline
+setOnFocusChangeListener(OnFocusChangeListener l) &Escuta e dipara eventos altera\\
+& o foco.\\
+\hline
+setPadding(int left, int right, int top,
+int bottom) & Define as margens\\&\\
+\hline
+
+\end{tabular}
+\caption{Lista Métodos da classe \textbf{View}}
+\legend{Fonte: \cite{ABLESON:2012}}
+\label{table:classeview}
+\end{table}
+
+A figuras \ref{figure:estrutura} mostra a estrutura e organização de arquivo xml.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=1]{imagens/xmlestrutura}
+\caption{Arquivo Main}
+\legend{Fonte: \cite{LEE:2012}}
+\label{figure:estrutura}
+\end{figure} 
+
+Um arquivo xml é basicamente formado por um layout principal com seus atributos. E um conjuto de elementos com seus atruibutos. Nessa figura há um elemento apenas que um \textbf{TextView} que responável por reservar um espaço para um texto na tela. O Elemento \textbf{TextView} assim como qualquer outro elemento de interface possui seus atributos. Atributos são definições. Algumas definições são comuns em quase todos os elementos, como, por exemplo um \textbf{id} responsável por identificar o elemento dentro do APP, o \textbf{layout\_with} e \textbf{layout\_height} que é a quantidade de espaço que o elemento deve ocupar na horizontal e na vertical respectivamente. No caso da \textbf{TextView} apresentada no arquivo possue um campo \textbf{text} esse campo é o conteúdo que aparecerá na tela. Nesse exemplo, está referenciando um texto \textbf{hello} arquivos de constantes de Strings (\textbf{strings.xml}).
+
+
+\subsection{BroadCastReceiver}
+\textbf{BroadCast} é um termo importado da literatura de redes de computadores e sistemas distribuídos. O conceito de \textbf{BroadCast} é transmitir uma mesma informação para todos os pontos. Em redes de pontos seria hosts e roteadores. No Android significa transmitir uma mensagem para todos usuários. Como cada aplicação representa um usuário tendo sua própria ID e sua instância da VM Dalvik, o conceito é facilmente adaptável. O transmissor da mensagem é o núcleo do sistema operacional e os pontos são os APPs na camada de aplicação.  Qualquer APP instalada pode enviar e receber mensagem através da classe \textit{android.content.BroadCastReceiver}.
+
+Um exemplo prático é quando um usuário de smartphone recebe um SMS. O sistema operacional é o primeiro a receber a mensagem, após recebimento, SO envia uma mensagem em uma intent via Broadcast para os aplicativos alertando sobre o recebimento de um SMS, por \textbf{default} a aplicação nativa (não necessariamente, pode ser um APP de terceiro) responsável pelo o recebimento de mensagem interpleta essa mensagem, salva seu contéudo e então avisa alerta o usuário sobre o recebimento de um novo SMS. 
+
+Quando o sistema operacional acaba de ser inicializado, o núclo envia uma mensagem a todas as aplicações com a mensagem \textbf{BOOT\_COMPLETED}. Se aproveitando desse recurso posso criar um processo que executa sempre em segundo plano, sem que o usuário perceba e sem que o atrapalhe, para ser executar sempre.
+mesmo que o telefone seja desligado e ligado novamente sempre que a aplicação receber a mensagem \textbf{BOOT\_COMPLETED} esse processo será ativado.
+
+Esse recurso é muito utilizado em aplicações que executam em segundo plano.  
+
+\subsection{Mapas e GPS}
+
+\chapter{Ferramentas de Localização}
+Atualmente existem dois sistemas de posicionamento global em pleno funcionamento no mundo. O norte americano NAVSTAR GPS (ou simplesmente GPS como é popularmente conhecido) e o russo GLONASS (GNSS).  Ainda existem outros dois que estão em fase de desenvolvimento: O sistema GALILEO (ou popularmente Super GPS) da união europeia e o Compass BeiDou da China. Embora muito se fala em sistema de posicionamento por toda parte do mundo, elas estão concentradas em mãos de poucos países. 
+A seguir, uma lista com os principais conceitos que envolvem os sistemas de posicionamentos.
+\section{Conceitos Básicos}
+\subsection{Satélite}
+Um satélite artificial é qualquer corpo feito pelo homem e colocado em órbita da Terra ou de qualquer outro astro. As primeiras ideias de construção de satélites artificiais surgiram das observações de satélites naturais no universo. As ideias de construção de satélites artificiais surgiram no século XVIII fundamentadas nas teorias de gravitações de Isaac Newton. No entanto, a comunidade científica mundial se limitou na teoria até meados do século XX quando a União Soviética (atualmente extinta) estreou lançando seu primeiro satélite artificial da história em 1957, o Sputnick 1 que marcou inicio da corrida espacial. A partir dessa data foram lançados centenas de satélites. Quando um satélite deixa de funcionar o mesmo é desativado. Quando desativados partes desses corpos se separam passando a orbitar de forma independente formando no chamado lixo espacial. Teoricamente, de acordo com a definição, esses corpos também são satélites. Todavia é comumente chamada de satélite os que estão ativos exercendo alguma função. 
+
+\subsection{Dispositivos Receptores} 
+Um receptor é um dispositivo eletrônico responsável por coletar os sinais enviados pelos satélites e processá-los transformando os em coordenadas, tempo, deslocamento e velocidade em tempo real.  É o dispositivo com o qual o usuário visualiza seus dados. Atualmente existem diversos fabricantes e modelos desses aparelhos. As figuras abaixo mostram alguns modelos disponíveis no mercado.
+
+
+Os modelos de receptores são projetados para atender as necessidades de cada usuário. Existem desde modelos de bolso até modelos sofisticados em computadores de bordo em navios e aeronaves incluído incluindo os supercomputadores para levantamentos geodésicos e topográficos.
+Para ALBUQUERQUE e SANTOS os receptores
+Além de receber e decodificar os sinais dos satélites, os receptores são verdadeiros computadores que permitem várias opções: referências; sistemas de medidas; sistemas de coordenadas; armazenamento de dados; troca de dados com outro receptor ou com um computador; etc. Alguns desses modelos possuem arquivos com mapas gravados em sua memória [ALBUQUERQUE e SANTOS, 2013].
+
+A principal característica dos receptores é a possibilidade de processamentos dos dados recebidos dos satélites em dois modos: o modo de processamento em tempo real e o modo de pós-processamento.
+No de processamento em tempo real, leitura dos sinais de satélites e cálculo das coordenadas de sua posição atual.
+No modo pós-processamento, umas das principais funções é a  leitura de coordenadas de documentos cartográficos, formação de rotas a partir de um conjunto não vazio de pontos que, quando ativadas, podem servir para calcular distância, tempo de percurso e horário de chegada até ao próximo ponto.
+Alguns receptores possuem em sua memória um conjunto de mapas que em conjunto com as informações fornecidas dos sistemas de posicionamento fornecem ao usuário suporte necessário para deslocamento. 
+
+
+\subsection{Paralelos, Latitude, Longitude, Altitude e Coordenadas Geográficas}
+
+\textbf{Coordenadas geográficas} - são um sistema de linhas imaginárias traçadas sobre o globo terrestre. Pode ser obtida a partir do cruzamento de um paralelo com um meridiano. Suas coordenadas são definidas como latitude e longitude e a unidade de medida é dado em graus minutos e segundos.
+
+\textbf{Paralelos} - são linhas paralelas ao Equador, sendo que a própria linha imaginária do Equador é um paralelo. O 0º corresponde ao equador, o 90º ao pólo norte e o -90º ao pólo sul.
+
+\textbf{Meridianos} - são linhas perpendiculares ao Equador que vão do Pólo Norte ao Pólo Sul e cruzam com os paralelos. Os meridianos possuem o mesmo tamanho e o ponto de partida para a numeração dos meridianos é o meridiano que passa pelo observatório de Greenwich (0º)  crescente em 180º e decrescente em até -180º.
+
+\textbf{Latitude} - é o ângulo formado entre o Equador e um ponto estimado. Os pontos que estão sobre a linha do equador possuem 0º. Pontos situados ao norte do equador têm latitudes maiores que 0º variando até 90º que é a latitude do pólo geográfico norte. Da mesma forma variam as latitudes ao sul do equador terrestre, desde 0º a 90º, latitude do pólo geográfico sul. Para se diferenciar os valores, atribui-se sinal positivo para as latitudes norte e negativo para as latitudes sul.
+
+
+\textbf{Longitude} - O ângulo formado entre o meridiano que passa por determinado lugar e o meridiano de Greenwich. A longitude  é a medida de 0º a 180º. Convencionalmente, atribui-se os sinais positivos para longitudes leste e negativo para longitudes oeste.
+  
+Ao termos  os valores da latitude e da longitude de um local desejado, teremos determinado as coordenadas geográficas do mesmo.
+
+
+
+
+\section{NAVSTAR GPS}
+Para ALBUQUERQUE e SANTOS, na década de 1970, o Departamento de Defesa dos EUA desenvolveu um sistema de posicionamento de alvos que se tornaria o principal sistema de posicionamento global que temos hoje: o GPS.
+GPS é uma simplificação para NAVigation System with Time and Ranging Global Positioning System - NAVSTAR GPS. Foi construído para fins militares, mas foi, posteriormente, extendido para a comunidade civil. Suas primeiras aplicações fora do âmbito militar foram a navegação marítima, os levantamentos topográficos e geodésicos. Atualmente ganhou muitas utilizações tantos por empresas quanto por pessoas que exploram seus recursos para auxiliar no deslocamento de pessoas e cargas no dia-a-dia. 
+
+Embora o GPS começou a ser desenvolvido na primeira metade da década de 1970, o sistema só atingiu sua configuração final em  1994 quando foi declarado totalmente funcional com a cobertura de todo o globo terrestre.
+Ainda de acordo com ALBUQUERQUE e SANTOS, o GPS é especificado para oferecer coordenadas bi ou tridimensionais de pontos na superfície terrestre, bem como a velocidade e o deslocamento entre pontos.  Formado pela uma constelação de 24 satélites, de acordo com MONICO, estão 
+[...] distribuídos em seis planos orbitais igualmente espaçados, com quatro satélites em cada plano, numa altitude aproximada de 20.200 km. Os planos orbitais são inclinados 55$º$ em relação ao Equador e o período orbital é de aproximadamente 12 horas siderais. Dessa forma, a posição dos satélites se repete, a cada dia, 4 minutos antes que a do dia anterior. Essa configuração garante que, no mínimo, quatro satélites GPS sejam visíveis em qualquer local da superfície terrestre, a qualquer hora [MONICO,ano].
+A figura 1 ilustra satélites em órbitas como descrito por MONICO
+A determinação do ponto, onde se encontra a antena do dispositivo receptor do usuário, consiste no cálculo das distâncias entre os dispositivos receptores e os quatro satélites. Nos conceitos de geometria bastam três distâncias para que o dispositivo receptor possa calcular as coordenadas do ponto onde se encontra desde que os satélites pertençam a planos diferentes. Todavia em razão do não sincronismo entre os relógios dos satélites e o do receptor adiciona-se uma nova medida para fins de garantir uma melhor acurácia. 
+Cada satélite assim como os dispositivos receptores do GPS possuem relógios atômicos que marcam as horas com uma precisão incrivelmente grande, para se ter uma noção. O relógio atrasa um segundo apenas a cada cem mil anos. Portando, se depender do atraso do relógio, a precisão é garantida.
+
+
+\section{GLONASS}
+O Sistema de posicionamento global da Rússia é muito similar ao sistema NAVSTAR GPS americano. Consiste em uma constelação de satélites em média órbita. Assim como o GPS americano é composto por 3 seguimentos:
+O seguimento de controle
+O seguimento de controle consiste em uma estação terrestre responsável pelo o gerenciamento do sistema. De muitas atividades de gerenciamento, as  principais são manter o horário dos satélites atualizados e sincronizados.
+O seguimento espacial
+O seguimento espacial consiste em uma constelação de 24 satélites como no NAVSTAR GPS, porém em apenas 3 planos orbitais com 8 satélites em cada plano.
+O seguimento de usuário
+O seguimento de usuário é divido em cível e militar assim como no sistema americano. Esse seguimento é formado pelo os dispositivos receptores de sinais sob posses de usuários finais. 
+Apesar de ser um sistema antigo e, em completo funcionamento, ainda não conseguiu intimidar o GPS americano que  por sua vez é mais difundido no mundo. No entanto, Rússia, União Europeia e Estados unidos vem trabalhando para garantir a interoperabilidade em seus sistemas GLONASS/Galileo/GPS.
+
+\section{GALILEO}
+Em 1998 a União Europeia decidiu por criar seu próprio sistema de posicionamento global independente do NAVSTAR GPS americano. Ao contrário do sistema americano de posicionamento global, o Galileo foi projetado exclusivamente para uso cível. De acordo com seu projeto o Galileo foi projetado para oferecer 5 tipos de serviços:
+
+1.	Um serviço aberto e gratuito a disposição de usuários comuns em qualquer parte do globo. 
+2.	Um serviço comercial com valores diferenciados de acordo com a precisão exigida.
+3.	Um serviço de segurança a vida em sistemas críticos como transporte aéreo.
+4.	Um serviço público regular de alta precisão com sistema robusto contra interferência para fins governamentais dos países aliados.
+5.	Um serviço de apoio a atividades de busca e resgate.
+[KAPLAN e ELLIOTT].
+ 
+Para garantir a qualidade de tais serviços, o projeto do galileo conta com uma constelação de 30 satélites, 6 satélites a mais que o GPS americano, que garantirão a cobertura a toda superfície terrestre. O sistema foi projetado para ser melhor que o sistema americano, estima-se que a taxa de erro será 15 cm contra 20 metros do sistema americano. No entanto, vale esperar pela a entrada do sistema em funcionamento, que estava prometido para 2008, para certificar se de tal aprimoramento. 
+
+\section{BeiDou}
+O sistema de posicionamento global chinês BeiDou Compass foi projetado para atender a navegação marítima e a precisão no deslocamento de usuários civis e militar. Atualmente o sistema, assim como o Galileo, ainda não está em completo funcionamento,  mas em fase de testes com três satélites em órbitas estacionárias sobre a China. É o único sistema que opera com tráfego de dados em dois sentidos satélite-receptor/receptor-satélite diferindo assim do NAVSTAR GPS do GLONASS e do Galileo. A ideia geral do funcionamento do sistema é descrito como:
+O centro de operações do sistema envia um sinal de rádio para um conjunto de usuários. Os dispositivos receptores dos usuários devem responder o sinal recebido a, pelo menos, três satélites, a posição do usuário é calculada pelo o centro de operações do sistema com base na variação de tempo ocorrida entre o envio e recebimento do sinal. 
+O centro de operações do sistema é o responsável por calcular o posicionamento de todos os usuários do sistema. Com uma grande quantidade de usuários é inevitável a adoção de um grande Data Center para atender toda a demanda. No entanto, por enquanto, o BeiDou Compass chinês está restrito apenas a usuários chineses. Os planos do governo chinês para o futuro é expandir o sistema, alargando a constelação de satélites para funcionar em âmbito global. 
+
+\chapter{O Problema}
+\chapter{Considerações Finais}
+Just-in-time
+
+\bibliography{bib/bib}
+\bibliographystyle{plain}
+\end{document}
