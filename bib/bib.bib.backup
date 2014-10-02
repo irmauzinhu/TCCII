@@ -240,30 +240,4 @@
   year={2011}
 }
 
-@phdthesis{herlocker2000understanding,
-  title={Understanding and improving automated collaborative filtering systems},
-  author={Herlocker, Jonathan Lee},
-  year={2000},
-  school={University of Minnesota}
-}
-
-@inproceedings{shardanand1995social,
-  title={Social information filtering: algorithms for automating “word of mouth”},
-  author={Shardanand, Upendra and Maes, Pattie},
-  booktitle={Proceedings of the SIGCHI conference on Human factors in computing systems},
-  pages={210--217},
-  year={1995},
-  organization={ACM Press/Addison-Wesley Publishing Co.}
-}
-
-@incollection{massa2004using,
-  title={Using trust in recommender systems: an experimental analysis},
-  author={Massa, Paolo and Bhattacharjee, Bobby},
-  booktitle={Trust Management},
-  pages={221--235},
-  year={2004},
-  publisher={Springer}
-}
-
-
 

@@ -12,7 +12,7 @@
 				brazil]{abntex2}
 
 \usepackage{lmodern}
-
+\usepackage{mathtools} 			%Math tags
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage{calligra}
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
@@ -263,7 +263,7 @@ Muitas vezes é preciso fazer escolhas sem ter experiência suficiente sobre as 
 Na maioria das aplicações, a recomendação é feita para oferecer ao seu usuário um produto que ele tem uma chance maior de interesse por parte do consumidor, facilitando a procura desse usuário, se for o caso, e aprimorando a eficiência do serviço prestado pelo ofertante.
 
 \begin{citacao}
-As empresas precisam estár prepadas para, no mínimo, oferecer produtos com diversas características para para conseguir oefercer a característica que mais se adeque a determinado usuário. A tendência é de que as empresas de comércio eletrônico possa oferecer mais produtos relacionados com o gosto de todos na internet. No entanto, ao disponibilizar diversas características de seus produtos para seus usuários, torna-se complicado a busca do usuário pelo produto que ele está procurando. Uma solução para esse problema de \textit overload de informação é a utilização de Sistema de Recomendação.  
+As empresas precisam estár prepadas para, no mínimo, oferecer produtos com diversas características para para conseguir oefercer a característica que mais se adeque a determinado usuário. A tendência é de que as empresas de comércio eletrônico possa oferecer mais produtos relacionados com o gosto de todos na internet. No entanto, ao disponibilizar diversas características de seus produtos para seus usuários, torna-se complicado a busca do usuário pelo produto que ele está procurando. Uma solução para esse problema de \textit{overload}(Colocar um apud) de informação é a utilização de Sistema de Recomendação.  
 \cite[4.0]{schafer1999recommender}.
 \end{citacao}
 
@@ -319,6 +319,203 @@ trabalhos desenvolvidos pelo autor do livro que também foi comprado por outros 
 
 \item \textbf{Reel.com} – Uma ligação entre os filmes semelhantes é feita e anunciada quando o usuário estiver decidindo sobre qual filme ele vai escolher. Uma  frase do tipo “Em NOMEDOFILMENOVO existe as seguintes semelhanças  com NOMEDOFILMEANTIGO,...” onde “NOMEDOFILMEANTIGO” seria algum  filme já assistido pelo usuário com a maior porcentagem de aproximação de  atributos com o filme novo.
 \end{itemize}
+
+
+%_______________ end ____________________________
+
+\section{Os principais algoritmos para a recomendação}
+Entre muitas técnicas utilizadas para a recomendação em estudos e divulgadas na internet, algumas se destacam por serem mais estudados e servir como ponto de partida para uma evolução ou para um estudo mais profundo dessas técnicas. Essas tecnicas possuem características que as diferenciam uma das outros ou combina partes específicas ou sua totalidade, suas características com as características de outra técnica, com a finalidade de conseguir formular uma outra técnica, se tornando um meio de recomendação mais eficiente, proporcionando resultados melhores do que as tecnicas que foram derivadas, com os resultados das técnicas comparados de forma separada. Entre essas tecnicas, não somente suas características podem determinar qual, entre elas, será a melhor em todos os cenários e situações que poder utilizar alguma forma de recomendação, pois, como será abordado de forma mais clara nos parágrafos seguintes, uma técnica pode atingir melhores resultados em um grande número de situações, entretanto, em algum outro cenário, pode ser superada por outra técnica cuja suas características deveriam determinar que esssa técnica não é a melhor, pois possui menos parâmentros para a recomendação, demonstrando que uma técnica pode sair-se melhor que a outra, mas sempre é levado em concideração o cenário em que ela será aplicada.(Seria bom alguma referência)
+
+Todas as técnicas de recomendação utilizam informações que estão na base de dados do sistema, onde fica arquivado o histórico de atividade de seus usuários, mas cada uma delas utiliza apenas as informações que são necessárias  e sulficientes para ser capaz de efetuar a recomendação. As técnicas são divididas em dois grupos, onde um grupo é formado pela recomendação não personalizada e o outro pela recomendação personalizada\cite{schafer1999recommender}\cite{kantor2011recommender}. Essa divisão estabelece qual vai ser o tipo de recomendação que o sistema vai oferecer, como quais atributos são relevantes ou se a recomendação usará algum atributo, pois se for o caso da recomendação não personalizada, não será usado nenhum atributo, já a recomendação personalisada é a, também chamada, recomendação baseada em atributos\cite{schafer1999recommender}, por usar atributos para sua recomendação. A divisão dos grupos é baseada nesses argumentos, uma vez que os dois grupos utilizam conceitos diferentes.
+
+A recomendação não pesonalizada consiste em recomendar o que está em destaque no momento utilizando, para o aprendizado de máquina, um conjunto de teste composto pelos dados mais relevantes do sistema referente a uma determinada categoria, como a categoria que ordena o livro mais vendido, ou escala a música mais tocada, ou poderia recomendar o melhor restaurante em determinada cidade levando em conta o número de clientes que eles atendem.
+
+Para a recomendação baseada em atributos, a quantidade dos itens classificados não é a unica informação que é levada em concideração, mas também os dados referente as características dos itens, a qualidade e as possíveis avaliações que foram feitas anteriormente por seus usuários, para ser utilizado também como critério classificatório, utilizando algoritmos que são característicos para esta tarefa. Muitos algoritmos são estudados na recomendação baseada em atributos, sempre com a finalidade de encontrar uma nova variação que possa ser capaz de superar as outros algoritmos em algum ambiente ou cenário específico, ou com a finalidade de encrementar um algoritmo já pesquisado para demostrar que, de alguma forma, ele pode obter resultados melhores utilizando mais alguns atributos além dos atributos básicos do algoritmo. Os algoritmos mais estudados no conjunto personalizado são os algoritmos de recomendação baseado em conteúdo, a recomendação por filtro colaborativo, e o algoritmo de recomendação híbrido. A recomendação baseada em conteúdo, é a recoendação onde é utilizado os atributos dos itens para correlacionar com outros produtos cuja suas características possuem uma alta porcentagem de equivalencia e realizar a aproximação correlacional entre os produtos. Já o filtro colaborativo é o algoritmo que utiliza a correlação dos atributos baseados nas preferências dos usuários, com a finalidade de aproximar os itens que possuem a melhor avaliação dos usuários e recomendar para outros que possuam proximidade em suas preferências. O algoritmo de recomendação híbrido combina as duas técnicas anteriores, relacionando os itens que possuem atributos parecidos com as avaliações que foram feitas, sobre eles, pelos seus usuários, aprimorando a sua aproximação sobre as preferências de seus usuários.
+
+Os valores que podem ser utilizados como avaliação, podem servir como exemplo de uma, das diversas formas de avaliação, que podem ser por \cite{schafer2007collaborative}:
+
+\begin{itemize}
+\item \textbf{Nota de satisção} – Valores escalares, onde é possível afirmar, com os valores dispostos por números ou outras formas de representação, como, por exemplo, estrelas ou asteriscos, para mostrar, qual seria a porcentagem de satisfação do usuário quanto ao produto que foi experimentado.
+\item \textbf{Gostei ou Não gostei} – Valores binários, utilizando apenas dois tipoes de valores para dizer apenas se \textit{Gostou/Não gostou}, ou \textit{Sim/Não}, etc.
+\item \textbf{Possui} – Valores unitários, para afirmar o que pode encontrar no produto ou se possui um atributo específico, como dizer a qual categoria determinado filme pertence, por exemplo.
+\end{itemize}
+
+
+
+\subsection{Recomendação não personalizada}
+O sistema de recomendação não personalizado\cite{schafer1999recommender} efetua sua recomendação baseado na preferência generalizada, utilizando o maior número de informações possíveis sobre a esperiência dos usuários com o sistema onde foi aplicado a recomendação. Como a recomendação não personalizada não utilizada dados de usuários ou atributos dos itens existentes no sitema, a recomendação é tida como independente. Por tanto, não será recomendado diferentes itens para determinados grupos de pesosas, e sim os itens mais relevantes, baseados nas preferências gerais, de determinada categoria, ou de um grupo de músicas aleatórias que estão sendo vendidas avulsas. A recomendação é feita de forma automática, pois não precisa da interação contínua do usuário para fazer a recomendação, e todas as informações sobre a recomendação são passageiras, por terem como base o item melhor avaliado no momento e não por terem a relação entre usuário e produto. Em diversos sistemas, a recomendação não personalizada é utilizada pelo fato da fácil implementação e por não precisar recomendar novos produtos para cada novo usuário, podendo ser colocada na página principal, por exemplo.
+
+Alguns sistemas utilizam a recomendação personalizada com pequenas variações, onde, além de utilizar as preferências gerais sobre os produtos, utilizão avaliações feitas de forma explícita, mas não é utilizado essas informações para calcular a lista de produtos que serão recomendados, mas apenas como forma de opção para seus usuários.
+
+Na tabela abaixo é disposto um pequeno exemplo de como seria uma matriz encontrada em sistemas que utilizão a recomendação não personalizada, onde seus produtos são avaliados de forma individual por seus usuários.
+
+{%Tabela exemplo recomendação não personalizada
+\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+\begin{center}
+\begin{array}{lccccll}\cline{3-7}
+× & \mc{6}{c}{\textit{Itens}}\\\cline{2-7}
+\mc{1}{l|}{×} & \mc{1}{c|}{1} & 2 & 3 & 4 & \mc{1}{c}{5} & \mc{1}{c}{6}\\\cline{2-7}
+\mc{1}{l|}{×} & \mc{1}{c|}{2} & 5 & ? & 4 & \mc{1}{c}{?} & \mc{1}{c}{4}\\
+\mc{1}{l|}{\textit{Usuário}} & \mc{1}{c|}{3} & 2 & 2 & ? & \mc{1}{c}{1} & \mc{1}{c}{3}\\
+\mc{1}{l|}{×} & \mc{1}{c|}{4} & ? & ? & 2 & \mc{1}{c}{5} & \mc{1}{c}{4}\\
+\mc{1}{l|}{×} & \mc{1}{c|}{5} & 3 & 5 & 4 & \mc{1}{c}{3} & \mc{1}{c}{3}
+\end{array}
+\caption{Matriz de avaliações da recomendação não personalizada}
+\end{center}
+}%
+
+Essa matriz exemplo, é composta por todas as avaliações feitas pelos usuários individualmente, relacionando cada usuário $u$ com suas avaliações realizadas para cada item $i$}. Como neste caso a recomendação é feita mediante as avaliações, é preciso encontrar, para cada item, uma média do valor de avaliação, e atribuir uma posição para este item no vetor $S$ de itens recomendados. A formula para caucular o valor médio de cada item é dada por:
+
+(formula)
+
+onde $S$ é um vetor que possui $n$ posições e armazenada o valor de cada item avaliado, que recebe o somatório de $k = 1$ indo até $n$, onde $n$ representa o número total de avaliações feitas por cada usuário $U_{k}$ sobre o produto específico $i$, divididos por $n$. Esse calculo é feito para cada item do sistema, e a recomendação se basea nos valores existentes no vetor resultado.
+
+%---------------------- Dúvida 
+\subsubsection{Pontos fortes desta técnica}
+Um dos pontos fortes desta técnica é a generalização de itens recomendados, não sendo preciso a separação por atributos dos itens, sendo assim, todos os usuários receberão a mesma recomendação. Está recomendação é feita de forma direta, mostrando o item que está na tendência, agradando usuários que se intereção por esse tipo de recomendação.
+
+\subsubsection{Pontos fracos desta técnica}
+A falta de utilização de atributos dos produtos ou da preferência de seus usuários, podem resultar em um sistema de recomendação não tão eficiente, onde existem usuários à procura de produtos que possuem características semelhantes ao produtos que ele já teve experiência no passado, ou produtos que são de alguma categoria de sua preferência, e utilizão atributos específicos relacionados aos seus usuários.
+%---------------------- Dúvida 
+
+
+\subsection{Baseado em conteúdo}
+Na recomendação baseada em conteúdo, a avaliação u(c,s) do produto s e do usuário c, é baseada na avaliação u(c,s') que foi atribuída pelo mesmo usuário c para outro itens, se pertencer, s'i E S que é similar a s, em atributos do produto. Então, como exemplo dado em [11], em um sistema de locação de filmes com sistema de recomendação, para recomendar novos filmes para o usuário u, a recomendação por conteúdo procura no histórico do usuário todos os filmes que foram avaliados por ele, e só assim, é possível correlacionar com novos filmes que tenham atributos semelhantes para recomendar para ele durante uma nova visita.
+
+Seguindo baseado em [11], de forma mais simples, o sistema selecionaria um atributo que está contido no produto Content de um item qualquer i, sendo então Content(i) relacionado atributo com produto e devidamente armazenado para usar em uma futura predição pelo sistema de recomendação baseado em conteúdo.
+
+Para incrementar o sistema, devemos formalizar um perfil de usuário para todo u. E como é feito em todos os sistemas de recomendação baseado em textos já preenchidos sobre determinado produto, através de palavras importantes que compõe os atributos do produto. Então, para todo usuário u, que agora tem como atributo ContentBasedProfile(u), pode ser definido
+como vetores de tamanho fixo, $(w_{u,1}, ... , w_{u,k})$, onde cada $w_{u,i}$ está demonstrando a importância da palavra-chave $k_i$ do usuárui $u$, e agora pode ser usando várias forma de métricas de recuperação de dados. 
+
+Então, nos sistemas de recomendação baseado em conteúdo, a avaliação para cada produto $i$ seria obtido através da função $u(c,s)$, que é definida pela formula como: 
+
+\begin{equation}
+ u(c,s) = score(ContentBasedProfile(u),Content(i)).
+\end{equation}
+
+
+Sendo $ContentBasedProfile(u)$ e $Content(i)$ dois vetores $w(vec)_c$ e $w(vec)_s$, como é muito utilizado por recomendação de Web pages, Usenet messages, e outros sistemas do tipo de documentos textuais, a avaliação u(c,s) é utilizada e representadas nas literaturas sobre recuperação de conteúdo ou informação no momento de avaliar o valor da informação contida nos vetores, da mesma forma do co-seno de aproximação:
+
+\begin{equation}
+u(c,s) = cos(w(vec)_c,w(vec)_s) = w(vec)_c*w(vec)_s/
+||w(%vec)_c||_%2*||w(vec)_s||_2 =
+\frac{\som^K_{i=1}w(vec)_{i,c} w(vec)_{i,s}{{sqrt{\som^K_{i=1}w(vec)^2_{i,c}}}
+{sqrt{\som^K_{i=1}w(vec)^2_{i,s}}}}}
+\end{equation}
+
+onde K seria o número total de chaves no sistema.
+
+Como, por exemplo, uma pessoa que compra algum produto em um site qualquer, no setor de esportes. Os itens que serão recomendados pelo sistema de recomendação serão apenas os itens de esportes, uma vez que o sistema de recomendação de conteúdo é baseado em atributos. Logo, os produtos de esportes do setor de esportes são os produtos mais correlacionados com o que o usuário tem em seus histórico de compra. 
+
+Por ser baseada apenas em dados e atributos, em suas técnicas mais simples, a recomendação por conteúdo se mostra muito limitada para atingir melhores resultados. Uma forma mais usual, com melhores chances de bons resultados mesmo utilizando apenas atributos, seria em sistemas capazes de recuperar todos os dados automaticamente, sem a necessidade de ficar esperando uma grande quantidade de dados para poder recomendar algo com uma precisão considerável. 
+
+Além do modo de recuperação de informação, na recomendação por conteúdo também é utilizada outras técnicas, como Bayesian classifiers,   [12] entre outras técnicas que são estudadas, como na área de clusters, no estudo sobre decisões de árvores de tomada de decisões, e também em redes neurais artificiais. [11] A diferença do não uso de recuperação de conteúdo nessas técnicas, é pelo uso de técnicas que são baseadas em um modelo de avaliação feitas por usuários, como uma forma de melhor aproximação, como seria o uso da técnica Bayesian classifier. Por exemplo, a técnica de Bayesian classifiers pode ser utilizada para verificar a probabilidade de uma página $p_j$ estar$ contida $em um conjunto $C_i$, onde contém páginas relevantes e não relevantes, e receber seu índice em $k_{1,j},...,k_{n,j}$ relativo a essa página:
+
+\begin{equation}
+P(C_i| k_{1,j}&, ... ,&k_{n,j}).
+\end{equation}
+
+
+Além disso, como a suposição dos índices são independentes, a probabilidade mostrada acima é 
+proporcional a:
+
+\begin{equation}
+P(C_i)||P(k_{x,j}|C_i).
+\end{equation}
+
+Então, ficando a colocação dos índices independentes, não é necessário aplicá-lo em todas as aplicações. De acordo com [5], em testes experimentais de demonstração da técnica de Bayesian classifiers mostrou uma ótima eficiência e precisão de classificação. E ainda mais, podendo os dois $P(C_i)$ e $P(k_{x,j}|C_i)$ serem estimados por dados preparados, com informação que seria suficiente para a recomendação. Sendo assim, para cada $p_j$ a probabilidade $P(C_i| k_{1,j}\&,...,\&k_{n,j})$ é registrada para cada classe $C_i$ e pagina $p_j$ é atribuído em $C_i$, atingindo o máximo de probabilidade possível.
+
+\subsubsection{Pontos fortes desta técnica}
+
+\subsubsection{Pontos fracos desta técnica}
+
+\subsection{Filtro colaborativo}
+O algoritmo de recomendação por filtro colaborativo se tornou, com o passar dos anos em meio a diversas pesquisas realisadas na área da recmondação, uma das principais técnicas de recomendação que viraram alvo de pesquisas e estudos para aprimoração ou derivação de outras técnicas, como o propósito de criar uma técnica variável, onde utiliza os mesmos conceitos, mas busca a sua recomendação em atributos específicos \cite{asanov2011algorithms}. A principal intenção desta técnica é a de encontrar usuários dispostos a divulgar suas experiências sobre os produtos disponíveis no sitema \cite{linden2003amazon}. Em muitos casos, dentro da área da recomendação, em um sistema de porte pequeno ou de pouca rotatividade, ou em sistema de grande porte onde possui muitas informações sobre as avaliações, mas com todas as informações, referentes as avaliações dos usuários, já presentes no sitema, a recomendação pode ser feita de forma mais simples, mas em sistemas que possuem muitos produtos, muitas categorias, é muito improvável poder afirmar que todos os produtos serão avaliados em algum momento. Utilizando como exemplo, o sistema web do GroupLens respossável por recomendar filmes, possui milhares de filmes para serem recomendados, mas possui uma porcentagem muito baixa de produtos avaliados \cite{miller2003movielens}. 
+
+Para a recomendação por filtro colaborativo, quando dois, ou mais, usuários demonstram ter o mesmo gosto, o que é possível observaor por suas avaliações semelhantes, são conciderados vizinhos, formando um grupo por aprocimação de preferências \cite{asanov2011algorithms}. Utilizando isto para a recomendação, os usuários poderão receber recomendação de produtos que ainda não foram avaliados por eles, pois são produtos que seus vizinhos avaliaram bem, então existe uma grande probabilidade que esses usuários que ainda não tiveram experiência com o produto, se interessem por ele. Com esses dados coletados, é possível afirmar que usuários vizinhos, na maior parte dos casos, possuem o mesmo gosto para escolha de seus produtos \cite{miller2003movielens}.
+
+Voltando a usar como exemplo o sistema de recomendação de filmes do GroupLens \cite{resnick1994grouplen} \cite{konstan1997grouplens}, o MovieLens \cite{miller2003movielens}, ele utiliza a recomendação por filtro colaborativo. Utilizando a coleta de avaliações explicita \cite{melville2010recommender}, cada usuário novo procura por um filme em específico, ou seleciona alguns filmes por categoria, ou por data de lançamento, etc, e faz a sua avaliação, utilizando valores que são representados por estrelas, sendo 1 a classificação para um filmes ``horrível'' e 5 a classificação para um filme que, para quem se enteressar por filmes semelhantes, então, ``deveriam ver''. Utilizando a sua avaliação, o sistema fará uma busca baseado em suas notas de avaliações dadas nos filmes que já foram avaliados, e recomendará os filmes com a maior taxa de correlação entre o novo usuário e seus ``vizinhos de mesmo gosto''. Como na figura abaixo, todos os novos usuários recebem alguns filmes listados, e após a sua avaliação, filmes correlacionas as preferências dos nóvos usuários serão recomendados como possíveis futuras escolhas de novos filmes que vão querer assistir.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{img/movielens2}
+\end{figure}
+
+A cada avaliação, uma associação é feita entre as preferências de um usuário e as características do produto, que, neste exemplo, seriam as características dos filmes. Para um melhor compreendimento, ou para apresentar de uma maneira mais formal, podemos analisar a representação desta figura (Fig. 1) e de todo o sistema, representando todo os valores de avaliações em uma tabela formada, da mesma forme que foi illustrado para exemplificar no algoritmo não personalizado, por usuários e por todos os itens que estão disponíveis para receber avaliações. Os dados encontrados são, a representação de todos os usuários, todos os itens e de todas as avaliações que já foram computadas, lembrando que, diferente da matriz utilizada no algoritmo não personalizado, a matriz na maioria das vezes é uma matriz esparsa, então podem existir poucas avaliações para determinado produto, ou não um número confiável de avaliações, podendo comprometer a recomendação, se não for utilizado, para a recomendação, uma técnica confiável, como o filtro colaborativo.
+
+{%
+\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+\begin{center}
+\begin{array}{ccccccc}
+× & \mc{6}{c}{\textit{Filmes}}\\\cline{2-7}
+\mc{1}{c|}{×} & \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{1}} & \mc{1}{c|}{\textbf{2}} & \mc{1}{c|}{\textbf{3}} & \mc{1}{c|}{\textbf{4}} & \mc{1}{c|}{\textbf{5}}\\\cline{2-7}
+\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{1}} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{5}\\\cline{2-7}
+\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{2}} & \mc{1}{c|}{1} & \mc{1}{c|}{?} & \mc{1}{c|}{1} & \mc{1}{c|}{4} & \mc{1}{c|}{?}\\\cline{2-7}
+\mc{1}{c|}{\textit{Usuários}} & \mc{1}{c|}{\textbf{3}} & \mc{1}{c|}{?} & \mc{1}{c|}{3} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?}\\\cline{2-7}
+\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{4}} & \mc{1}{c|}{4} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{4.5} & \mc{1}{c|}{5}\\\cline{2-7}
+\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{5}} & \mc{1}{c|}{?} & \mc{1}{c|}{2} & \mc{1}{c|}{3} & \mc{1}{c|}{?} & \mc{1}{c|}{?}\\\cline{2-7}
+\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{6}} & \mc{1}{c|}{4} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{3}\\\cline{2-7}
+\end{array}
+\end{center}
+}%
+
+Observando a matriz acima (ref da matriz), não é possivel dizer, do ponto de vista humano, com facilidade quais são as referências e dizer todas as correlações existentes entre os valores dados como exemplo, logo, podemos afirmar que essa seria a primeira pergunta sobre como realizar a correlação entre os valores, dizendo o quão esses itens, ou usuários, são similares uns com os outros \cite{ricci2011introduction}, dependendo de qual aproximação foi adotada.
+
+O filtro colaborativo é muito utilizado em sistemas web(colocar apud) \cite{turban2009electronic}, onde usuário podem repartir suas experiências com outros usuários sobre músicas, videos, livros ou qualquer outro produto, ou serviço, que possa receber alguma forma de avaliação, com o propósito de utilizar essas informações no futuro, sobre seus novos usuários. Além do uso para fins lucrativos, o filtro colaborativo é muito utilizado em sitemas de recomendação de diversos tipos de documentos, como trabalhos cienctíficos, por exemplo \cite{sun2010new}. 
+
+Para uma abordagem mais detalhada sobre o filtro colaborativo, os detalhes podem formar um melhor compreendimento sonre o assunto. Dentro dos detalhes, o filtro colaborativo é dividido em algumas principais aproximações, que são: a aproximação baseada nos usuários, a aproximação baseada nos itens. %(Posso falar também sobre), a aproximação baseada em históricos de usuários, e a aproximação baseada em modelo de aprendizagem \cite{asanov2011algorithms}\cite{su2009survey}. Exixtem diversos outras aproximações que não vão ser citadas aqui, como (Colocar as referências).
+
+
+\subsubsection{Filtro colaborativo Baseado em Usuários}
+Esta aproximação foi proposta por Jonathan L. Herlocker, professor da Universidade de Minnesota, no fina da década de 90 \cite{sun2010new}. A aproximação baseada em usuários, como já comentado sobre isso alguns parágrados acima, utiliza as avaliações dos usuários do sistema sobre determinado produto para recomendar esses produtos para outros usuários. Usuários que possuam grande similaridade de preferências são conciderados, por conveniência de termos, como \textit{vizinhos}. Por tanto, um usuário que teve mais experiências com outros usuários que são seus \textit{vizinhos}, poderão receber recomendação partindo de suas preferências. O algoritmo baseado em \textit{usuários vizinhos} produz a sua predição de recomendação de determinado produto para outros usuários, utilizando o seu valor de avaliação que foi avaliado por seus \textit{usuários vizinhos}. Desta forma, podemos predizer avaliações de itens que ainda não foram avaliados \cite{zhao2010user}\cite{wang2006unifying}. 
+
+Utilizando informações presentes em \cite{schafer2007collaborative}, podemos apresentar o algoritmo baseado em usuário de uma maneira mais formal. Por tanto, tomemos como exemplo um usuário $n$, que possui muitas similaridades com o usuário $u$, então podemos dizer que $n$ e $u$ são \textit{vizinhos}. Sendo $i$ um produto qualquer, sua avaliação pode ser obtida por outras avaliações de $i$ que foram efetuadas em momentos no passado por seu grupo de usuários que são \textit{vizinhos}. Além destas informaçẽso, é possível obter a média de todas as avaliações feitas por está \textit{vizinhança}. Na equação seguinte, onde $r_ni$ é o valor de avaliação feita pelo seu \textit{vizinho} $n$, temos uma demonstração de como seria a predição nativa, representada por $pred$, do valor da avalição de um produto $i$, para o usuário $u$, utilizando as avaliações feita por seu \textit{vizinho} $n$.
+
+%equação 1 {pred(u,i)
+
+É possível atingir a predição através da equação anterior, entretanto, seria necessário uma melhor aproximação, utilizando uma medida de avaliação de maior peso de quem for similar ao usuário $u$, ou seja, do seu \textit{vizinho}. Para isso, podemos tomar como exemplo uma função que calcula a similaridade entre $u$ e seu \textit{vizinho} $n$, que poderia ser chamada de $userSim(u,n)$, então a precição poderia ser feita utilizando a próxima formula. 
+
+%equação 2 {pred(u,i)
+
+Porém, caso o valor obtido pela função de similaridade não for maior do que um, a precidação será obtida em escala incorreta. Para conrrigir isso, podemo utilizar a função seguinte, onde o valor da equação enterior é dividido pelo valor da soma da similaridade dos \textit{vizinhos}.
+
+%equação 3 {pred(u,i)
+
+Tendo uma equação que consiga efetuar a predição dos valor para a recomendação, então já seria possível efetuar a recomendação baseada nos usuários do sistema. Um único incoveniente que poderia ainda persistir, seriam os usuários que possuam muitas variações em suas avaliações. Então, para recompençar essa variação, é possível utilizar a próxima função, que seria uma função de \textit{ajuste de média}.
+
+%equanção 4
+
+\subsubsection{Filtro Colaborativo Baseado em Itens}
+Esta aproximação foi proposta por pesquisadores da Universidade de Minnesota durante pesquisas realizadas por volta do ano de 2001 \cite{sarwar2001item}. É possível afirmar que a aproximação por filtro colaborativo baseado em usuários é igualmente o oposto da aproximação por filtro colaborativo baseado em itens \cite{schafer2007collaborative}. O filtro colaborativo gera predição através da similaridade entre usuários, ditos \textit{vizinhos}, enquanto o filtro colaborativo baseado em itens gera sua predição por via da similaridade dos atributos dos items dispostos no sistema. A aproximação por filtro colaborativo baseado em itens, utiliza como referência o fato de que as preferências dos usuários muda muito pouco e continua constante, formando, com os itens semlehantes, uma vizinhança de itens que são semelhantes. Por tanto, a recomendação poderá ser feita partindo de itens que esão presentes nesta vizinhança \cite{asanov2011algorithms}.
+
+De forma análoga ao filtro colaborativo baseado em usuário, utilizando as informações das avaliações efeutadas por usuários que efetuaram avaliações e para todos os itens que receberam as avaliações, podemos recomendar novos items para os usuários baseado nas preferências dos usuários, recomendando itens com similaridades e vizinhança de atributos. 
+
+Para predizer os valores de avaliações que os itens receberam para a recomendação, é preciso calcular o quão similares os items são uns com os outros. No âmbito da aproximação por filtro colaborativo baseado em itens, existem muitas variações da forma que a similaridade entre dois itens $(i, j)$ é calculada, como correlação de \textit{Pearson} (\textit{Pearson correla}) \cite{herlocker2000understanding}, similaridade de coseno (\textit{Cosine-based similarity}), similaridade de correlação (\textit{Correlation-based similarity}), similaridade de coseno ajustado (\textit{Adjusted-cosine similarity}) \cite{sarwar2001item}, diferença do quadrado (\textit{mean-square difference}) \cite{shardanand1995social} e a \textit{Spearman Correlation} \cite{massa2004using}. A similaridade de coseno ajustado (\textit{Adjusted-cosine similarity}), a mais popular, conciderada por muitos também como a mais exata, métrica de similaridade é calculada utilizando todos os usuários que avaliaram ambos os itens $i$ e $j$. O valor resultante da equação da similaridade de coseno ajustado (\textit{Adjusted-cosine similarity}) é obtido pela equação a seguir, onde $RB_ij$ $(rate both)$ é o conjunto de usuários que avaliaram ambos os itens $(i, j)$.
+
+%equação itemSim(i,j)
+
+Com o valor da similaridade dos itens, o peso do somatório das avaliações feitas pelo usuário $u$ sobre diversos itens similares a $i$ gera a predição para o usuário $u$ sobre o item $i$. Com a seguinte formula é possível realizar a predição.
+
+%equação pred(u,i)
+
+Observando a matriz de avaliações do filtro colaborativo baseado em usuários, a diferênça entre ela e a matriz de avaliações do filtro colaborativo baseado em itens é que na aproximação baseada em usuários, os valores existente nas linhas são os valores utilizados para a predição, e na aproximação baseada em item, os valores existente nas colunas são os valores utilizados para a predição \cite{sarwar2001item}. 
+
+
+\subsubsection{Pontos fortes desta técnica}
+
+\subsubsection{Pontos fracos desta técnica}
+
+
+\subsection{Híbrido}
+Exixtem diversas formas e variações sobre técnicas híbridas. A mais estudada é a fusão entre as técnicas de recomedação baseada em conteúdo e a recomendação por filtro colaborativo. Utilizando as duas predições, é possível, e mais provável, uma melhor precisão em pontros fracos dos dois algoritmos. Como a intenção e obter melhores resultados, a aprocimação é realizada de forma separada, onde a técnica de recomendação baseada em conteúdo e a técnica de recomendação por filtro colaborativo predizem valores separadamente, e com os valores já encontrados, é possível realizar a fuzão dos resultados, resultando em um vetor novo, que será o vetor resultado \cite{melville2010recommender}.
+
+\subsubsection{Pontos fortes desta técnica}
+
+\subsubsection{Pontos fracos desta técnica}
+
+\subsection{Comparativo entre as técnicas abordadas}
+
+
 
 \subsection{Subseção}
 
