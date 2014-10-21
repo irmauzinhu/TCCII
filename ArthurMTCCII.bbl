@@ -1,7 +1,12 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{abnt-url-package=url}
 
+
+\bibitem{asanov2011algorithms}
+Daniar Asanov.
+\newblock Algorithms and methods in recommender systems.
+\newblock {\em Berlin Institute of Technology, Berlin, Germany}, 2011.
 
 \bibitem{bennett2007netflix}
 James Bennett and Stan Lanning.
@@ -9,15 +14,117 @@ James Bennett and Stan Lanning.
 \newblock In {\em Proceedings of KDD cup and workshop}, volume 2007, page~35,
   2007.
 
+\bibitem{herlocker2000understanding}
+Jonathan~Lee Herlocker.
+\newblock {\em Understanding and improving automated collaborative filtering
+  systems}.
+\newblock PhD thesis, University of Minnesota, 2000.
+
+\bibitem{kantor2011recommender}
+Paul~B Kantor, Lior Rokach, Francesco Ricci, and Bracha Shapira.
+\newblock {\em Recommender systems handbook}.
+\newblock Springer, 2011.
+
+\bibitem{konstan1997grouplens}
+Joseph~A Konstan, Bradley~N Miller, David Maltz, Jonathan~L Herlocker, Lee~R
+  Gordon, and John Riedl.
+\newblock Grouplens: applying collaborative filtering to usenet news.
+\newblock {\em Communications of the ACM}, 40(3):77--87, 1997.
+
+\bibitem{linden2003amazon}
+Greg Linden, Brent Smith, and Jeremy York.
+\newblock Amazon. com recommendations: Item-to-item collaborative filtering.
+\newblock {\em Internet Computing, IEEE}, 7(1):76--80, 2003.
+
+\bibitem{massa2004using}
+Paolo Massa and Bobby Bhattacharjee.
+\newblock Using trust in recommender systems: an experimental analysis.
+\newblock In {\em Trust Management}, pages 221--235. Springer, 2004.
+
+\bibitem{masum2004manifesto}
+Hassan Masum and Yi-Cheng Zhang.
+\newblock Manifesto for the reputation society.
+\newblock {\em First Monday}, 9(7), 2004.
+
+\bibitem{melville2010recommender}
+Prem Melville and Vikas Sindhwani.
+\newblock Recommender systems.
+\newblock In {\em Encyclopedia of machine learning}, pages 829--838. Springer,
+  2010.
+
+\bibitem{miller2003movielens}
+Bradley~N Miller, Istvan Albert, Shyong~K Lam, Joseph~A Konstan, and John
+  Riedl.
+\newblock Movielens unplugged: experiences with an occasionally connected
+  recommender system.
+\newblock In {\em Proceedings of the 8th international conference on
+  Intelligent user interfaces}, pages 263--266. ACM, 2003.
+
+\bibitem{ramos2008ambient}
+Carlos Ramos, Juan~Carlos Augusto, and Daniel Shapiro.
+\newblock Ambient intelligence—the next step for artificial intelligence.
+\newblock {\em Intelligent Systems, IEEE}, 23(2):15--18, 2008.
+
 \bibitem{resnick1997recommender}
 Paul Resnick and Hal~R Varian.
 \newblock Recommender systems.
 \newblock {\em Communications of the ACM}, 40(3):56--58, 1997.
+
+\bibitem{ricci2011introduction}
+Francesco Ricci, Lior Rokach, and Bracha Shapira.
+\newblock {\em Introduction to recommender systems handbook}.
+\newblock Springer, 2011.
+
+\bibitem{sarwar2001item}
+Badrul Sarwar, George Karypis, Joseph Konstan, and John Riedl.
+\newblock Item-based collaborative filtering recommendation algorithms.
+\newblock In {\em Proceedings of the 10th international conference on World
+  Wide Web}, pages 285--295. ACM, 2001.
+
+\bibitem{schafer2007collaborative}
+J~Ben Schafer, Dan Frankowski, Jon Herlocker, and Shilad Sen.
+\newblock Collaborative filtering recommender systems.
+\newblock In {\em The adaptive web}, pages 291--324. Springer, 2007.
 
 \bibitem{schafer1999recommender}
 J~Ben Schafer, Joseph Konstan, and John Riedl.
 \newblock Recommender systems in e-commerce.
 \newblock In {\em Proceedings of the 1st ACM conference on Electronic
   commerce}, pages 158--166. ACM, 1999.
+
+\bibitem{shardanand1995social}
+Upendra Shardanand and Pattie Maes.
+\newblock Social information filtering: algorithms for automating “word of
+  mouth”.
+\newblock In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems}, pages 210--217. ACM Press/Addison-Wesley Publishing Co.,
+  1995.
+
+\bibitem{sun2010new}
+Zilei Sun and Nianlong Luo.
+\newblock A new user-based collaborative filtering algorithm combining
+  data-distribution.
+\newblock In {\em Information Science and Management Engineering (ISME), 2010
+  International Conference of}, volume~2, pages 19--23. IEEE, 2010.
+
+\bibitem{turban2009electronic}
+Efraim Turban, Jae~K Lee, David King, Ting~Peng Liang, and Deborrah Turban.
+\newblock {\em Electronic commerce 2010}.
+\newblock Prentice Hall Press, 2009.
+
+\bibitem{wang2006unifying}
+Jun Wang, Arjen~P De~Vries, and Marcel~JT Reinders.
+\newblock Unifying user-based and item-based collaborative filtering approaches
+  by similarity fusion.
+\newblock In {\em Proceedings of the 29th annual international ACM SIGIR
+  conference on Research and development in information retrieval}, pages
+  501--508. ACM, 2006.
+
+\bibitem{zhao2010user}
+Zhi-Dan Zhao and Ming-Sheng Shang.
+\newblock User-based collaborative-filtering recommendation algorithms on
+  hadoop.
+\newblock In {\em Knowledge Discovery and Data Mining, 2010. WKDD'10. Third
+  International Conference on}, pages 478--481. IEEE, 2010.
 
 \end{thebibliography}

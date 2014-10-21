@@ -300,15 +300,6 @@ O objetivo dos Sistemas de Recomendação é, de forma geral, garantir o signifi
 De acordo com [7], alguns fatos marcaram o grande crescimento das pesquisas e utilização dos sistemas de recomendação, como o uso ascendente das grandes empresas da internet, que utilizam a recomendação para agradar novos usuários e manter seus usuários, com a recomendação de conteúdos contidos no site que possam ser do interesse desse usuário. As grandes empresas que utilizam esse sistema hoje em dia são, NetFlix, [10] YouTube, Yahoo, Tripadvisor, Last.fm e IMDb. Muitas empresas estão passando a utilizar a recomendação para otimizar seu desempenho no mercado, e todas as empresas que já utilizam a recomendação buscam á sempre ter seus sistemas totalmente atualizados, para garantir a melhor eficiência em recomendação, como, por exemplo, o NetFlix, que se dispõe a pagar um milhão de dollar para a pessoa, ou grupo de pessoas, que conseguir desenvolver um sistema melhor que o já implementado deles. Isso mostra que o setor de recomendação da empresa representa uma parcela muito grande de seu retorno financeiro. 
 Hoje existe uma organização promotora dedicada a conferências e workshops sobre sistema de recomendação que é a ACM Recommender Systems (RecSys), foi estabilizada em 2007 e agora é conhecida por realizar anualmente uma conferência sobre recomendação e suas tecnologias sobre pesquisas e aplicações.
 Universidades do mundo todos realizam trabalhos sobre sistema de recomendação. Mais hoje do que nunca. Recentemente, uma faculdade, ondese fez famosa por possuir grandes conferências sobre ciência, lançou um livro sobre as técnicas de recomendação.
-
-%------ Um pouco sobre a história. Seria melhor outro Cap pra isso? -----
-\section{História}
-Estudos sobre a recomendação entre pessoas foram realizados durante muitos períodos da história humana e foram motivados por levantamentos e afirmações como as de \textit{Masum} e \textit{Zhang} \cite{masum2004manifesto}. Algumas questões pertinentes sobre a recomendação surgiram e viraram alvo de estudos para outras áreas de estudos, como a área de Inteligência Artificial \cite{ramos2008ambient}, com o intuíto de descobrir uma singularidade ou padrão onde seria possível generalizar a recomendação de forma automatizada.
-
-
-
-%-- end Hystory sec
-%-- Begin Examples RecSys
 \section{Exemplos de sistemas que usam recomendação}
 Sistemas de recomendação são encontrados em uso por vários sistemas de lojas de eCommerce [3], [4], [6], com a tarefa de sugerir aos seus usuários produtos que possam lhe interessar. Os produtos podem ser recomendados partindo de várias premissas, como, por exemplo, sendo o produto mais vendido de uma determinada seção em que o usuário esta visitando, ou o
 mais vendido de todo o site, ou baseado em dados coletados do usuário como referência, ou analisando compras feitas pelo usuário com os dados dos produtos comprados no passado, correlacionando com produtos vizinhos que tenham atributos idênticos ou semelhantes, que seria utilizado como uma previsão de uma futura compra desses produtos vizinhos. [4] Uma
@@ -361,39 +352,18 @@ Alguns sistemas utilizam a recomendação personalizada com pequenas variações
 Na tabela abaixo é disposto um pequeno exemplo de como seria uma matriz encontrada em sistemas que utilizam a recomendação não personalizada, onde seus produtos são avaliados de forma individual por seus usuários.
 
 %{%Tabela exemplo recomendação não personalizada
-%\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
-% \begin{center}
-% \begin{array}{lccccll}\cline{3-7}
-% × & \mc{6}{c}{\textit{Itens}}\\\cline{2-7}
-% \mc{1}{l|}{×} & \mc{1}{c|}{1} & 2 & 3 & 4 & \mc{1}{c}{5} & \mc{1}{c}{6}\\\cline{2-7}
-% \mc{1}{l|}{×} & \mc{1}{c|}{2} & 5 & ? & 4 & \mc{1}{c}{?} & \mc{1}{c}{4}\\
-% \mc{1}{l|}{\textit{Usuário}} & \mc{1}{c|}{3} & 2 & 2 & ? & \mc{1}{c}{1} & \mc{1}{c}{3}\\
-% \mc{1}{l|}{×} & \mc{1}{c|}{4} & ? & ? & 2 & \mc{1}{c}{5} & \mc{1}{c}{4}\\
-% \mc{1}{l|}{×} & \mc{1}{c|}{5} & 3 & 5 & 4 & \mc{1}{c}{3} & \mc{1}{c}{3}
-% \end{array}
-% \caption{Matriz de avaliações da recomendação não personalizada}
-% \end{center}
-% }%
-
-\def\tablename{Tabela}%
-\begin{table}[!htb]
-\caption{Matriz de avaliações da recomendação não personalizada}
-\vspace*{0.2cm}
-\centering
-\begin{tabular}{l|r|c|r} \hline
-\multicolumn{4}{c}{Esquerda} \\ \hline
-Um & Dois & Três & Quatro \\ 
-1 & 2 & 3 & 4 \\
-i & ii & iii & iv \\
-Um & Dois & Três & Quatro \\
-1 & 2 & 3 & 4 \\
-i & ii & iii & iv \\
-Um & Dois & Três & Quatro \\
-1 & 2 & 3 & 4 \\
-i & ii & iii & iv \\ \hline
-\end{tabular}
-\label{Tabe}
-\end{table}
+%\begin{center}
+%\begin{array} {lccccll}\cline{3-7}
+%× & \mc{6}{c}{\textit{Itens}}\\\cline{2-7}
+%\mc{1}{l|}{×} & \mc{1}{c|}{1} & 2 & 3 & 4 & \mc{1}{c}{5} & \mc{1}{c}{6}\\\cline{2-7}
+%\mc{1}{l|}{×} & \mc{1}{c|}{2} & 5 & ? & 4 & \mc{1}{c}{?} & \mc{1}{c}{4}\\
+%\mc{1}{l|}{\textit{Usuário}} & \mc{1}{c|}{3} & 2 & 2 & ? & \mc{1}{c}{1} & \mc{1}{c}{3}\\
+%\mc{1}{l|}{×} & \mc{1}{c|}{4} & ? & ? & 2 & \mc{1}{c}{5} & \mc{1}{c}{4}\\
+%\mc{1}{l|}{×} & \mc{1}{c|}{5} & 3 & 5 & 4 & \mc{1}{c}{3} & \mc{1}{c}{3}
+%\end{array}
+%\caption{Matriz de avaliações da recomendação não personalizada}
+%\end{center}
+%}%
 
 Essa matriz exemplo, é composta por todas as avaliações feitas pelos usuários individualmente, relacionando cada usuário $u$ com suas avaliações realizadas para cada item $i$. Como neste caso a recomendação é feita mediante as avaliações, é preciso encontrar, para cada item, uma média do valor de avaliação, e atribuir uma posição para este item no vetor $S$ de itens recomendados. A formula para calcular o valor médio de cada item é dada por:
 
@@ -427,11 +397,12 @@ Então, nos sistemas de recomendação baseado em conteúdo, a avaliação para 
 
 Sendo $ContentBasedProfile(u)$ e $Content(i)$ dois vetores $w(vec)_c$ e $w(vec)_s$, como é muito utilizado por recomendação de Web pages, Usenet messages, e outros sistemas do tipo de documentos textuais, a avaliação u(c,s) é utilizada e representadas nas literaturas sobre recuperação de conteúdo ou informação no momento de avaliar o valor da informação contida nos vetores, da mesma forma do co-seno de aproximação:
 
-% \begin{equation}
-% u(c,s) = cos(w(vec)_c,w(vec)_s) = w(vec)_c*w(vec)_s/
-% ||w()%vec)_c||_%2*||w(vec)_s||_2 = \frac{\som^K_{i=1}w(vec)_{i,c} w(vec)_{i,s}{{sqrt{\som^K_{i=1}w(vec)^2_{i,c}}}
-% {sqrt{\som^K_{i=1}w(vec)^2_{i,s}}}}}
-% \end{equation}
+\begin{equation}
+%u(c,s) = cos(w(vec)_c,w(vec)_s) = w(vec)_c*w(vec)_s/
+%||w(%vec)_c||_%2*||w(vec)_s||_2 =
+%\frac{\som^K_{i=1}w(vec)_{i,c} w(vec)_{i,s}{{sqrt{\som^K_{i=1}w(vec)^2_{i,c}}}
+%{sqrt{\som^K_{i=1}w(vec)^2_{i,s}}}}}
+\end{equation}
 
 onde K seria o número total de chaves no sistema.
 
@@ -441,9 +412,9 @@ Por ser baseada apenas em dados e atributos, em suas técnicas mais simples, a r
 
 Além do modo de recuperação de informação, na recomendação por conteúdo também são utilizadas outras técnicas, como Bayesian classifiers, [12] entre outras técnicas que são estudadas, como na área de clusters, no estudo sobre decisões de árvores de tomada de decisões, e também em redes neurais artificiais. [11] A diferença do não uso de recuperação de conteúdo nessas técnicas, é pelo uso de técnicas que são baseadas em um modelo de avaliação feitas por usuários, como uma forma de melhor aproximação, como seria o uso da técnica Bayesian classifier. Por exemplo, a técnica de Bayesian classifiers pode ser utilizada para verificar a probabilidade de uma página $p_j$ estar$ contida $em um conjunto $C_i$, onde contém páginas relevantes e não relevantes, e receber seu índice em $k_{1,j},...,k_{n,j}$ relativo a essa página:
 
-% \begin{equation}
-% P(C_i| k_{1,j}&, ... ,&k_{n,j}).
-% \end{equation}
+\begin{equation}
+%P(C_i| k_{1,j} & , ... ,&k_{n,j}).
+\end{equation}
 
 
 Além disso, como a suposição dos índices são independentes, a probabilidade mostrada acima é 
@@ -473,21 +444,22 @@ Voltando a usar como exemplo o sistema de recomendação de filmes do GroupLens 
 
 A cada avaliação, uma associação é feita entre as preferências de um usuário e as características do produto, que, neste exemplo, seriam as características dos filmes. Para um melhor compreendimento, ou para apresentar de uma maneira mais formal, podemos analisar a representação desta figura (Fig. 1) e de todo o sistema, representando todo os valores de avaliações em uma tabela formada, da mesma forma que foi ilustrado para exemplificar no algoritmo não personalizado, por usuários e por todos os itens que estão disponíveis para receber avaliações. Os dados encontrados são, a representação de todos os usuários, todos os itens e de todas as avaliações que já foram computadas, lembrando que, diferente da matriz utilizada no algoritmo não personalizado, a matriz na maioria das vezes é uma matriz esparsa, então podem existir poucas avaliações para determinado produto, ou um número não confiável de avaliações, podendo comprometer a recomendação, se não for utilizado, para a recomendação, uma técnica confiável, como o filtro colaborativo.
 
-{%
-% \newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
-% \begin{center}
-% \begin{array}{ccccccc}
-% × & \mc{6}{c}{\textit{Filmes}}\\\cline{2-7}
-% \mc{1}{c|}{×} & \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{1}} & \mc{1}{c|}{\textbf{2}} & \mc{1}{c|}{\textbf{3}} & \mc{1}{c|}{\textbf{4}} & \mc{1}{c|}{\textbf{5}}\\\cline{2-7}
-% \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{1}} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{5}\\\cline{2-7}
-% \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{2}} & \mc{1}{c|}{1} & \mc{1}{c|}{?} & \mc{1}{c|}{1} & \mc{1}{c|}{4} & \mc{1}{c|}{?}\\\cline{2-7}
-% \mc{1}{c|}{\textit{Usuários}} & \mc{1}{c|}{\textbf{3}} & \mc{1}{c|}{?} & \mc{1}{c|}{3} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?}\\\cline{2-7}
-% \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{4}} & \mc{1}{c|}{4} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{4.5} & \mc{1}{c|}{5}\\\cline{2-7}
-% \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{5}} & \mc{1}{c|}{?} & \mc{1}{c|}{2} & \mc{1}{c|}{3} & \mc{1}{c|}{?} & \mc{1}{c|}{?}\\\cline{2-7}
-% \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{6}} & \mc{1}{c|}{4} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{3}\\\cline{2-7}
-% \end{array}
-% \end{center}
-}%
+
+%{%
+%\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+%\begin{center}
+%\begin{array} {ccccccc}
+%× & \mc{6}{c}{\textit{Filmes}}\\\cline{2-7}
+%\mc{1}{c|}{×} & \mc{1}{c|}{×} & \mc{1}{c|}{\textbf{1}} & \mc{1}{c|}{\textbf{2}} & \mc{1}{c|}{\textbf{3}} & \mc{1}{c|}{\textbf{4}} & \mc{1}{c|}{\textbf{5}}\\\cline{2-7}
+%\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{1}} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{5}\\\cline{2-7}
+%\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{2}} & \mc{1}{c|}{1} & \mc{1}{c|}{?} & \mc{1}{c|}{1} & \mc{1}{c|}{4} & \mc{1}{c|}{?}\\\cline{2-7}
+%\mc{1}{c|}{\textit{Usuários}} & \mc{1}{c|}{\textbf{3}} & \mc{1}{c|}{?} & \mc{1}{c|}{3} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?}\\\cline{2-7}
+%\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{4}} & \mc{1}{c|}{4} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{4.5} & \mc{1}{c|}{5}\\\cline{2-7}
+%\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{5}} & \mc{1}{c|}{?} & \mc{1}{c|}{2} & \mc{1}{c|}{3} & \mc{1}{c|}{?} & \mc{1}{c|}{?}\\\cline{2-7}
+%\mc{1}{c|}{×} & \mc{1}{c|}{\textbf{6}} & \mc{1}{c|}{4} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{?} & \mc{1}{c|}{3}\\\cline{2-7}
+%\end{array}
+%\end{center}
+%}%
 
 Observando a matriz acima (ref da matriz), não é possível dizer, do ponto de vista humano, com facilidade quais são as referências e dizer todas as correlações existentes entre os valores dados como exemplo, logo, podemos afirmar que essa seria a primeira pergunta sobre como realizar a correlação entre os valores, dizendo o quão esses itens, ou usuários, são similares uns com os outros \cite{ricci2011introduction}, dependendo de qual aproximação foi adotada.
 

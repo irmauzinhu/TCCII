@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.15)  27 SEP 2014 12:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.15)  21 OCT 2014 02:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -492,56 +492,31 @@ File: babel.def 2013/12/03 3.9h Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
-Language: frenchb 2013/12/30 v2.6g French support from the babel system
-\FB@interchartokenstateORI=\count152
-Package babel Info: Making : an active character on input line 244.
-Package babel Info: Making ; an active character on input line 245.
-Package babel Info: Making ! an active character on input line 246.
-Package babel Info: Making ? an active character on input line 247.
-\FB@Mht=\dimen152
-\std@mcc=\count153
-\dec@mcc=\count154
-\listindentFB=\skip186
-\labelwidthFB=\skip187
-\leftmarginFB=\skip188
-\parindentFFN=\dimen153
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-Language: spanish.ldf 2014/01/29 v5.0m Spanish support from the babel system
-\es@datefmt=\count155
-\es@quottoks=\toks23
-\es@quotdepth=\count156
-Package babel Info: Making " an active character on input line 496.
-Package babel Info: Making . an active character on input line 599.
-Package babel Info: Making < an active character on input line 644.
-Package babel Info: Making > an active character on input line 644.
-)
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 \l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip189
-\enit@outerparindent=\dimen154
-\enit@toks=\toks24
+\labelindent=\skip186
+\enit@outerparindent=\dimen152
+\enit@toks=\toks23
 \enit@inbox=\box29
-\enitdp@description=\count157
+\enitdp@description=\count152
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count158
-\calc@Bcount=\count159
-\calc@Adimen=\dimen155
-\calc@Bdimen=\dimen156
-\calc@Askip=\skip190
-\calc@Bskip=\skip191
+\calc@Acount=\count153
+\calc@Bcount=\count154
+\calc@Adimen=\dimen153
+\calc@Bdimen=\dimen154
+\calc@Askip=\skip187
+\calc@Bskip=\skip188
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count160
-\calc@Cskip=\skip192
+\calc@Ccount=\count155
+\calc@Cskip=\skip189
 )
 
 ******************************************************
@@ -563,20 +538,20 @@ Sidefoothsep and sidefootwidth: 7pt and 92pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
-\c@abntex@bookmarkcounter=\count161
-\cftlastnumwidth=\skip193
-\chapternamenumlength=\skip194
-\ABNTEXcitacaorecuo=\skip195
-\c@alineasi=\count162
-\c@alineasii=\count163
-\enitdp@alineas=\count164
-\c@subalineasi=\count165
-\enitdp@subalineas=\count166
-\c@incisosi=\count167
-\enitdp@incisos=\count168
-\ABNTEXsignwidth=\skip196
-\ABNTEXsignthickness=\skip197
-\ABNTEXsignskip=\skip198
+\c@abntex@bookmarkcounter=\count156
+\cftlastnumwidth=\skip190
+\chapternamenumlength=\skip191
+\ABNTEXcitacaorecuo=\skip192
+\c@alineasi=\count157
+\c@alineasii=\count158
+\enitdp@alineas=\count159
+\c@subalineasi=\count160
+\enitdp@subalineas=\count161
+\c@incisosi=\count162
+\enitdp@incisos=\count163
+\ABNTEXsignwidth=\skip193
+\ABNTEXsignthickness=\skip194
+\ABNTEXsignskip=\skip195
 ) (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -612,6 +587,82 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip196
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks24
+\ex@=\dimen155
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen156
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count164
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count165
+\leftroot@=\count166
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count167
+\DOTSCASE@=\count168
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen157
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count169
+\c@MaxMatrixCols=\count170
+\dotsspace@=\muskip11
+\c@parentequation=\count171
+\dspbrk@lvl=\count172
+\tag@help=\toks25
+\row@=\count173
+\column@=\count174
+\maxfields@=\count175
+\andhelp@=\toks26
+\eqnshift@=\dimen158
+\alignsep@=\dimen159
+\tagshift@=\dimen160
+\tagwidth@=\dimen161
+\totwidth@=\dimen162
+\lineht@=\dimen163
+\@envbody=\toks27
+\multlinegap=\skip197
+\multlinetaggap=\skip198
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count176
+\l_MT_multwidth_dim=\dimen164
+\origjot=\skip199
+\l_MT_shortvdotswithinadjustabove_dim=\dimen165
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen166
+\l_MT_above_intertext_sep=\dimen167
+\l_MT_below_intertext_sep=\dimen168
+\l_MT_above_shortintertext_sep=\dimen169
+\l_MT_below_shortintertext_sep=\dimen170
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -624,8 +675,8 @@ Package: calligra 2012/04/10 v1.9 LaTeX package calligra
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks25
-\inpenc@posthook=\toks26
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -854,7 +905,7 @@ Package color Info: Driver file: pdftex.def on input line 130.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count169
+\Gread@gobject=\count177
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
@@ -870,24 +921,24 @@ File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
-\MT@toks=\toks27
-\MT@count=\count170
+\MT@toks=\toks31
+\MT@count=\count178
 LaTeX Info: Redefining \textls on input line 766.
-\MT@outer@kern=\dimen159
+\MT@outer@kern=\dimen173
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
-\MT@listname@count=\count171
+\MT@listname@count=\count179
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip199
+\MT@outer@space=\skip200
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -904,11 +955,11 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks28
-\minrowclearance=\skip200
+\everycr=\toks32
+\minrowclearance=\skip201
 )
 LaTeX Info: Redefining \color on input line 702.
-\rownum=\count172
+\rownum=\count180
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -926,23 +977,23 @@ Package: backref 2012/07/25 v1.38 Bibliographical back referencing
 Package: abntex2cite 2014/01/26 v1.9.2 abnTeX2
 
 (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
-\minimumbiblabelwidth=\skip201
-\ABCIauxlen=\skip202
-\c@ABCIaux=\count173
-\c@ABCImax=\count174
+\minimumbiblabelwidth=\skip202
+\ABCIauxlen=\skip203
+\c@ABCIaux=\count181
+\c@ABCImax=\count182
 
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\biblabelsep=\skip203
+\biblabelsep=\skip204
 LaTeX Info: Redefining \newblock on input line 675.
 LaTeX Info: Redefining \cite on input line 702.
-\ABCItoken=\toks29
+\ABCItoken=\toks33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen160
+\bigstrutjot=\dimen174
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 96.
+Package hyperref Info: Option `colorlinks' set `true' on input line 98.
 \ArthurMTCCII@idxfile=\write4
 \openout4 = `ArthurMTCCII.idx'.
 
@@ -955,26 +1006,26 @@ LaTeX Warning: Unused global option(s):
 (./ArthurMTCCII.aux)
 \openout1 = `ArthurMTCCII.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 119.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 121.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 119.
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring ON on input line 121.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -982,37 +1033,29 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count175
+\c@section@level=\count183
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 119.
-LaTeX Info: Redefining \ref on input line 119.
-LaTeX Info: Redefining \pageref on input line 119.
-LaTeX Info: Redefining \nameref on input line 119.
-LaTeX Info: Redefining \degres on input line 119.
-
-Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
-(frenchb.ldf)                frenchb will NOT customise it;
-(frenchb.ldf)                reported on input line 119.
-
-LaTeX Info: Redefining \dots on input line 119.
-LaTeX Info: Redefining \up on input line 119.
-\myptabbox=\box31
-\myptabboxwidth=\skip204
+LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 121.
+LaTeX Info: Redefining \pageref on input line 121.
+LaTeX Info: Redefining \nameref on input line 121.
+\myptabbox=\box33
+\myptabboxwidth=\skip205
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count176
-\scratchdimen=\dimen161
-\scratchbox=\box32
-\nofMPsegments=\count177
-\nofMParguments=\count178
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count179
-\MPscratchDim=\dimen162
-\MPnumerator=\count180
-\makeMPintoPDFobject=\count181
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count184
+\scratchdimen=\dimen175
+\scratchbox=\box34
+\nofMPsegments=\count185
+\nofMParguments=\count186
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count187
+\MPscratchDim=\dimen176
+\MPnumerator=\count188
+\makeMPintoPDFobject=\count189
+\everyMPtoPDFconversion=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1028,7 +1071,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 119.
+LaTeX Info: Redefining \microtypecontext on input line 121.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1046,9 +1089,9 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 <img/logoufms.jpg, id=4, 295.94565pt x 375.44266pt>
 File: img/logoufms.jpg Graphic file (type jpg)
  <use img/logoufms.jpg>
-Package pdftex.def Info: img/logoufms.jpg used on input line 133.
+Package pdftex.def Info: img/logoufms.jpg used on input line 135.
 (pdftex.def)             Requested size: 88.78436pt x 112.63365pt.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 135.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 137.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
@@ -1063,41 +1106,41 @@ Package microtype Info: Loading generic settings for font family
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/logoufms.jpg>] [2
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 142.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 144.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 142.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 144.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 142
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 144
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 142
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 144
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 142.
+(Font)              <12> on input line 144.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 142.
+(Font)              <8> on input line 144.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 142.
+(Font)              <6> on input line 144.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 \imprimirtipotrabalho
+l.144 \imprimirtipotrabalho
                             [1
 
 
@@ -1105,12 +1148,12 @@ l.142 \imprimirtipotrabalho
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 \imprimirtipotrabalho
+l.144 \imprimirtipotrabalho
                             [2
 
 ]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 17.28003pt on input line 155.
+(Font)              scaled to size 17.28003pt on input line 157.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `calligra' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1171,41 +1214,190 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [19]
 
 LaTeX Warning: Citation `resnick1997recommender' on page 20 undefined on input 
-line 260.
+line 262.
 
 
 LaTeX Warning: Citation `schafer1999recommender' on page 20 undefined on input 
-line 267.
+line 269.
 
 [20]
 
 LaTeX Warning: Citation `bennett2007netflix' on page 21 undefined on input line
- 274.
+ 276.
 
 [21] [22
 
-] [23]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 309.
+]
+
+LaTeX Warning: Citation `masum2004manifesto' on page 23 undefined on input line
+ 306.
+
+
+LaTeX Warning: Citation `ramos2008ambient' on page 23 undefined on input line 3
+06.
+
+[23]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 320.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 309.
- [24] [25
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 320.
+ [24]
 
-] [26
+LaTeX Warning: Citation `schafer1999recommender' on page 25 undefined on input 
+line 340.
 
-]
-(./ArthurMTCCII.bbl (./ArthurMTCCII.brf)
+
+LaTeX Warning: Citation `kantor2011recommender' on page 25 undefined on input l
+ine 340.
+
+
+LaTeX Warning: Citation `schafer1999recommender' on page 25 undefined on input 
+line 340.
+
+
+Underfull \vbox (badness 1571) has occurred while \output is active []
+
+ [25]
+
+LaTeX Warning: Citation `schafer2007collaborative' on page 26 undefined on inpu
+t line 346.
+
+
+LaTeX Warning: Citation `schafer1999recommender' on page 26 undefined on input 
+line 357.
+
+
+Underfull \vbox (badness 8038) has occurred while \output is active []
+
+ [26]
+[27] [28]
+Underfull \vbox (badness 1033) has occurred while \output is active []
+
+ [29]
+
+LaTeX Warning: Citation `asanov2011algorithms' on page 30 undefined on input li
+ne 463.
+
+
+LaTeX Warning: Citation `linden2003amazon' on page 30 undefined on input line 4
+63.
+
+
+LaTeX Warning: Citation `miller2003movielens' on page 30 undefined on input lin
+e 463.
+
+
+LaTeX Warning: Citation `asanov2011algorithms' on page 30 undefined on input li
+ne 465.
+
+
+LaTeX Warning: Citation `miller2003movielens' on page 30 undefined on input lin
+e 465.
+
+[30]
+
+LaTeX Warning: Citation `resnick1994grouplen' on page 31 undefined on input lin
+e 467.
+
+
+LaTeX Warning: Citation `konstan1997grouplens' on page 31 undefined on input li
+ne 467.
+
+
+LaTeX Warning: Citation `miller2003movielens' on page 31 undefined on input lin
+e 467.
+
+
+LaTeX Warning: Citation `melville2010recommender' on page 31 undefined on input
+ line 467.
+
+<img/movielens2.png, id=227, 351.3125pt x 247.92625pt>
+File: img/movielens2.png Graphic file (type png)
+
+<use img/movielens2.png>
+Package pdftex.def Info: img/movielens2.png used on input line 471.
+(pdftex.def)             Requested size: 140.5225pt x 99.16873pt.
+
+
+LaTeX Warning: Citation `ricci2011introduction' on page 31 undefined on input l
+ine 492.
+
+
+LaTeX Warning: Citation `turban2009electronic' on page 31 undefined on input li
+ne 494.
+
+
+LaTeX Warning: Citation `sun2010new' on page 31 undefined on input line 494.
+
+[31 <./img/movielens2.png (PNG copy)>]
+
+LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 500.
+
+
+LaTeX Warning: Citation `zhao2010user' on page 32 undefined on input line 500.
+
+
+LaTeX Warning: Citation `wang2006unifying' on page 32 undefined on input line 5
+00.
+
+
+LaTeX Warning: Citation `schafer2007collaborative' on page 32 undefined on inpu
+t line 502.
+
+[32]
+
+LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 519
+.
+
+
+LaTeX Warning: Citation `schafer2007collaborative' on page 33 undefined on inpu
+t line 519.
+
+
+LaTeX Warning: Citation `asanov2011algorithms' on page 33 undefined on input li
+ne 519.
+
+
+LaTeX Warning: Citation `herlocker2000understanding' on page 33 undefined on in
+put line 523.
+
+
+LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 523
+.
+
+
+LaTeX Warning: Citation `shardanand1995social' on page 33 undefined on input li
+ne 523.
+
+
+LaTeX Warning: Citation `massa2004using' on page 33 undefined on input line 523
+.
+
+[33]
+
+LaTeX Warning: Citation `sarwar2001item' on page 34 undefined on input line 531
+.
+
+
+LaTeX Warning: Citation `melville2010recommender' on page 34 undefined on input
+ line 540.
+
+[34] [35
+
+] [36
+
+] (./ArthurMTCCII.bbl (./ArthurMTCCII.brf)
 \tf@brf=\write5
 \openout5 = `ArthurMTCCII.brf'.
 
- [27] [28
+ [37] [38
 
 ]
 bibitemlist
-) [29]
+[39]) [40]
 \tf@lof=\write6
 \openout6 = `ArthurMTCCII.lof'.
 
@@ -1215,13 +1407,13 @@ bibitemlist
 \tf@toc=\write8
 \openout8 = `ArthurMTCCII.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
  (./ArthurMTCCII.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 560.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 560.
 Package rerunfilecheck Info: File `ArthurMTCCII.brf' has not changed.
-(rerunfilecheck)             Checksum: ED1C59FDCBBBF20242EB21C21E766E27;173.
+(rerunfilecheck)             Checksum: 245EBCA1CCE50E981744DB2FB74AB50C;2225.
 
 
 LaTeX Warning: There were undefined references.
@@ -1229,31 +1421,33 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 560.
  ) 
 Here is how much of TeX's memory you used:
- 13947 strings out of 493304
- 206285 string characters out of 6139871
- 367941 words of memory out of 5000000
- 17009 multiletter control sequences out of 15000+600000
- 67773 words of font info for 102 fonts, out of 8000000 for 9000
+ 14552 strings out of 493304
+ 215389 string characters out of 6139871
+ 377918 words of memory out of 5000000
+ 17480 multiletter control sequences out of 15000+600000
+ 73585 words of font info for 130 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 43i,12n,35p,1418b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fonts/ty
+ 43i,13n,35p,1934b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/calligra-type1/callig15.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ArthurMTCCII.pdf (31 pages, 418294 bytes).
+/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on ArthurMTCCII.pdf (42 pages, 566051 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 22166 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 469 compressed objects within 5 object streams
+ 129 named destinations out of 1000 (max. 500000)
+ 24355 words of extra memory for PDF output out of 24883 (max. 10000000)
 

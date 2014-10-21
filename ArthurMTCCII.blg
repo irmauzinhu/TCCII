@@ -6,46 +6,51 @@ Database file #1: abntex2-options.bib
 Warning--entry type for "abnt-url-package=url" isn't style-file defined
 --line 199 of file abntex2-options.bib
 Database file #2: bib/bib.bib
+Repeated entry---line 236 of file bib/bib.bib
+ : @article{asanov2011algorithms
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "resnick1994grouplen"
 Warning--all relevant fields are empty in abnt-url-package=url
-You've used 4 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            519 strings with 4415 characters,
-and the built_in function-call counts, 1314 in all, are:
-= -- 126
-> -- 45
-< -- 3
-+ -- 19
-- -- 14
-* -- 80
-:= -- 194
-add.period$ -- 11
-call.type$ -- 4
-change.case$ -- 19
+            616 strings with 7620 characters,
+and the built_in function-call counts, 8447 in all, are:
+= -- 860
+> -- 367
+< -- 13
++ -- 146
+- -- 122
+* -- 537
+:= -- 1309
+add.period$ -- 74
+call.type$ -- 22
+change.case$ -- 123
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 60
-empty$ -- 121
-format.name$ -- 14
-if$ -- 293
+cite$ -- 23
+duplicate$ -- 366
+empty$ -- 677
+format.name$ -- 122
+if$ -- 1864
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 3
-newline$ -- 21
-num.names$ -- 6
-pop$ -- 27
+int.to.str$ -- 22
+missing$ -- 23
+newline$ -- 111
+num.names$ -- 42
+pop$ -- 164
 preamble$ -- 1
-purify$ -- 16
+purify$ -- 106
 quote$ -- 0
-skip$ -- 53
+skip$ -- 278
 stack$ -- 0
-substring$ -- 76
-swap$ -- 21
-text.length$ -- 3
+substring$ -- 504
+swap$ -- 125
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
+type$ -- 82
 warning$ -- 1
-while$ -- 12
-width$ -- 5
-write$ -- 41
-(There were 2 warnings)
+while$ -- 81
+width$ -- 24
+write$ -- 245
+(There was 1 error message)
