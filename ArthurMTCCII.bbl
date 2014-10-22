@@ -29,6 +29,18 @@ James Bennett and Stan Lanning.
 \newblock In {\em Proceedings of KDD cup and workshop}, volume 2007, page~35,
   2007.
 
+\bibitem{chen2011solving}
+Yibo Chen, Chanle Wu, Ming Xie, and Xiaojun Guo.
+\newblock Solving the sparsity problem in recommender systems using association
+  retrieval.
+\newblock {\em Journal of computers}, 6(9):1896--1902, 2011.
+
+\bibitem{de2009preference}
+Marco De~Gemmis, Leo Iaquinta, Pasquale Lops, Cataldo Musto, Fedelucio
+  Narducci, and Giovanni Semeraro.
+\newblock Preference learning in recommender systems.
+\newblock {\em PREFERENCE LEARNING}, 41, 2009.
+
 \bibitem{goldberg1992using}
 David Goldberg, David Nichols, Brian~M Oki, and Douglas Terry.
 \newblock Using collaborative filtering to weave an information tapestry.
@@ -145,6 +157,11 @@ Upendra Shardanand and Pattie Maes.
 \newblock In {\em Proceedings of the SIGCHI conference on Human factors in
   computing systems}, pages 210--217. ACM Press/Addison-Wesley Publishing Co.,
   1995.
+
+\bibitem{su2009survey}
+Xiaoyuan Su and Taghi~M Khoshgoftaar.
+\newblock A survey of collaborative filtering techniques.
+\newblock {\em Advances in artificial intelligence}, 2009:4, 2009.
 
 \bibitem{sun2010new}
 Zilei Sun and Nianlong Luo.

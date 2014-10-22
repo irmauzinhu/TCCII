@@ -21,21 +21,18 @@
 \contentsline {section}{\numberline {2.2}Exemplos de sistemas que usam recomenda\IeC {\c c}\IeC {\~a}o}{25}{section.2.2}
 \contentsline {section}{\numberline {2.3}Os principais algoritmos para a recomenda\IeC {\c c}\IeC {\~a}o}{26}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Recomenda\IeC {\c c}\IeC {\~a}o n\IeC {\~a}o personalizada}{28}{subsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.1.1}Pontos fortes desta t\IeC {\'e}cnica}{29}{subsubsection.2.3.1.1}
-\contentsline {subsubsection}{\numberline {2.3.1.2}Pontos fracos desta t\IeC {\'e}cnica}{29}{subsubsection.2.3.1.2}
 \contentsline {subsection}{\numberline {2.3.2}Baseado em conte\IeC {\'u}do}{29}{subsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Pontos fortes desta t\IeC {\'e}cnica}{31}{subsubsection.2.3.2.1}
-\contentsline {subsubsection}{\numberline {2.3.2.2}Pontos fracos desta t\IeC {\'e}cnica}{31}{subsubsection.2.3.2.2}
-\contentsline {subsection}{\numberline {2.3.3}Filtro colaborativo}{31}{subsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.3.1}Filtro colaborativo Baseado em Usu\IeC {\'a}rios}{33}{subsubsection.2.3.3.1}
-\contentsline {subsubsection}{\numberline {2.3.3.2}Filtro Colaborativo Baseado em Itens}{34}{subsubsection.2.3.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3.3}Pontos fortes desta t\IeC {\'e}cnica}{35}{subsubsection.2.3.3.3}
-\contentsline {subsubsection}{\numberline {2.3.3.4}Pontos fracos desta t\IeC {\'e}cnica}{35}{subsubsection.2.3.3.4}
-\contentsline {subsection}{\numberline {2.3.4}H\IeC {\'\i }brido}{35}{subsection.2.3.4}
-\contentsline {subsubsection}{\numberline {2.3.4.1}Pontos fortes desta t\IeC {\'e}cnica}{35}{subsubsection.2.3.4.1}
-\contentsline {subsubsection}{\numberline {2.3.4.2}Pontos fracos desta t\IeC {\'e}cnica}{35}{subsubsection.2.3.4.2}
-\contentsline {subsection}{\numberline {2.3.5}Comparativo entre as t\IeC {\'e}cnicas abordadas}{35}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Subse\IeC {\c c}\IeC {\~a}o}{35}{subsection.2.3.6}
+\contentsline {subsection}{\numberline {2.3.3}Filtro colaborativo}{30}{subsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.1}Filtro colaborativo Baseado em Usu\IeC {\'a}rios}{32}{subsubsection.2.3.3.1}
+\contentsline {subsubsection}{\numberline {2.3.3.2}Filtro Colaborativo Baseado em Itens}{33}{subsubsection.2.3.3.2}
+\contentsline {subsection}{\numberline {2.3.4}H\IeC {\'\i }brido}{34}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Obst\IeC {\'a}culos na Recomenda\IeC {\c c}\IeC {\~a}o}{34}{subsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.5.1}Novo Usu\IeC {\'a}rio}{35}{subsubsection.2.3.5.1}
+\contentsline {subsubsection}{\numberline {2.3.5.2}Usu\IeC {\'a}rio Neutro}{35}{subsubsection.2.3.5.2}
+\contentsline {subsubsection}{\numberline {2.3.5.3}Relev\IeC {\^a}ncia}{35}{subsubsection.2.3.5.3}
+\contentsline {subsubsection}{\numberline {2.3.5.4}Dados Esparsos}{35}{subsubsection.2.3.5.4}
+\contentsline {subsubsection}{\numberline {2.3.5.5}Ovelha Negra}{36}{subsubsection.2.3.5.5}
+\contentsline {subsection}{\numberline {2.3.6}Subse\IeC {\c c}\IeC {\~a}o}{36}{subsection.2.3.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {O Problema}}{37}{chapter.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }

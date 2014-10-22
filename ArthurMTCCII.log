@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.15)  22 OCT 2014 11:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.15)  22 OCT 2014 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1344,125 +1344,143 @@ line 366.
 Underfull \vbox (badness 8113) has occurred while \output is active []
 
  [28]
-[29] [30]
+[29]
+
+LaTeX Warning: Citation `asanov2011algorithms' on page 30 undefined on input li
+ne 461.
+
+
+LaTeX Warning: Citation `linden2003amazon' on page 30 undefined on input line 4
+61.
+
+
+LaTeX Warning: Citation `miller2003movielens' on page 30 undefined on input lin
+e 461.
+
+[30]
 
 LaTeX Warning: Citation `asanov2011algorithms' on page 31 undefined on input li
-ne 472.
-
-
-LaTeX Warning: Citation `linden2003amazon' on page 31 undefined on input line 4
-72.
+ne 463.
 
 
 LaTeX Warning: Citation `miller2003movielens' on page 31 undefined on input lin
-e 472.
-
-
-LaTeX Warning: Citation `asanov2011algorithms' on page 31 undefined on input li
-ne 474.
-
-
-LaTeX Warning: Citation `miller2003movielens' on page 31 undefined on input lin
-e 474.
+e 463.
 
 
 LaTeX Warning: Citation `resnick1994grouplen' on page 31 undefined on input lin
-e 476.
+e 465.
 
 
 LaTeX Warning: Citation `konstan1997grouplens' on page 31 undefined on input li
-ne 476.
+ne 465.
 
 
 LaTeX Warning: Citation `miller2003movielens' on page 31 undefined on input lin
-e 476.
+e 465.
 
 
 LaTeX Warning: Citation `melville2010recommender' on page 31 undefined on input
- line 476.
+ line 465.
 
-[31] <img/rate.png, id=229, 518.53725pt x 157.18726pt>
+<img/rate.png, id=219, 518.53725pt x 157.18726pt>
 File: img/rate.png Graphic file (type png)
  <use img/rate.png>
-Package pdftex.def Info: img/rate.png used on input line 480.
+Package pdftex.def Info: img/rate.png used on input line 469.
 (pdftex.def)             Requested size: 207.41122pt x 62.87378pt.
-
+ [31 <./img/rate.png>]
 
 LaTeX Warning: Citation `ricci2011introduction' on page 32 undefined on input l
-ine 501.
+ine 490.
 
 
 LaTeX Warning: Citation `turban2009electronic' on page 32 undefined on input li
-ne 503.
+ne 492.
 
 
-LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 503.
+LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 492.
 
 
-LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 509.
+LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 498.
 
 
-LaTeX Warning: Citation `zhao2010user' on page 32 undefined on input line 509.
+LaTeX Warning: Citation `zhao2010user' on page 32 undefined on input line 498.
 
 
-LaTeX Warning: Citation `wang2006unifying' on page 32 undefined on input line 5
-09.
+LaTeX Warning: Citation `wang2006unifying' on page 32 undefined on input line 4
+98.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Citation `schafer2007collaborative' on page 32 undefined on inpu
+t line 500.
 
- [32 <./img/rate.png>]
+[32]
 
-LaTeX Warning: Citation `schafer2007collaborative' on page 33 undefined on inpu
-t line 511.
-
-
-LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 528
+LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 517
 .
 
 
 LaTeX Warning: Citation `schafer2007collaborative' on page 33 undefined on inpu
-t line 528.
+t line 517.
 
 
 LaTeX Warning: Citation `asanov2011algorithms' on page 33 undefined on input li
-ne 528.
+ne 517.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-
-LaTeX Warning: Citation `herlocker2000understanding' on page 34 undefined on in
-put line 532.
+LaTeX Warning: Citation `herlocker2000understanding' on page 33 undefined on in
+put line 521.
 
 
-LaTeX Warning: Citation `sarwar2001item' on page 34 undefined on input line 532
+LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 521
 .
 
 
-LaTeX Warning: Citation `shardanand1995social' on page 34 undefined on input li
-ne 532.
+LaTeX Warning: Citation `shardanand1995social' on page 33 undefined on input li
+ne 521.
 
 
-LaTeX Warning: Citation `massa2004using' on page 34 undefined on input line 532
+LaTeX Warning: Citation `massa2004using' on page 33 undefined on input line 521
 .
 
+[33]
 
-LaTeX Warning: Citation `sarwar2001item' on page 34 undefined on input line 540
+LaTeX Warning: Citation `sarwar2001item' on page 34 undefined on input line 529
 .
 
 
 LaTeX Warning: Citation `melville2010recommender' on page 34 undefined on input
- line 549.
+ line 533.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Citation `konstan1998recommender' on page 34 undefined on input 
+line 537.
 
- [34]
-[35] [36
+[34]
 
-] [37] [38
+LaTeX Warning: Citation `sun2010new' on page 35 undefined on input line 540.
+
+
+LaTeX Warning: Citation `asanov2011algorithms' on page 35 undefined on input li
+ne 543.
+
+
+LaTeX Warning: Citation `asanov2011algorithms' on page 35 undefined on input li
+ne 546.
+
+
+LaTeX Warning: Citation `chen2011solving' on page 35 undefined on input line 54
+9.
+
+
+LaTeX Warning: Citation `de2009preference' on page 35 undefined on input line 5
+52.
+
+
+LaTeX Warning: Citation `su2009survey' on page 35 undefined on input line 552.
+
+[35] [36] [37
+
+] [38
 
 ] (./ArthurMTCCII.bbl (./ArthurMTCCII.brf)
 \tf@brf=\write5
@@ -1482,13 +1500,13 @@ bibitemlist
 \tf@toc=\write8
 \openout8 = `ArthurMTCCII.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 569.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 569.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 566.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
  (./ArthurMTCCII.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 569.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 569.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
 Package rerunfilecheck Info: File `ArthurMTCCII.brf' has not changed.
-(rerunfilecheck)             Checksum: C632031AFD2EAC2F8170151D0BDCDCF6;3190.
+(rerunfilecheck)             Checksum: 8550734C7ADD7B0E5A870C744F82CB0D;3655.
 
 
 LaTeX Warning: There were undefined references.
@@ -1496,13 +1514,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 569.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 566.
  ) 
 Here is how much of TeX's memory you used:
- 14634 strings out of 493304
- 217199 string characters out of 6139871
- 379089 words of memory out of 5000000
- 17536 multiletter control sequences out of 15000+600000
+ 14658 strings out of 493304
+ 217658 string characters out of 6139871
+ 378198 words of memory out of 5000000
+ 17557 multiletter control sequences out of 15000+600000
  74101 words of font info for 134 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  43i,12n,35p,1916b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1519,10 +1537,10 @@ blic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ArthurMTCCII.pdf (45 pages, 639741 bytes).
+Output written on ArthurMTCCII.pdf (45 pages, 644342 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 147 named destinations out of 1000 (max. 500000)
- 24355 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 509 compressed objects within 6 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 24331 words of extra memory for PDF output out of 24883 (max. 10000000)
 

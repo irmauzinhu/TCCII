@@ -318,9 +318,9 @@ O primeiro framework desenvolvido para exemplificar o funcionamento do Sistema d
 Em 1994, o projeto \textit{GroupLens Research} criou o sistema para recomendação chamado \textit{GroupLens}, utilizando a técnica de Filtro Colaborativo para filtrar artigos de notícias, utilizando a avaliação efetuada por outros usuários que já tiveram contato com o artigo. Foi o primeiro sistema a utilizar avaliações como dado principal para recomendação \cite{resnick1994grouplens}. 
 
 Com estudo mais solidificados e com um maior insetivo de pesquisa, em 1997, \textit{Paul Resnick} e \textit{Hal Varian} realizam um trabalho que serve de base para estudos realizados até os dias atuais, relatando no artigo, a naturalidade da recomendação social feita entre pessoas, afirmando que é preciso fazer escolhas sem ter conhecimento prévio sibre o que se tem a disposição para escolher, utilizando informações de outras pessoas que podem afirmar que tiveram experiência com as opções disponíveis para escolha \cite{resnick1997recommender}. Também em 1997, o projeto \textit{GroupLens Research} foi responsável por criar o primeiro Sitema de Recomendação de filmes, chamado \textit{MovieLens} ,utilizando infomações implícitas de outros usuários da internet, como base para a recomendação dos filmes para outros usuários, aproximando as preferências deste usuário com as características dos filmes \cite{miller2003movielens}, \cite{konstan1998recommender}.
-%-- end Hystory sec
 
-%-- Begin Examples RecSys
+
+
 \section{Exemplos de sistemas que usam recomendação}
 Sistemas de recomendação são encontrados em uso por vários sistemas de lojas de eCommerce [3], [4], [6], com a tarefa de sugerir aos seus usuários produtos que possam lhe interessar. Os produtos podem ser recomendados partindo de várias premissas, como, por exemplo, sendo o produto mais vendido de uma determinada seção em que o usuário esta visitando, ou o
 mais vendido de todo o site, ou baseado em dados coletados do usuário como referência, ou analisando compras feitas pelo usuário com os dados dos produtos comprados no passado, correlacionando com produtos vizinhos que tenham atributos idênticos ou semelhantes, que seria utilizado como uma previsão de uma futura compra desses produtos vizinhos. [4] Uma
@@ -410,14 +410,6 @@ Essa matriz exemplo, é composta por todas as avaliações feitas pelos usuário
 
 onde $S$ é um vetor que possui $n$ posições e armazenada o valor de cada item avaliado, que recebe o somatório de $k = 1$ indo até $n$, onde $n$ representa o número total de avaliações feitas por cada usuário $U_{k}$ sobre o produto específico $i$, divididos por $n$. Esse calculo é feito para cada item do sistema, e a recomendação se baseia nos valores existentes no vetor resultado.
 
-%---------------------- Dúvida 
-\subsubsection{Pontos fortes desta técnica}
-Um dos pontos fortes desta técnica é a generalização de itens recomendados, não sendo preciso a separação por atributos dos itens, sendo assim, todos os usuários receberão a mesma recomendação. Esta recomendação é feita de forma direta, mostrando o item que está na tendência, agradando usuários que se interessam por esse tipo de recomendação.
-
-\subsubsection{Pontos fracos desta técnica}
-A falta de utilização de atributos dos produtos ou da preferência de seus usuários, podem resultar em um sistema de recomendação não tão eficiente, onde existem usuários à procura de produtos que possuem características semelhantes aos produtos que ele já teve experiência no passado, ou produtos que são de alguma categoria de sua preferência, e utilizam atributos específicos relacionados aos seus usuários.
-%---------------------- Dúvida 
-
 
 \subsection{Baseado em conteúdo}
 Na recomendação baseada em conteúdo, a avaliação u(c,s) do produto s e do usuário c, é baseada na avaliação u(c,s') que foi atribuída pelo mesmo usuário c para outro itens, se pertencer, s'i E S que é similar a s, em atributos do produto. Então, como exemplo dado em [11], em um sistema de locação de filmes com sistema de recomendação, para recomendar novos filmes para o usuário u, a recomendação por conteúdo procura no histórico do usuário todos os filmes que foram avaliados por ele, e só assim, é possível correlacionar com novos filmes que tenham atributos semelhantes para recomendar para ele durante uma nova visita.
@@ -464,9 +456,6 @@ P(C_i)||P(k_{x,j}|C_i).
 
 Então, ficando a colocação dos índices independentes, não é necessário aplicá-lo em todas as aplicações. De acordo com [5], em testes experimentais de demonstração da técnica de Bayesian classifiers mostrou uma ótima eficiência e precisão de classificação. E ainda mais, podendo os dois $P(C_i)$ e $P(k_{x,j}|C_i)$ serem estimados por dados preparados, com informação que seria suficiente para a recomendação. Sendo assim, para cada $p_j$ a probabilidade $P(C_i| k_{1,j}\&,...,\&k_{n,j})$ é registrada para cada classe $C_i$ e pagina $p_j$ é atribuído em $C_i$, atingindo o máximo de probabilidade possível.
 
-\subsubsection{Pontos fortes desta técnica}
-
-\subsubsection{Pontos fracos desta técnica}
 
 \subsection{Filtro colaborativo}
 O algoritmo de recomendação por filtro colaborativo se tornou, com o passar dos anos em meio a diversas pesquisas realizadas na área da recomendação, uma das principais técnicas de recomendação que viraram alvo de pesquisas e estudos para aprimoramento ou derivação de outras técnicas, como o propósito de criar uma técnica variável, onde utiliza os mesmos conceitos, mas busca a sua recomendação em atributos específicos \cite{asanov2011algorithms}. A principal intenção desta técnica é a de encontrar usuários dispostos a divulgar suas experiências sobre os produtos disponíveis no sistema \cite{linden2003amazon}. Em muitos casos, dentro da área da recomendação, em um sistema de porte pequeno ou de pouca rotatividade, ou em sistema de grande porte onde possui muitas informações sobre as avaliações, mas com todas as informações, referentes as avaliações dos usuários, já presentes no sistema, a recomendação pode ser feita de forma mais simples, mas em sistemas que possuem muitos produtos, muitas categorias, é muito improvável poder afirmar que todos os produtos serão avaliados em algum momento. Utilizando como exemplo, o sistema web do GroupLens responsável por recomendar filmes, possui milhares de filmes para serem recomendados, mas possui uma porcentagem muito baixa de produtos avaliados \cite{miller2003movielens}. 
@@ -540,19 +529,27 @@ Com o valor da similaridade dos itens, o peso do somatório das avaliações fei
 Observando a matriz de avaliações do filtro colaborativo baseado em usuários, a diferença entre ela e a matriz de avaliações do filtro colaborativo baseado em itens é que na aproximação baseada em usuários, os valores existente nas linhas são os valores utilizados para a predição, e na aproximação baseada em item, os valores existentes nas colunas são os valores utilizados para a predição \cite{sarwar2001item}. 
 
 
-\subsubsection{Pontos fortes desta técnica}
-
-\subsubsection{Pontos fracos desta técnica}
-
-
 \subsection{Híbrido}
 Existem diversas formas e variações sobre técnicas híbridas. A mais estudada é a fusão entre as técnicas de recomendação baseada em conteúdo e a recomendação por filtro colaborativo. Utilizando as duas predições, é possível, e mais provável, uma melhor precisão em pontos fracos dos dois algoritmos. Como a intenção é obter melhores resultados, a aproximação é realizada de forma separada, onde a técnica de recomendação baseada em conteúdo e a técnica de recomendação por filtro colaborativo predizem valores separadamente, e com os valores já encontrados, é possível realizar a fusão dos resultados, resultando em um vetor novo, que será o vetor resultado \cite{melville2010recommender}.
 
-\subsubsection{Pontos fortes desta técnica}
 
-\subsubsection{Pontos fracos desta técnica}
+\subsection{Obstáculos na Recomendação}
+Em sistemas de recomendação, a utilização da informações e a principal ferramenta do sistema, o que poderia ser definida como uma ótima recomendação seria a recomendação que atua sobre um sitema completo, ou um sistema robusto, um sistema com todas as informações contidas em sua base de dados, todas as informações necessárias para a recomendação, para garantir resultados com maior precisão. É possível afirmar também que, se o Sitema de Recomendação atuar sobre uma base de dados que não tenha uma quantidade de dados suficiente para uma recomendação precisa, é muito provável que a recomendação seja realizada de forma defeituosa, não conseguindo realizar aprocimações corretas. Outros fatores negativos, que serão nomeados como obstáculos nesta seção do trabalho, podem  influenciar em uma recomendação imperfeita, tornando o sistema instável e não confiável. Esses obstáculos serão abordados de forma sucinta nas próximas subseções \cite{konstan1998recommender}.
 
-\subsection{Comparativo entre as técnicas abordadas}
+\subsubsection{Novo Usuário}
+A recomendação para um novo usuário pode ser feita de forma incorreta, uma vez que não é possível ter nenhuma informação sobre as preferências deste novo usuário pois é a primeira vez que o usuário está tendo contado com o sistema onde foi aplicada a recomendação. Uma forma de tentar superar este obstáculo é utilizando mais de uma técnica para a recomendação, um sistema híbrido, por exemplo \cite{sun2010new}.
+
+\subsubsection{Usuário Neutro}
+Um dos proncipais obstáculos da recomendação e tentar recomendar algum produto para um usuário que não possui quase nenhuma, ou nenhuma, informação sobre suas preferências, como não ter avaliado nenhum produto que já tenha tido experiência ou possua um perfil praticamente nulo. O sistema não terá nenhuma informação para poder recomendar outro produto. Mesmo não sendo um usuário novo, para o sistema, ele seria tratado como um obstáculo igual ao do novo usuário \cite{asanov2011algorithms}.
+
+\subsubsection{Relevância}
+As informações coletadas por usuários nem sempre tem o mesmo peso entre sí. Pode se dizer que, a preferência de um usuário com poucas avaliações realizadas no sistema tem um peso menor que as avaliações feitas por outro usuário que possua muitas avaliações \cite{asanov2011algorithms}.
+
+\subsubsection{Dados Esparsos}
+Em determinado sistemas, a quantidade de produtos pertence a um conjunto de números enormes, logo, não é possível ter a garantia de que todos os produtos serão avaliados por algum usuário em determinado período, e não é possível garantir a recomendação correta, pois tendo uma quantidade insuficiente de dados, pode occorer de comprometer a integridade da recomendação. Determinado produto não pode ser recomendado de forma correta se ainda não foi avaliado por nenhum outro usuário \cite{chen2011solving}.
+
+\subsubsection{Ovelha Negra}
+O termo ovelha negra, ou \textit{Black Sheep} (em inglês), é o nome dado aos usuários que não pertencem a nenhum grupo do sistema, mas sim de um grupo próprio, o grupo que não avalia nada positivamente. Todas as avaliações feitas sobre os produtos do sistema são relativas as suas experiências negativas, mesmo sobre produtos avaliados positivamente, as avaliações feitas pelo usuário ovelha negra vai contra a avaliação da maior parte do soutros usuários, dificultando a real aproximação dos dados para a recomendação \cite{de2009preference}, \cite{su2009survey}. 
 
 
 
