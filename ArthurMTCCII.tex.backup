@@ -546,9 +546,13 @@ Um dos proncipais obstáculos da recomendação e tentar recomendar algum produt
 As informações coletadas por usuários nem sempre tem o mesmo peso entre sí. Pode se dizer que, a preferência de um usuário com poucas avaliações realizadas no sistema tem um peso menor que as avaliações feitas por outro usuário que possua muitas avaliações \cite{asanov2011algorithms}.
 
 \subsubsection{Dados Esparsos}
-Em determinado sistemas, a quantidade de produtos pertence a um conjunto de números enormes, logo, não é possível ter a garantia de que todos os produtos serão avaliados por algum usuário em determinado período, e não 
+Em determinado sistemas, a quantidade de produtos pertence a um conjunto de números enormes, logo, não é possível ter a garantia de que todos os produtos serão avaliados por algum usuário em determinado período, e não é possível garantir a recomendação correta, pois tendo uma quantidade insuficiente de dados, pode occorer de comprometer a integridade da recomendação. Determinado produto não pode ser recomendado de forma correta se ainda não foi avaliado por nenhum outro usuário \cite{chen2011solving}.
 
-\subsubsection{Usuário Neutro}
+\subsubsection{Ovelha Negra}
+O termo ovelha negra, ou \textit{Black Sheep} (em inglês), é o nome dado aos usuários que não pertencem a nenhum grupo do sistema, mas sim de um grupo próprio, o grupo que não avalia nada positivamente. Todas as avaliações feitas sobre os produtos do sistema são relativas as suas experiências negativas, mesmo sobre produtos avaliados positivamente, as avaliações feitas pelo usuário ovelha negra vai contra a avaliação da maior parte do soutros usuários, dificultando a real aproximação dos dados para a recomendação \cite{de2009preference}, \cite{su2009survey}. 
+
+\chapter{Não sei como chamar este capítulo}
+Para este trabalho, foi escolhido a Recomendação por Filtro Colaborativo como técnica para demostração de resultados e desenvolvimento do Framework exemplo. Este fre
 
 \subsection{Subseção}
 

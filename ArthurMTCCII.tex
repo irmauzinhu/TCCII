@@ -292,13 +292,19 @@ Com esse trabalho em desenvolvimento, os objetivos são de demostrar o uso e a a
 
 O algoritmo de recomendação será submetido a um conjunto de dados obtidos pela internet, coletados por um site  de agrupamento de informações sobre filmes, e ao receber os dados referêntes ao histório do usuário, o algoritmo coletará informações sobre suas preferências no banco de dados, correlacionando suas  informações com as de outros usuário que compraram ou avaliaram produtos relacionados, buscando quais foram suas outras  compras que tem atributos os recursos em comum com o que o usuário está pesquisando, e mostrar, de forma ordenada por relevância, ao  usuário os produtos que mais tiveram relação entre as escolhas dos usuário, de acordo com o banco de dados.
 
-Com a pesquisa feita no banco de dados, os resultados esperados são de que, mesmo com um grande número de informações sobre os dados do sistema, as informações que são armazenadas no banco de dados são alimentadas de forma a aprimorar mais 
-o sistema de recomendação, aumentado a taxa de acerto na recomendação de futuros produtos.
+Com a pesquisa feita no banco de dados, os resultados esperados são de que, mesmo com um grande número de informações sobre os dados do sistema, as informações que são armazenadas no banco de dados são alimentadas de forma a aprimorar mais o sistema de recomendação, aumentado a taxa de acerto na recomendação de futuros produtos.
 
 \chapter{Sistema de Recomendação}
-O objetivo dos Sistemas de Recomendação é, de forma geral, garantir o significado de recomendação para um ambiente formado por um grande grupo de pessoas interessadas em algo novo, independente do que seja, com a finalidade de oferecer algo com mais precisão e certeza. [8] Ele foi emergido através de importantes pesquisas independentes, na área de pesquisa tecnológicas, com seus primeiros dados de avanços e descobertas publicados em meados dos anos 90. [5] Desta época até os dias atuais, as pesquisas sobre recomendação subiram drasticamente, buscando o aprimoramento das técnicas e a expansão do conhecimento. [7] 
+O objetivo dos Sistemas de Recomendação é, de forma geral, garantir o significado de recomendação para um ambiente formado por um grande grupo de pessoas interessadas em algo novo, independente do que seja, com a finalidade de oferecer algo com mais precisão e certeza. [8] Ele foi emergido através de importantes pesquisas independentes, na área de pesquisa tecnológicas, com seus primeiros dados de avanços e descobertas publicados em meados dos anos 90. [5] Desta época até os dias atuais, as pesquisas sobre recomendação subiram significativamente, buscando o aprimoramento das técnicas e a expansão do conhecimento. [7]
+
+De forma mais detalhada, o Sitema de Recomendação tenta realizar a tarefa de poder apresentar a seus usuários novos produtos que possuem muitas correlações com suas prefeencias \cite{resnick1997recommender}. O grande desafio de muitos sitemas seria a apresentação dos novos produtos para seus usuários. De forma simples, como é observado durante muitos anos de estudos sociais, o Sitema de Recomendação trabalha sobre a necessidade das pessoas buscarem alguma informação sobre algo novo. 
+
+Para exemplificar, podemos tomar como exemplo um usuário novo visitando um site qualquer, onde ele gostaria de procurar um produto em específico. Ao finalizar sua atividade, o usuário tem duas opções: sair do sistema ou se interessar por novos produtos. Partindo disso, podemos afirmar que não é fácil para o usuário se interessar por algo que não nenhum atributo relacionado com suas experiências, então podemos aplicar a recomendação neste sistema, e torná-lo responsável por realizar a tarefa de mostrar para a pessoa algo que realmente vá lhe interessar, adiando, por um tempo mais longo, a opção voluntária da pessoa de sair do sistema em questão.
+
 De acordo com [7], alguns fatos marcaram o grande crescimento das pesquisas e utilização dos sistemas de recomendação, como o uso ascendente das grandes empresas da internet, que utilizam a recomendação para agradar novos usuários e manter seus usuários, com a recomendação de conteúdos contidos no site que possam ser do interesse desse usuário. As grandes empresas que utilizam esse sistema hoje em dia são, NetFlix, [10] YouTube, Yahoo, Tripadvisor, Last.fm e IMDb. Muitas empresas estão passando a utilizar a recomendação para otimizar seu desempenho no mercado, e todas as empresas que já utilizam a recomendação buscam á sempre ter seus sistemas totalmente atualizados, para garantir a melhor eficiência em recomendação, como, por exemplo, o NetFlix, que se dispõe a pagar um milhão de dollar para a pessoa, ou grupo de pessoas, que conseguir desenvolver um sistema melhor que o já implementado deles. Isso mostra que o setor de recomendação da empresa representa uma parcela muito grande de seu retorno financeiro. 
+
 Hoje existe uma organização promotora dedicada a conferências e workshops sobre sistema de recomendação que é a ACM Recommender Systems (RecSys), foi estabilizada em 2007 e agora é conhecida por realizar anualmente uma conferência sobre recomendação e suas tecnologias sobre pesquisas e aplicações.
+
 Universidades do mundo todos realizam trabalhos sobre sistema de recomendação. Mais hoje do que nunca. Recentemente, uma faculdade, ondese fez famosa por possuir grandes conferências sobre ciência, lançou um livro sobre as técnicas de recomendação.
 
 
@@ -551,7 +557,8 @@ Em determinado sistemas, a quantidade de produtos pertence a um conjunto de núm
 \subsubsection{Ovelha Negra}
 O termo ovelha negra, ou \textit{Black Sheep} (em inglês), é o nome dado aos usuários que não pertencem a nenhum grupo do sistema, mas sim de um grupo próprio, o grupo que não avalia nada positivamente. Todas as avaliações feitas sobre os produtos do sistema são relativas as suas experiências negativas, mesmo sobre produtos avaliados positivamente, as avaliações feitas pelo usuário ovelha negra vai contra a avaliação da maior parte do soutros usuários, dificultando a real aproximação dos dados para a recomendação \cite{de2009preference}, \cite{su2009survey}. 
 
-
+\chapter{Não sei como chamar este capítulo}
+Para este trabalho, foi escolhido a Recomendação por Filtro Colaborativo como técnica para demostração de resultados e desenvolvimento do Framework exemplo. Este fre
 
 \subsection{Subseção}
 
