@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.15)  21 OCT 2014 02:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.15)  22 OCT 2014 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1236,168 +1236,243 @@ LaTeX Warning: Citation `masum2004manifesto' on page 23 undefined on input line
 LaTeX Warning: Citation `ramos2008ambient' on page 23 undefined on input line 3
 06.
 
-[23]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 320.
 
- (/usr/share/texmf/tex/latex/lm/omslmr.fd
+LaTeX Warning: Citation `adomavicius2005toward' on page 23 undefined on input l
+ine 308.
+
+
+LaTeX Warning: Citation `ricci2011introduction' on page 23 undefined on input l
+ine 308.
+
+
+LaTeX Warning: Citation `adomavicius2005incorporating' on page 23 undefined on 
+input line 308.
+
+
+LaTeX Warning: Citation `schafer1999recommender' on page 23 undefined on input 
+line 308.
+
+
+LaTeX Warning: Citation `goldberg1992using' on page 23 undefined on input line 
+308.
+
+
+LaTeX Warning: Citation `konstan1998recommender' on page 23 undefined on input 
+line 308.
+
+
+LaTeX Warning: Citation `bennett2007netflix' on page 23 undefined on input line
+ 308.
+
+
+LaTeX Warning: Citation `linden2003amazon' on page 23 undefined on input line 3
+08.
+
+[23]
+
+LaTeX Warning: Citation `hayes1978naive' on page 24 undefined on input line 310
+.
+
+
+LaTeX Warning: Citation `hey1989system' on page 24 undefined on input line 312.
+
+
+
+LaTeX Warning: Citation `konstan1998recommender' on page 24 undefined on input 
+line 314.
+
+
+LaTeX Warning: Citation `goldberg1992using' on page 24 undefined on input line 
+316.
+
+
+LaTeX Warning: Citation `vozalis2003recommender' on page 24 undefined on input 
+line 316.
+
+
+LaTeX Warning: Citation `resnick1994grouplens' on page 24 undefined on input li
+ne 318.
+
+
+LaTeX Warning: Citation `resnick1997recommender' on page 24 undefined on input 
+line 320.
+
+
+LaTeX Warning: Citation `miller2003movielens' on page 24 undefined on input lin
+e 320.
+
+
+LaTeX Warning: Citation `konstan1998recommender' on page 24 undefined on input 
+line 320.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 332.
+
+
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 320.
- [24]
-
-LaTeX Warning: Citation `schafer1999recommender' on page 25 undefined on input 
-line 340.
-
-
-LaTeX Warning: Citation `kantor2011recommender' on page 25 undefined on input l
-ine 340.
-
-
-LaTeX Warning: Citation `schafer1999recommender' on page 25 undefined on input 
-line 340.
-
-
-Underfull \vbox (badness 1571) has occurred while \output is active []
-
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 332.
  [25]
 
-LaTeX Warning: Citation `schafer2007collaborative' on page 26 undefined on inpu
-t line 346.
+LaTeX Warning: Citation `schafer1999recommender' on page 26 undefined on input 
+line 349.
+
+
+LaTeX Warning: Citation `kantor2011recommender' on page 26 undefined on input l
+ine 349.
 
 
 LaTeX Warning: Citation `schafer1999recommender' on page 26 undefined on input 
-line 357.
+line 349.
+
+[26]
+
+LaTeX Warning: Citation `schafer2007collaborative' on page 27 undefined on inpu
+t line 355.
+
+[27]
+
+LaTeX Warning: Citation `schafer1999recommender' on page 28 undefined on input 
+line 366.
 
 
-Underfull \vbox (badness 8038) has occurred while \output is active []
+Underfull \vbox (badness 8113) has occurred while \output is active []
 
- [26]
-[27] [28]
-Underfull \vbox (badness 1033) has occurred while \output is active []
+ [28]
+[29] [30]
 
- [29]
-
-LaTeX Warning: Citation `asanov2011algorithms' on page 30 undefined on input li
-ne 463.
+LaTeX Warning: Citation `asanov2011algorithms' on page 31 undefined on input li
+ne 472.
 
 
-LaTeX Warning: Citation `linden2003amazon' on page 30 undefined on input line 4
-63.
-
-
-LaTeX Warning: Citation `miller2003movielens' on page 30 undefined on input lin
-e 463.
-
-
-LaTeX Warning: Citation `asanov2011algorithms' on page 30 undefined on input li
-ne 465.
-
-
-LaTeX Warning: Citation `miller2003movielens' on page 30 undefined on input lin
-e 465.
-
-[30]
-
-LaTeX Warning: Citation `resnick1994grouplen' on page 31 undefined on input lin
-e 467.
-
-
-LaTeX Warning: Citation `konstan1997grouplens' on page 31 undefined on input li
-ne 467.
+LaTeX Warning: Citation `linden2003amazon' on page 31 undefined on input line 4
+72.
 
 
 LaTeX Warning: Citation `miller2003movielens' on page 31 undefined on input lin
-e 467.
+e 472.
+
+
+LaTeX Warning: Citation `asanov2011algorithms' on page 31 undefined on input li
+ne 474.
+
+
+LaTeX Warning: Citation `miller2003movielens' on page 31 undefined on input lin
+e 474.
+
+
+LaTeX Warning: Citation `resnick1994grouplen' on page 31 undefined on input lin
+e 476.
+
+
+LaTeX Warning: Citation `konstan1997grouplens' on page 31 undefined on input li
+ne 476.
+
+
+LaTeX Warning: Citation `miller2003movielens' on page 31 undefined on input lin
+e 476.
 
 
 LaTeX Warning: Citation `melville2010recommender' on page 31 undefined on input
- line 467.
+ line 476.
 
-<img/movielens2.png, id=227, 351.3125pt x 247.92625pt>
-File: img/movielens2.png Graphic file (type png)
-
-<use img/movielens2.png>
-Package pdftex.def Info: img/movielens2.png used on input line 471.
-(pdftex.def)             Requested size: 140.5225pt x 99.16873pt.
-
-
-LaTeX Warning: Citation `ricci2011introduction' on page 31 undefined on input l
-ine 492.
+[31] <img/rate.png, id=229, 518.53725pt x 157.18726pt>
+File: img/rate.png Graphic file (type png)
+ <use img/rate.png>
+Package pdftex.def Info: img/rate.png used on input line 480.
+(pdftex.def)             Requested size: 207.41122pt x 62.87378pt.
 
 
-LaTeX Warning: Citation `turban2009electronic' on page 31 undefined on input li
-ne 494.
+LaTeX Warning: Citation `ricci2011introduction' on page 32 undefined on input l
+ine 501.
 
 
-LaTeX Warning: Citation `sun2010new' on page 31 undefined on input line 494.
-
-[31 <./img/movielens2.png (PNG copy)>]
-
-LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 500.
+LaTeX Warning: Citation `turban2009electronic' on page 32 undefined on input li
+ne 503.
 
 
-LaTeX Warning: Citation `zhao2010user' on page 32 undefined on input line 500.
+LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 503.
+
+
+LaTeX Warning: Citation `sun2010new' on page 32 undefined on input line 509.
+
+
+LaTeX Warning: Citation `zhao2010user' on page 32 undefined on input line 509.
 
 
 LaTeX Warning: Citation `wang2006unifying' on page 32 undefined on input line 5
-00.
+09.
 
 
-LaTeX Warning: Citation `schafer2007collaborative' on page 32 undefined on inpu
-t line 502.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[32]
+ [32 <./img/rate.png>]
 
-LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 519
+LaTeX Warning: Citation `schafer2007collaborative' on page 33 undefined on inpu
+t line 511.
+
+
+LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 528
 .
 
 
 LaTeX Warning: Citation `schafer2007collaborative' on page 33 undefined on inpu
-t line 519.
+t line 528.
 
 
 LaTeX Warning: Citation `asanov2011algorithms' on page 33 undefined on input li
-ne 519.
+ne 528.
 
 
-LaTeX Warning: Citation `herlocker2000understanding' on page 33 undefined on in
-put line 523.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+
+LaTeX Warning: Citation `herlocker2000understanding' on page 34 undefined on in
+put line 532.
 
 
-LaTeX Warning: Citation `sarwar2001item' on page 33 undefined on input line 523
+LaTeX Warning: Citation `sarwar2001item' on page 34 undefined on input line 532
 .
 
 
-LaTeX Warning: Citation `shardanand1995social' on page 33 undefined on input li
-ne 523.
+LaTeX Warning: Citation `shardanand1995social' on page 34 undefined on input li
+ne 532.
 
 
-LaTeX Warning: Citation `massa2004using' on page 33 undefined on input line 523
+LaTeX Warning: Citation `massa2004using' on page 34 undefined on input line 532
 .
 
-[33]
 
-LaTeX Warning: Citation `sarwar2001item' on page 34 undefined on input line 531
+LaTeX Warning: Citation `sarwar2001item' on page 34 undefined on input line 540
 .
 
 
 LaTeX Warning: Citation `melville2010recommender' on page 34 undefined on input
- line 540.
+ line 549.
 
-[34] [35
 
-] [36
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+[35] [36
+
+] [37] [38
 
 ] (./ArthurMTCCII.bbl (./ArthurMTCCII.brf)
 \tf@brf=\write5
 \openout5 = `ArthurMTCCII.brf'.
 
- [37] [38
+ [39] [40
 
 ]
 bibitemlist
-[39]) [40]
+[41] [42]) [43]
 \tf@lof=\write6
 \openout6 = `ArthurMTCCII.lof'.
 
@@ -1407,13 +1482,13 @@ bibitemlist
 \tf@toc=\write8
 \openout8 = `ArthurMTCCII.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 569.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 569.
  (./ArthurMTCCII.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 560.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 560.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 569.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 569.
 Package rerunfilecheck Info: File `ArthurMTCCII.brf' has not changed.
-(rerunfilecheck)             Checksum: 245EBCA1CCE50E981744DB2FB74AB50C;2225.
+(rerunfilecheck)             Checksum: C632031AFD2EAC2F8170151D0BDCDCF6;3190.
 
 
 LaTeX Warning: There were undefined references.
@@ -1421,16 +1496,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 560.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 569.
  ) 
 Here is how much of TeX's memory you used:
- 14552 strings out of 493304
- 215389 string characters out of 6139871
- 377918 words of memory out of 5000000
- 17480 multiletter control sequences out of 15000+600000
- 73585 words of font info for 130 fonts, out of 8000000 for 9000
+ 14634 strings out of 493304
+ 217199 string characters out of 6139871
+ 379089 words of memory out of 5000000
+ 17536 multiletter control sequences out of 15000+600000
+ 74101 words of font info for 134 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 43i,13n,35p,1934b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,35p,1916b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/ty
@@ -1444,10 +1519,10 @@ blic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ArthurMTCCII.pdf (42 pages, 566051 bytes).
+Output written on ArthurMTCCII.pdf (45 pages, 639741 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
- 129 named destinations out of 1000 (max. 500000)
+ 581 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
+ 147 named destinations out of 1000 (max. 500000)
  24355 words of extra memory for PDF output out of 24883 (max. 10000000)
 

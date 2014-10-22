@@ -3,6 +3,21 @@
 \bibitem{abnt-url-package=url}
 
 
+\bibitem{adomavicius2005incorporating}
+Gediminas Adomavicius, Ramesh Sankaranarayanan, Shahana Sen, and Alexander
+  Tuzhilin.
+\newblock Incorporating contextual information in recommender systems using a
+  multidimensional approach.
+\newblock {\em ACM Transactions on Information Systems (TOIS)}, 23(1):103--145,
+  2005.
+
+\bibitem{adomavicius2005toward}
+Gediminas Adomavicius and Alexander Tuzhilin.
+\newblock Toward the next generation of recommender systems: A survey of the
+  state-of-the-art and possible extensions.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  17(6):734--749, 2005.
+
 \bibitem{asanov2011algorithms}
 Daniar Asanov.
 \newblock Algorithms and methods in recommender systems.
@@ -14,11 +29,28 @@ James Bennett and Stan Lanning.
 \newblock In {\em Proceedings of KDD cup and workshop}, volume 2007, page~35,
   2007.
 
+\bibitem{goldberg1992using}
+David Goldberg, David Nichols, Brian~M Oki, and Douglas Terry.
+\newblock Using collaborative filtering to weave an information tapestry.
+\newblock {\em Communications of the ACM}, 35(12):61--70, 1992.
+
+\bibitem{hayes1978naive}
+Patrick~J Hayes et~al.
+\newblock {\em The naive physics manifesto}.
+\newblock Universit{\'e} de Gen{\`e}ve, Institut pour les {\'e}tudes
+  s{\'e}mantiques et cognitives, 1978.
+
 \bibitem{herlocker2000understanding}
 Jonathan~Lee Herlocker.
 \newblock {\em Understanding and improving automated collaborative filtering
   systems}.
 \newblock PhD thesis, University of Minnesota, 2000.
+
+\bibitem{hey1989system}
+John~B Hey.
+\newblock System and method of predicting subjective reactions, September~26
+  1989.
+\newblock US Patent 4,870,579.
 
 \bibitem{kantor2011recommender}
 Paul~B Kantor, Lior Rokach, Francesco Ricci, and Bracha Shapira.
@@ -30,6 +62,12 @@ Joseph~A Konstan, Bradley~N Miller, David Maltz, Jonathan~L Herlocker, Lee~R
   Gordon, and John Riedl.
 \newblock Grouplens: applying collaborative filtering to usenet news.
 \newblock {\em Communications of the ACM}, 40(3):77--87, 1997.
+
+\bibitem{konstan1998recommender}
+Joseph~A Konstan, John Riedl, A~Borchers, and Jonathan~L Herlocker.
+\newblock Recommender systems: A grouplens perspective.
+\newblock In {\em Recommender Systems: Papers from the 1998 Workshop (AAAI
+  Technical Report WS-98-08)}, pages 60--64, 1998.
 
 \bibitem{linden2003amazon}
 Greg Linden, Brent Smith, and Jeremy York.
@@ -64,6 +102,14 @@ Bradley~N Miller, Istvan Albert, Shyong~K Lam, Joseph~A Konstan, and John
 Carlos Ramos, Juan~Carlos Augusto, and Daniel Shapiro.
 \newblock Ambient intelligence—the next step for artificial intelligence.
 \newblock {\em Intelligent Systems, IEEE}, 23(2):15--18, 2008.
+
+\bibitem{resnick1994grouplens}
+Paul Resnick, Neophytos Iacovou, Mitesh Suchak, Peter Bergstrom, and John
+  Riedl.
+\newblock Grouplens: an open architecture for collaborative filtering of
+  netnews.
+\newblock In {\em Proceedings of the 1994 ACM conference on Computer supported
+  cooperative work}, pages 175--186. ACM, 1994.
 
 \bibitem{resnick1997recommender}
 Paul Resnick and Hal~R Varian.
@@ -111,6 +157,13 @@ Zilei Sun and Nianlong Luo.
 Efraim Turban, Jae~K Lee, David King, Ting~Peng Liang, and Deborrah Turban.
 \newblock {\em Electronic commerce 2010}.
 \newblock Prentice Hall Press, 2009.
+
+\bibitem{vozalis2003recommender}
+Emmanouil~G Vozalis and Konstantinos~G Margaritis.
+\newblock Recommender systems: An experimental comparison of two filtering
+  algorithms.
+\newblock In {\em Proceedings of the 9th Panhellenic Conference in
+  Informatics-PCI 2003}, 2003.
 
 \bibitem{wang2006unifying}
 Jun Wang, Arjen~P De~Vries, and Marcel~JT Reinders.

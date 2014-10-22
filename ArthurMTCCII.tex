@@ -301,13 +301,25 @@ De acordo com [7], alguns fatos marcaram o grande crescimento das pesquisas e ut
 Hoje existe uma organização promotora dedicada a conferências e workshops sobre sistema de recomendação que é a ACM Recommender Systems (RecSys), foi estabilizada em 2007 e agora é conhecida por realizar anualmente uma conferência sobre recomendação e suas tecnologias sobre pesquisas e aplicações.
 Universidades do mundo todos realizam trabalhos sobre sistema de recomendação. Mais hoje do que nunca. Recentemente, uma faculdade, ondese fez famosa por possuir grandes conferências sobre ciência, lançou um livro sobre as técnicas de recomendação.
 
-%------ Um pouco sobre a história. Seria melhor outro Cap pra isso? -----
+
 \section{História}
 Estudos sobre a recomendação entre pessoas foram realizados durante muitos períodos da história humana e foram motivados por levantamentos e afirmações como as de \textit{Masum} e \textit{Zhang} \cite{masum2004manifesto}. Algumas questões pertinentes sobre a recomendação surgiram e viraram alvo de estudos para outras áreas de estudos, como a área de Inteligência Artificial \cite{ramos2008ambient}, com o intuíto de descobrir uma singularidade ou padrão onde seria possível generalizar a recomendação de forma automatizada.
 
+Os principais estudos sobre os Sistemas de Recomendação foram realizados durante a década de 90, \cite{adomavicius2005toward}, \cite{ricci2011introduction}, \cite{adomavicius2005incorporating}, \cite{schafer1999recommender}, mais precisamente em 1992 \cite{goldberg1992using}, \cite{konstan1998recommender}, e serviram de alvo de pesquisas que são realizadas até os dias atuais com a finalidade de aprimorar essas técnicas de recomendação e aplicá-las sobre diversos tipoes de sistemas \cite{bennett2007netflix}, \cite{linden2003amazon}.
 
+Antes dos estudos diretamentes relacionados com os Sistemas de Recomendação automatizados, outras pesquisas e estudos foram realizados tratando de assuntos como o que é tratado em \cite{hayes1978naive} por \textit{Hayes} (1978), onde é abordado a grande ênfase dada pelo campo da Inteligência Artificail sobre o mundo de pequenas tecnologias, utilizando informações coletadas em larga escala para poder aprimorar o sistema do produto desenvolvido e apresentar as diversas aplicações do produto, como a Recomendação.
 
+Em estudos realizados anos depois, as pesquisas sobre os Sistemas de Recomendação começaram a se intensificar, para poder determinar uma forma eficiente de predição, como é visto em \cite{hey1989system} (1989), onde foi proposto uma forma de calcular a reação de determinado intem sobre determinado usuário.
+
+Já na década de 90, a Recomendação se tornou alvo de diversos estudos. Durante a conferência \textit{Computer Supported Cooperative Work (CSCW)} (1992), foi iniciado o projeto chamado \textit{GroupLens Research} \cite{konstan1998recommender}, que desenvolveu, e desenvolve até os dias atuais, pesquisas, estudos e levantamentos sobre todos as áreas da Recomendação, servindo de insentivo para outras instituições, grupos e outros projetos.
+
+O primeiro framework desenvolvido para exemplificar o funcionamento do Sistema de Recomendação foi o \textit{Tapestry} (1992) \cite{goldberg1992using}, utilizando a técnica de Filtro Colaborativo (uma técnica que será apresentada no próximo capítulo deste trabalho) para realizar a predição de produtos utilizando dados de outros usuários que possuam similaridade entre suas preferências. Um dos framework mais utilizado como exemplo para pesquisas e um dos mais referênciado em trabalhos sobre os Sistemas de Recomendação \cite{vozalis2003recommender}.
+
+Em 1994, o projeto \textit{GroupLens Research} criou o sistema para recomendação chamado \textit{GroupLens}, utilizando a técnica de Filtro Colaborativo para filtrar artigos de notícias, utilizando a avaliação efetuada por outros usuários que já tiveram contato com o artigo. Foi o primeiro sistema a utilizar avaliações como dado principal para recomendação \cite{resnick1994grouplens}. 
+
+Com estudo mais solidificados e com um maior insetivo de pesquisa, em 1997, \textit{Paul Resnick} e \textit{Hal Varian} realizam um trabalho que serve de base para estudos realizados até os dias atuais, relatando no artigo, a naturalidade da recomendação social feita entre pessoas, afirmando que é preciso fazer escolhas sem ter conhecimento prévio sibre o que se tem a disposição para escolher, utilizando informações de outras pessoas que podem afirmar que tiveram experiência com as opções disponíveis para escolha \cite{resnick1997recommender}. Também em 1997, o projeto \textit{GroupLens Research} foi responsável por criar o primeiro Sitema de Recomendação de filmes, chamado \textit{MovieLens} ,utilizando infomações implícitas de outros usuários da internet, como base para a recomendação dos filmes para outros usuários, aproximando as preferências deste usuário com as características dos filmes \cite{miller2003movielens}, \cite{konstan1998recommender}.
 %-- end Hystory sec
+
 %-- Begin Examples RecSys
 \section{Exemplos de sistemas que usam recomendação}
 Sistemas de recomendação são encontrados em uso por vários sistemas de lojas de eCommerce [3], [4], [6], com a tarefa de sugerir aos seus usuários produtos que possam lhe interessar. Os produtos podem ser recomendados partindo de várias premissas, como, por exemplo, sendo o produto mais vendido de uma determinada seção em que o usuário esta visitando, ou o
@@ -330,9 +342,6 @@ trabalhos desenvolvidos pelo autor do livro que também foi comprado por outros 
 
 \item \textbf{Reel.com} – Uma ligação entre os filmes semelhantes é feita e anunciada quando o usuário estiver decidindo sobre qual filme ele vai escolher. Uma  frase do tipo “Em NOMEDOFILMENOVO existe as seguintes semelhanças  com NOMEDOFILMEANTIGO,...” onde “NOMEDOFILMEANTIGO” seria algum  filme já assistido pelo usuário com a maior porcentagem de aproximação de  atributos com o filme novo.
 \end{itemize}
-
-
-%_______________ end ____________________________
 
 \section{Os principais algoritmos para a recomendação}
 Entre muitas técnicas utilizadas para a recomendação em estudos e divulgadas na internet, algumas se destacam por serem mais estudados e servir como ponto de partida para uma evolução ou para um estudo mais profundo dessas técnicas. Essas técnicas possuem características que as diferenciam uma das outros ou combina partes específicas ou sua totalidade, suas características com as características de outra técnica, com a finalidade de conseguir formular uma outra técnica, se tornando um meio de recomendação mais eficiente, proporcionando resultados melhores do que as técnicas que foram derivadas, com os resultados das técnicas comparados de forma separada. Entre essas técnicas, não somente suas características podem determinar qual, entre elas, será a melhor em todos os cenários e situações que poder utilizar alguma forma de recomendação, pois, como será abordado de forma mais clara nos parágrafos seguintes, uma técnica pode atingir melhores resultados em um grande número de situações, entretanto, em algum outro cenário, pode ser superada por outra técnica cuja suas características deveriam determinar que sessa técnica não é a melhor, pois possui menos parâmetros para a recomendação, demonstrando que uma técnica pode sair-se melhor que a outra, mas sempre é levado em consideração o cenário em que ela será aplicada.(Seria bom alguma referência)
@@ -375,25 +384,25 @@ Na tabela abaixo é disposto um pequeno exemplo de como seria uma matriz encontr
 % \end{center}
 % }%
 
-\def\tablename{Tabela}%
-\begin{table}[!htb]
-\caption{Matriz de avaliações da recomendação não personalizada}
-\vspace*{0.2cm}
-\centering
-\begin{tabular}{l|r|c|r} \hline
-\multicolumn{4}{c}{Esquerda} \\ \hline
-Um & Dois & Três & Quatro \\ 
-1 & 2 & 3 & 4 \\
-i & ii & iii & iv \\
-Um & Dois & Três & Quatro \\
-1 & 2 & 3 & 4 \\
-i & ii & iii & iv \\
-Um & Dois & Três & Quatro \\
-1 & 2 & 3 & 4 \\
-i & ii & iii & iv \\ \hline
-\end{tabular}
-\label{Tabe}
-\end{table}
+% \def\tablename{Tabela}%
+% \begin{table}[!htb]
+% \caption{Matriz de avaliações da recomendação não personalizada}
+% \vspace*{0.2cm}
+% \centering
+% \begin{tabular}{l|r|c|r} \hline
+% \multicolumn{4}{c}{Esquerda} \\ \hline
+% Um & Dois & Três & Quatro \\ 
+% 1 & 2 & 3 & 4 \\
+% i & ii & iii & iv \\
+% Um & Dois & Três & Quatro \\
+% 1 & 2 & 3 & 4 \\
+% i & ii & iii & iv \\
+% Um & Dois & Três & Quatro \\
+% 1 & 2 & 3 & 4 \\
+% i & ii & iii & iv \\ \hline
+% \end{tabular}
+% \label{Tabe}
+% \end{table}
 
 Essa matriz exemplo, é composta por todas as avaliações feitas pelos usuários individualmente, relacionando cada usuário $u$ com suas avaliações realizadas para cada item $i$. Como neste caso a recomendação é feita mediante as avaliações, é preciso encontrar, para cada item, uma média do valor de avaliação, e atribuir uma posição para este item no vetor $S$ de itens recomendados. A formula para calcular o valor médio de cada item é dada por:
 
@@ -468,7 +477,7 @@ Voltando a usar como exemplo o sistema de recomendação de filmes do GroupLens 
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{img/movielens2}
+\includegraphics[scale=0.4]{img/rate}
 \end{figure}
 
 A cada avaliação, uma associação é feita entre as preferências de um usuário e as características do produto, que, neste exemplo, seriam as características dos filmes. Para um melhor compreendimento, ou para apresentar de uma maneira mais formal, podemos analisar a representação desta figura (Fig. 1) e de todo o sistema, representando todo os valores de avaliações em uma tabela formada, da mesma forma que foi ilustrado para exemplificar no algoritmo não personalizado, por usuários e por todos os itens que estão disponíveis para receber avaliações. Os dados encontrados são, a representação de todos os usuários, todos os itens e de todas as avaliações que já foram computadas, lembrando que, diferente da matriz utilizada no algoritmo não personalizado, a matriz na maioria das vezes é uma matriz esparsa, então podem existir poucas avaliações para determinado produto, ou um número não confiável de avaliações, podendo comprometer a recomendação, se não for utilizado, para a recomendação, uma técnica confiável, como o filtro colaborativo.

@@ -12,45 +12,45 @@ Repeated entry---line 236 of file bib/bib.bib
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "resnick1994grouplen"
 Warning--all relevant fields are empty in abnt-url-package=url
-You've used 22 entries,
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            616 strings with 7620 characters,
-and the built_in function-call counts, 8447 in all, are:
-= -- 860
-> -- 367
-< -- 13
-+ -- 146
-- -- 122
-* -- 537
-:= -- 1309
-add.period$ -- 74
-call.type$ -- 22
-change.case$ -- 123
+            663 strings with 9296 characters,
+and the built_in function-call counts, 11315 in all, are:
+= -- 1139
+> -- 510
+< -- 15
++ -- 203
+- -- 170
+* -- 732
+:= -- 1771
+add.period$ -- 99
+call.type$ -- 30
+change.case$ -- 169
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 366
-empty$ -- 677
-format.name$ -- 122
-if$ -- 1864
+cite$ -- 31
+duplicate$ -- 476
+empty$ -- 907
+format.name$ -- 170
+if$ -- 2473
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 23
-newline$ -- 111
-num.names$ -- 42
-pop$ -- 164
+int.to.str$ -- 30
+missing$ -- 31
+newline$ -- 151
+num.names$ -- 58
+pop$ -- 224
 preamble$ -- 1
-purify$ -- 106
+purify$ -- 145
 quote$ -- 0
-skip$ -- 278
+skip$ -- 358
 stack$ -- 0
-substring$ -- 504
-swap$ -- 125
-text.length$ -- 13
+substring$ -- 670
+swap$ -- 152
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 112
 warning$ -- 1
-while$ -- 81
-width$ -- 24
-write$ -- 245
+while$ -- 109
+width$ -- 32
+write$ -- 331
 (There was 1 error message)
